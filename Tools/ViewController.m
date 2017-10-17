@@ -35,6 +35,13 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *classDic = self.dataSource[indexPath.row];
+    NSString *className = classDic[@"class"];
+    UIViewController *vc = [[NSClassFromString(className) alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)addTableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStylePlain)];

@@ -8,5 +8,17 @@
 		<key>class</key>
 		<string>MarqueeDemo</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>倒计时</string>
+		<key>class</key>
+		<string>CountdownVCDemo</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>轮播</string>
+		<key>class</key>
+		<string>CyclePagerViewController</string>
+	</dict>
 </array>
 </plist>

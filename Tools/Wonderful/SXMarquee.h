@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, SXMarqueeSpeedLevel) {
  *
  *  @param action tapAction block code
  */
-- (void)changeTapMarqueeAction:(void(^)())action;
+- (void)changeTapMarqueeAction:(void(^)(void))action;
 
 /**
  *  you can change marqueeLabel 's font before start
