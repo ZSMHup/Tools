@@ -14,20 +14,20 @@
 		E11043B31F7DF6D700372F21 /* MarqueeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043B21F7DF6D700372F21 /* MarqueeDemo.m */; };
 		E11044061F7DFDD000372F21 /* TestClassList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E11044051F7DFDD000372F21 /* TestClassList.plist */; };
 		E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E11044081F7E006000372F21 /* UITableViewCell+FastCell.m */; };
-		E1209EE21F959EAA006E6D86 /* TYCyclePagerTransformLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EDD1F959E9C006E6D86 /* TYCyclePagerTransformLayout.m */; };
-		E1209EE31F959EB0006E6D86 /* TYCyclePagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EDF1F959E9C006E6D86 /* TYCyclePagerView.m */; };
-		E1209EE41F959EB5006E6D86 /* TYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EE11F959E9C006E6D86 /* TYPageControl.m */; };
+		E1209EFC1F95A232006E6D86 /* TYCyclePagerTransformLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EE81F95A226006E6D86 /* TYCyclePagerTransformLayout.m */; };
+		E1209EFD1F95A238006E6D86 /* TYCyclePagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EEA1F95A226006E6D86 /* TYCyclePagerView.m */; };
+		E1209EFE1F95A23E006E6D86 /* TYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EEC1F95A226006E6D86 /* TYPageControl.m */; };
+		E1209EFF1F95A243006E6D86 /* SXColorGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EEF1F95A226006E6D86 /* SXColorGradientView.m */; };
+		E1209F001F95A248006E6D86 /* SXColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EF11F95A226006E6D86 /* SXColorLabel.m */; };
+		E1209F011F95A24E006E6D86 /* SXHeadLine.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EF31F95A226006E6D86 /* SXHeadLine.m */; };
+		E1209F021F95A254006E6D86 /* SXMarquee.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EF51F95A226006E6D86 /* SXMarquee.m */; };
+		E1209F031F95A25C006E6D86 /* UIColor+Separate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EF71F95A226006E6D86 /* UIColor+Separate.m */; };
+		E1209F041F95A261006E6D86 /* UIColor+Wonderful.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EF91F95A226006E6D86 /* UIColor+Wonderful.m */; };
+		E1209F051F95A267006E6D86 /* UILabel+Wonderful.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EFB1F95A226006E6D86 /* UILabel+Wonderful.m */; };
 		E142B9891F946639002EAEF7 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9881F946639002EAEF7 /* UIButton+Countdown.m */; };
 		E142B98C1F946746002EAEF7 /* CountdownVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B98B1F946746002EAEF7 /* CountdownVCDemo.m */; };
 		E142B99A1F9484BD002EAEF7 /* CyclePagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9991F9484BD002EAEF7 /* CyclePagerViewController.m */; };
 		E142B9AD1F9488E5002EAEF7 /* CyclePagerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9AC1F9488E5002EAEF7 /* CyclePagerViewCell.m */; };
-		E16762D81F8F6E3200F1076F /* SXColorGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043A31F7DF67200372F21 /* SXColorGradientView.m */; };
-		E16762D91F8F6E3900F1076F /* SXColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043A51F7DF67200372F21 /* SXColorLabel.m */; };
-		E16762DA1F8F6E3D00F1076F /* SXHeadLine.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043A71F7DF67200372F21 /* SXHeadLine.m */; };
-		E16762DB1F8F6E4100F1076F /* SXMarquee.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043A91F7DF67200372F21 /* SXMarquee.m */; };
-		E16762DC1F8F6E4700F1076F /* UIColor+Separate.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043AB1F7DF67200372F21 /* UIColor+Separate.m */; };
-		E16762DD1F8F6E4B00F1076F /* UIColor+Wonderful.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043AD1F7DF67200372F21 /* UIColor+Wonderful.m */; };
-		E16762DE1F8F6E4F00F1076F /* UILabel+Wonderful.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043AF1F7DF67200372F21 /* UILabel+Wonderful.m */; };
 		E16762F41F8F6EDA00F1076F /* UIView+ViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043F31F7DF73900372F21 /* UIView+ViewTools.m */; };
 		E16762F51F8F6EE500F1076F /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043EE1F7DF73900372F21 /* UITextView+Placeholder.m */; };
 		E16762F61F8F6EED00F1076F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043F11F7DF73900372F21 /* UIView+Extension.m */; };
@@ -46,20 +46,6 @@
 		E11043931F7DF55600372F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E11043981F7DF55600372F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E11043991F7DF55600372F21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E11043A21F7DF67200372F21 /* SXColorGradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXColorGradientView.h; sourceTree = "<group>"; };
-		E11043A31F7DF67200372F21 /* SXColorGradientView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXColorGradientView.m; sourceTree = "<group>"; };
-		E11043A41F7DF67200372F21 /* SXColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXColorLabel.h; sourceTree = "<group>"; };
-		E11043A51F7DF67200372F21 /* SXColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXColorLabel.m; sourceTree = "<group>"; };
-		E11043A61F7DF67200372F21 /* SXHeadLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXHeadLine.h; sourceTree = "<group>"; };
-		E11043A71F7DF67200372F21 /* SXHeadLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXHeadLine.m; sourceTree = "<group>"; };
-		E11043A81F7DF67200372F21 /* SXMarquee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXMarquee.h; sourceTree = "<group>"; };
-		E11043A91F7DF67200372F21 /* SXMarquee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXMarquee.m; sourceTree = "<group>"; };
-		E11043AA1F7DF67200372F21 /* UIColor+Separate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Separate.h"; sourceTree = "<group>"; };
-		E11043AB1F7DF67200372F21 /* UIColor+Separate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Separate.m"; sourceTree = "<group>"; };
-		E11043AC1F7DF67200372F21 /* UIColor+Wonderful.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Wonderful.h"; sourceTree = "<group>"; };
-		E11043AD1F7DF67200372F21 /* UIColor+Wonderful.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Wonderful.m"; sourceTree = "<group>"; };
-		E11043AE1F7DF67200372F21 /* UILabel+Wonderful.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Wonderful.h"; sourceTree = "<group>"; };
-		E11043AF1F7DF67200372F21 /* UILabel+Wonderful.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Wonderful.m"; sourceTree = "<group>"; };
 		E11043B11F7DF6D700372F21 /* MarqueeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarqueeDemo.h; sourceTree = "<group>"; };
 		E11043B21F7DF6D700372F21 /* MarqueeDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarqueeDemo.m; sourceTree = "<group>"; };
 		E11043ED1F7DF73900372F21 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
@@ -77,12 +63,26 @@
 		E11044051F7DFDD000372F21 /* TestClassList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TestClassList.plist; sourceTree = "<group>"; };
 		E11044071F7E006000372F21 /* UITableViewCell+FastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FastCell.h"; sourceTree = "<group>"; };
 		E11044081F7E006000372F21 /* UITableViewCell+FastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FastCell.m"; sourceTree = "<group>"; };
-		E1209EDC1F959E9C006E6D86 /* TYCyclePagerTransformLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerTransformLayout.h; sourceTree = "<group>"; };
-		E1209EDD1F959E9C006E6D86 /* TYCyclePagerTransformLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerTransformLayout.m; sourceTree = "<group>"; };
-		E1209EDE1F959E9C006E6D86 /* TYCyclePagerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerView.h; sourceTree = "<group>"; };
-		E1209EDF1F959E9C006E6D86 /* TYCyclePagerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerView.m; sourceTree = "<group>"; };
-		E1209EE01F959E9C006E6D86 /* TYPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPageControl.h; sourceTree = "<group>"; };
-		E1209EE11F959E9C006E6D86 /* TYPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPageControl.m; sourceTree = "<group>"; };
+		E1209EE71F95A226006E6D86 /* TYCyclePagerTransformLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerTransformLayout.h; sourceTree = "<group>"; };
+		E1209EE81F95A226006E6D86 /* TYCyclePagerTransformLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerTransformLayout.m; sourceTree = "<group>"; };
+		E1209EE91F95A226006E6D86 /* TYCyclePagerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerView.h; sourceTree = "<group>"; };
+		E1209EEA1F95A226006E6D86 /* TYCyclePagerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerView.m; sourceTree = "<group>"; };
+		E1209EEB1F95A226006E6D86 /* TYPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPageControl.h; sourceTree = "<group>"; };
+		E1209EEC1F95A226006E6D86 /* TYPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPageControl.m; sourceTree = "<group>"; };
+		E1209EEE1F95A226006E6D86 /* SXColorGradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXColorGradientView.h; sourceTree = "<group>"; };
+		E1209EEF1F95A226006E6D86 /* SXColorGradientView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXColorGradientView.m; sourceTree = "<group>"; };
+		E1209EF01F95A226006E6D86 /* SXColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXColorLabel.h; sourceTree = "<group>"; };
+		E1209EF11F95A226006E6D86 /* SXColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXColorLabel.m; sourceTree = "<group>"; };
+		E1209EF21F95A226006E6D86 /* SXHeadLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXHeadLine.h; sourceTree = "<group>"; };
+		E1209EF31F95A226006E6D86 /* SXHeadLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXHeadLine.m; sourceTree = "<group>"; };
+		E1209EF41F95A226006E6D86 /* SXMarquee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXMarquee.h; sourceTree = "<group>"; };
+		E1209EF51F95A226006E6D86 /* SXMarquee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXMarquee.m; sourceTree = "<group>"; };
+		E1209EF61F95A226006E6D86 /* UIColor+Separate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Separate.h"; sourceTree = "<group>"; };
+		E1209EF71F95A226006E6D86 /* UIColor+Separate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Separate.m"; sourceTree = "<group>"; };
+		E1209EF81F95A226006E6D86 /* UIColor+Wonderful.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Wonderful.h"; sourceTree = "<group>"; };
+		E1209EF91F95A226006E6D86 /* UIColor+Wonderful.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Wonderful.m"; sourceTree = "<group>"; };
+		E1209EFA1F95A226006E6D86 /* UILabel+Wonderful.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Wonderful.h"; sourceTree = "<group>"; };
+		E1209EFB1F95A226006E6D86 /* UILabel+Wonderful.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Wonderful.m"; sourceTree = "<group>"; };
 		E142B9871F946639002EAEF7 /* UIButton+Countdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Countdown.h"; sourceTree = "<group>"; };
 		E142B9881F946639002EAEF7 /* UIButton+Countdown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Countdown.m"; sourceTree = "<group>"; };
 		E142B98A1F946746002EAEF7 /* CountdownVCDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownVCDemo.h; sourceTree = "<group>"; };
@@ -130,9 +130,8 @@
 				E110438D1F7DF55600372F21 /* ViewController.h */,
 				E110438E1F7DF55600372F21 /* ViewController.m */,
 				E11043B01F7DF6BC00372F21 /* Page */,
-				E11043A11F7DF67200372F21 /* Wonderful */,
-				E1209EDB1F959E9C006E6D86 /* TYCyclePagerView */,
 				E11043B41F7DF73800372F21 /* Utils */,
+				E1209EE51F95A226006E6D86 /* 3rdLib */,
 				E11043A01F7DF5AA00372F21 /* Other */,
 			);
 			path = Tools;
@@ -147,27 +146,6 @@
 				E11044051F7DFDD000372F21 /* TestClassList.plist */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		E11043A11F7DF67200372F21 /* Wonderful */ = {
-			isa = PBXGroup;
-			children = (
-				E11043A21F7DF67200372F21 /* SXColorGradientView.h */,
-				E11043A31F7DF67200372F21 /* SXColorGradientView.m */,
-				E11043A41F7DF67200372F21 /* SXColorLabel.h */,
-				E11043A51F7DF67200372F21 /* SXColorLabel.m */,
-				E11043A61F7DF67200372F21 /* SXHeadLine.h */,
-				E11043A71F7DF67200372F21 /* SXHeadLine.m */,
-				E11043A81F7DF67200372F21 /* SXMarquee.h */,
-				E11043A91F7DF67200372F21 /* SXMarquee.m */,
-				E11043AA1F7DF67200372F21 /* UIColor+Separate.h */,
-				E11043AB1F7DF67200372F21 /* UIColor+Separate.m */,
-				E11043AC1F7DF67200372F21 /* UIColor+Wonderful.h */,
-				E11043AD1F7DF67200372F21 /* UIColor+Wonderful.m */,
-				E11043AE1F7DF67200372F21 /* UILabel+Wonderful.h */,
-				E11043AF1F7DF67200372F21 /* UILabel+Wonderful.m */,
-			);
-			path = Wonderful;
 			sourceTree = "<group>";
 		};
 		E11043B01F7DF6BC00372F21 /* Page */ = {
@@ -271,17 +249,47 @@
 			path = UITextView;
 			sourceTree = "<group>";
 		};
-		E1209EDB1F959E9C006E6D86 /* TYCyclePagerView */ = {
+		E1209EE51F95A226006E6D86 /* 3rdLib */ = {
 			isa = PBXGroup;
 			children = (
-				E1209EDC1F959E9C006E6D86 /* TYCyclePagerTransformLayout.h */,
-				E1209EDD1F959E9C006E6D86 /* TYCyclePagerTransformLayout.m */,
-				E1209EDE1F959E9C006E6D86 /* TYCyclePagerView.h */,
-				E1209EDF1F959E9C006E6D86 /* TYCyclePagerView.m */,
-				E1209EE01F959E9C006E6D86 /* TYPageControl.h */,
-				E1209EE11F959E9C006E6D86 /* TYPageControl.m */,
+				E1209EE61F95A226006E6D86 /* TYCyclePagerView */,
+				E1209EED1F95A226006E6D86 /* Wonderful */,
+			);
+			path = 3rdLib;
+			sourceTree = "<group>";
+		};
+		E1209EE61F95A226006E6D86 /* TYCyclePagerView */ = {
+			isa = PBXGroup;
+			children = (
+				E1209EE71F95A226006E6D86 /* TYCyclePagerTransformLayout.h */,
+				E1209EE81F95A226006E6D86 /* TYCyclePagerTransformLayout.m */,
+				E1209EE91F95A226006E6D86 /* TYCyclePagerView.h */,
+				E1209EEA1F95A226006E6D86 /* TYCyclePagerView.m */,
+				E1209EEB1F95A226006E6D86 /* TYPageControl.h */,
+				E1209EEC1F95A226006E6D86 /* TYPageControl.m */,
 			);
 			path = TYCyclePagerView;
+			sourceTree = "<group>";
+		};
+		E1209EED1F95A226006E6D86 /* Wonderful */ = {
+			isa = PBXGroup;
+			children = (
+				E1209EEE1F95A226006E6D86 /* SXColorGradientView.h */,
+				E1209EEF1F95A226006E6D86 /* SXColorGradientView.m */,
+				E1209EF01F95A226006E6D86 /* SXColorLabel.h */,
+				E1209EF11F95A226006E6D86 /* SXColorLabel.m */,
+				E1209EF21F95A226006E6D86 /* SXHeadLine.h */,
+				E1209EF31F95A226006E6D86 /* SXHeadLine.m */,
+				E1209EF41F95A226006E6D86 /* SXMarquee.h */,
+				E1209EF51F95A226006E6D86 /* SXMarquee.m */,
+				E1209EF61F95A226006E6D86 /* UIColor+Separate.h */,
+				E1209EF71F95A226006E6D86 /* UIColor+Separate.m */,
+				E1209EF81F95A226006E6D86 /* UIColor+Wonderful.h */,
+				E1209EF91F95A226006E6D86 /* UIColor+Wonderful.m */,
+				E1209EFA1F95A226006E6D86 /* UILabel+Wonderful.h */,
+				E1209EFB1F95A226006E6D86 /* UILabel+Wonderful.m */,
+			);
+			path = Wonderful;
 			sourceTree = "<group>";
 		};
 		E16762FB1F8F748100F1076F /* UIButton */ = {
@@ -365,9 +373,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1209EE41F959EB5006E6D86 /* TYPageControl.m in Sources */,
-				E1209EE31F959EB0006E6D86 /* TYCyclePagerView.m in Sources */,
-				E1209EE21F959EAA006E6D86 /* TYCyclePagerTransformLayout.m in Sources */,
+				E1209F051F95A267006E6D86 /* UILabel+Wonderful.m in Sources */,
+				E1209F041F95A261006E6D86 /* UIColor+Wonderful.m in Sources */,
+				E1209F031F95A25C006E6D86 /* UIColor+Separate.m in Sources */,
+				E1209F021F95A254006E6D86 /* SXMarquee.m in Sources */,
+				E1209F011F95A24E006E6D86 /* SXHeadLine.m in Sources */,
+				E1209F001F95A248006E6D86 /* SXColorLabel.m in Sources */,
+				E1209EFF1F95A243006E6D86 /* SXColorGradientView.m in Sources */,
+				E1209EFE1F95A23E006E6D86 /* TYPageControl.m in Sources */,
+				E1209EFD1F95A238006E6D86 /* TYCyclePagerView.m in Sources */,
+				E1209EFC1F95A232006E6D86 /* TYCyclePagerTransformLayout.m in Sources */,
 				E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */,
 				E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */,
 				E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */,
@@ -377,13 +392,6 @@
 				E16762F61F8F6EED00F1076F /* UIView+Extension.m in Sources */,
 				E16762F51F8F6EE500F1076F /* UITextView+Placeholder.m in Sources */,
 				E16762F41F8F6EDA00F1076F /* UIView+ViewTools.m in Sources */,
-				E16762DE1F8F6E4F00F1076F /* UILabel+Wonderful.m in Sources */,
-				E16762DD1F8F6E4B00F1076F /* UIColor+Wonderful.m in Sources */,
-				E16762DC1F8F6E4700F1076F /* UIColor+Separate.m in Sources */,
-				E16762DB1F8F6E4100F1076F /* SXMarquee.m in Sources */,
-				E16762DA1F8F6E3D00F1076F /* SXHeadLine.m in Sources */,
-				E16762D91F8F6E3900F1076F /* SXColorLabel.m in Sources */,
-				E16762D81F8F6E3200F1076F /* SXColorGradientView.m in Sources */,
 				E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */,
 				E110438F1F7DF55600372F21 /* ViewController.m in Sources */,
 				E11043B31F7DF6D700372F21 /* MarqueeDemo.m in Sources */,
