@@ -14,11 +14,11 @@
 		E11043B31F7DF6D700372F21 /* MarqueeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043B21F7DF6D700372F21 /* MarqueeDemo.m */; };
 		E11044061F7DFDD000372F21 /* TestClassList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E11044051F7DFDD000372F21 /* TestClassList.plist */; };
 		E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E11044081F7E006000372F21 /* UITableViewCell+FastCell.m */; };
+		E1209EE21F959EAA006E6D86 /* TYCyclePagerTransformLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EDD1F959E9C006E6D86 /* TYCyclePagerTransformLayout.m */; };
+		E1209EE31F959EB0006E6D86 /* TYCyclePagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EDF1F959E9C006E6D86 /* TYCyclePagerView.m */; };
+		E1209EE41F959EB5006E6D86 /* TYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EE11F959E9C006E6D86 /* TYPageControl.m */; };
 		E142B9891F946639002EAEF7 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9881F946639002EAEF7 /* UIButton+Countdown.m */; };
 		E142B98C1F946746002EAEF7 /* CountdownVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B98B1F946746002EAEF7 /* CountdownVCDemo.m */; };
-		E142B9951F948435002EAEF7 /* TYCyclePagerTransformLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9901F948413002EAEF7 /* TYCyclePagerTransformLayout.m */; };
-		E142B9961F94843B002EAEF7 /* TYCyclePagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9921F948413002EAEF7 /* TYCyclePagerView.m */; };
-		E142B9971F948441002EAEF7 /* TYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9941F948413002EAEF7 /* TYPageControl.m */; };
 		E142B99A1F9484BD002EAEF7 /* CyclePagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9991F9484BD002EAEF7 /* CyclePagerViewController.m */; };
 		E142B9AD1F9488E5002EAEF7 /* CyclePagerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9AC1F9488E5002EAEF7 /* CyclePagerViewCell.m */; };
 		E16762D81F8F6E3200F1076F /* SXColorGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043A31F7DF67200372F21 /* SXColorGradientView.m */; };
@@ -77,16 +77,16 @@
 		E11044051F7DFDD000372F21 /* TestClassList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TestClassList.plist; sourceTree = "<group>"; };
 		E11044071F7E006000372F21 /* UITableViewCell+FastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FastCell.h"; sourceTree = "<group>"; };
 		E11044081F7E006000372F21 /* UITableViewCell+FastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FastCell.m"; sourceTree = "<group>"; };
+		E1209EDC1F959E9C006E6D86 /* TYCyclePagerTransformLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerTransformLayout.h; sourceTree = "<group>"; };
+		E1209EDD1F959E9C006E6D86 /* TYCyclePagerTransformLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerTransformLayout.m; sourceTree = "<group>"; };
+		E1209EDE1F959E9C006E6D86 /* TYCyclePagerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerView.h; sourceTree = "<group>"; };
+		E1209EDF1F959E9C006E6D86 /* TYCyclePagerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerView.m; sourceTree = "<group>"; };
+		E1209EE01F959E9C006E6D86 /* TYPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPageControl.h; sourceTree = "<group>"; };
+		E1209EE11F959E9C006E6D86 /* TYPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPageControl.m; sourceTree = "<group>"; };
 		E142B9871F946639002EAEF7 /* UIButton+Countdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Countdown.h"; sourceTree = "<group>"; };
 		E142B9881F946639002EAEF7 /* UIButton+Countdown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Countdown.m"; sourceTree = "<group>"; };
 		E142B98A1F946746002EAEF7 /* CountdownVCDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownVCDemo.h; sourceTree = "<group>"; };
 		E142B98B1F946746002EAEF7 /* CountdownVCDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountdownVCDemo.m; sourceTree = "<group>"; };
-		E142B98F1F948413002EAEF7 /* TYCyclePagerTransformLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerTransformLayout.h; sourceTree = "<group>"; };
-		E142B9901F948413002EAEF7 /* TYCyclePagerTransformLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerTransformLayout.m; sourceTree = "<group>"; };
-		E142B9911F948413002EAEF7 /* TYCyclePagerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerView.h; sourceTree = "<group>"; };
-		E142B9921F948413002EAEF7 /* TYCyclePagerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerView.m; sourceTree = "<group>"; };
-		E142B9931F948413002EAEF7 /* TYPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPageControl.h; sourceTree = "<group>"; };
-		E142B9941F948413002EAEF7 /* TYPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPageControl.m; sourceTree = "<group>"; };
 		E142B9981F9484BD002EAEF7 /* CyclePagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CyclePagerViewController.h; sourceTree = "<group>"; };
 		E142B9991F9484BD002EAEF7 /* CyclePagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CyclePagerViewController.m; sourceTree = "<group>"; };
 		E142B9AB1F9488E5002EAEF7 /* CyclePagerViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CyclePagerViewCell.h; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				E110438E1F7DF55600372F21 /* ViewController.m */,
 				E11043B01F7DF6BC00372F21 /* Page */,
 				E11043A11F7DF67200372F21 /* Wonderful */,
-				E142B98E1F948413002EAEF7 /* TYCyclePagerView */,
+				E1209EDB1F959E9C006E6D86 /* TYCyclePagerView */,
 				E11043B41F7DF73800372F21 /* Utils */,
 				E11043A01F7DF5AA00372F21 /* Other */,
 			);
@@ -271,15 +271,15 @@
 			path = UITextView;
 			sourceTree = "<group>";
 		};
-		E142B98E1F948413002EAEF7 /* TYCyclePagerView */ = {
+		E1209EDB1F959E9C006E6D86 /* TYCyclePagerView */ = {
 			isa = PBXGroup;
 			children = (
-				E142B98F1F948413002EAEF7 /* TYCyclePagerTransformLayout.h */,
-				E142B9901F948413002EAEF7 /* TYCyclePagerTransformLayout.m */,
-				E142B9911F948413002EAEF7 /* TYCyclePagerView.h */,
-				E142B9921F948413002EAEF7 /* TYCyclePagerView.m */,
-				E142B9931F948413002EAEF7 /* TYPageControl.h */,
-				E142B9941F948413002EAEF7 /* TYPageControl.m */,
+				E1209EDC1F959E9C006E6D86 /* TYCyclePagerTransformLayout.h */,
+				E1209EDD1F959E9C006E6D86 /* TYCyclePagerTransformLayout.m */,
+				E1209EDE1F959E9C006E6D86 /* TYCyclePagerView.h */,
+				E1209EDF1F959E9C006E6D86 /* TYCyclePagerView.m */,
+				E1209EE01F959E9C006E6D86 /* TYPageControl.h */,
+				E1209EE11F959E9C006E6D86 /* TYPageControl.m */,
 			);
 			path = TYCyclePagerView;
 			sourceTree = "<group>";
@@ -365,9 +365,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E142B9971F948441002EAEF7 /* TYPageControl.m in Sources */,
-				E142B9961F94843B002EAEF7 /* TYCyclePagerView.m in Sources */,
-				E142B9951F948435002EAEF7 /* TYCyclePagerTransformLayout.m in Sources */,
+				E1209EE41F959EB5006E6D86 /* TYPageControl.m in Sources */,
+				E1209EE31F959EB0006E6D86 /* TYCyclePagerView.m in Sources */,
+				E1209EE21F959EAA006E6D86 /* TYCyclePagerTransformLayout.m in Sources */,
 				E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */,
 				E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */,
 				E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */,

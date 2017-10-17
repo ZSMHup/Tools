@@ -36,6 +36,20 @@ typedef NS_ENUM(NSUInteger, TYTransformLayoutItemDirection) {
 
 @implementation TYCyclePagerTransformLayout
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+    return self;
+}
+
 #pragma mark - getter setter
 
 - (void)setDelegate:(id<TYCyclePagerTransformLayoutDelegate>)delegate {
@@ -86,19 +100,14 @@ typedef NS_ENUM(NSUInteger, TYTransformLayoutItemDirection) {
 
 #pragma mark - layout
 
-- (void)prepareLayout {
-    self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    [super prepareLayout];
-}
-
 -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {
     return _layout.layoutType == TYCyclePagerTransformLayoutNormal ? [super shouldInvalidateLayoutForBoundsChange:newBounds] : YES;
 }
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-    NSArray *attributesArray = [[NSArray alloc] initWithArray:[super layoutAttributesForElementsInRect:rect] copyItems:YES];
     if (_delegateFlags.applyTransformToAttributes || _layout.layoutType != TYCyclePagerTransformLayoutNormal) {
+        NSArray *attributesArray = [[NSArray alloc] initWithArray:[super layoutAttributesForElementsInRect:rect] copyItems:YES];
         CGRect visibleRect = {self.collectionView.contentOffset,self.collectionView.bounds.size};
         for (UICollectionViewLayoutAttributes *attributes in attributesArray) {
             if (!CGRectIntersectsRect(visibleRect, attributes.frame)) {
@@ -110,8 +119,9 @@ typedef NS_ENUM(NSUInteger, TYTransformLayoutItemDirection) {
                 [self applyTransformToAttributes:attributes layoutType:_layout.layoutType];
             }
         }
+        return attributesArray;
     }
-    return attributesArray;
+    return [super layoutAttributesForElementsInRect:rect];
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
