@@ -20,5 +20,11 @@
 		<key>class</key>
 		<string>CyclePagerViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>网络监测</string>
+		<key>class</key>
+		<string>RealReachabilityController</string>
+	</dict>
 </array>
 </plist>

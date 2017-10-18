@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "RealReachability.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,10 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+    //开启网络监测
+    [GLobalRealReachability startNotifier];
+    
     return YES;
 }
 
