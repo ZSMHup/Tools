@@ -28,6 +28,8 @@
     //开启网络监测
     [GLobalRealReachability startNotifier];
     
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     return YES;
 }
 

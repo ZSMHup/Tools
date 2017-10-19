@@ -19,6 +19,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+
 - (void)setNavTransparent:(BOOL)isTransparent {
     if (isTransparent) {
         [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
@@ -29,7 +30,7 @@
 }
 
 - (void)setNavBlackLine:(BOOL)showLine {
-    self.navigationController.navigationBar.shadowImage = showLine ? nil : [[UIImage alloc] init];
+    self.navigationController.navigationBar.shadowImage = showLine ? [[UIImage alloc] init] : nil;
 }
 
 - (UIImage *)imageWithColor:(UIColor *)color {

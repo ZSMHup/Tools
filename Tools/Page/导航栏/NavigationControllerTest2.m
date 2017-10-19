@@ -20,13 +20,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self setNavTransparent:NO];
-    [self setNavBlackLine:YES];
+    [self setNavBlackLine:NO];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self setNavTransparent:NO];
-    [self setNavBlackLine:YES];
+    [self setNavBlackLine:NO];
 }
 
 - (void)viewDidLoad {

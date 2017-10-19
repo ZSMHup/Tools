@@ -13,6 +13,7 @@
 @interface NavigationControllerTest1 ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIView *navView;
 
 @end
 
@@ -21,22 +22,23 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self setNavTransparent:YES];
-    [self setNavBlackLine:NO];
+    [self setNavBlackLine:YES];
+    [self scrollViewDidScroll:self.tableView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self setNavTransparent:YES];
-    [self setNavBlackLine:NO];
+    [self setNavBlackLine:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"next" style:UIBarButtonItemStylePlain target:self action:@selector(saveToCameraRoll)];
     self.navigationItem.rightBarButtonItem = saveButton;
-    
     [self addTableView];
-    
+    [self addNavView];
 }
 
 - (void)saveToCameraRoll {
@@ -54,6 +56,18 @@
     return cell;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    CGFloat offset = scrollView.contentOffset.y;
+    if (offset > 50) {
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    } else {
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    }
+    self.navView.alpha = offset / 64;
+    
+}
+
 - (void)addTableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStylePlain)];
@@ -68,6 +82,15 @@
         [self.view addSubview:_tableView];
     }
 }
+
+- (void)addNavView {
+    if (!_navView) {
+        _navView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64.0)];
+        _navView.backgroundColor = [UIColor blackColor];
+        [self.view addSubview:_navView];
+    }
+}
+
 
 
 @end
