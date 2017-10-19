@@ -38,6 +38,14 @@
 		E1209F2F1F95EFAC006E6D86 /* PingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209F211F95EF56006E6D86 /* PingHelper.m */; };
 		E1209F301F95EFB2006E6D86 /* RealReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209F241F95EF56006E6D86 /* RealReachability.m */; };
 		E1209F331F95EFEF006E6D86 /* RealReachabilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209F321F95EFEF006E6D86 /* RealReachabilityController.m */; };
+		E1415D471F973F6C00390C4D /* SCTouchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D461F973F6C00390C4D /* SCTouchDetector.m */; };
+		E1415D4A1F973F8200390C4D /* SCVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D481F973F8200390C4D /* SCVideoPlayerViewController.m */; };
+		E1415D511F973F8B00390C4D /* SCRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D4D1F973F8A00390C4D /* SCRecorderViewController.m */; };
+		E1415D521F973F8B00390C4D /* SCEditVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D4E1F973F8A00390C4D /* SCEditVideoViewController.m */; };
+		E1415D531F973F8B00390C4D /* SCRecordSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D501F973F8B00390C4D /* SCRecordSessionManager.m */; };
+		E1415D561F97400E00390C4D /* RecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D551F97400E00390C4D /* RecorderViewController.m */; };
+		E1415D581F97428500390C4D /* a_filter.cisf in Resources */ = {isa = PBXBuildFile; fileRef = E1415D571F97428500390C4D /* a_filter.cisf */; };
+		E1415D5B1F97581D00390C4D /* SCWatermarkOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D5A1F97581D00390C4D /* SCWatermarkOverlayView.m */; };
 		E142B9891F946639002EAEF7 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9881F946639002EAEF7 /* UIButton+Countdown.m */; };
 		E142B98C1F946746002EAEF7 /* CountdownVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B98B1F946746002EAEF7 /* CountdownVCDemo.m */; };
 		E142B99A1F9484BD002EAEF7 /* CyclePagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9991F9484BD002EAEF7 /* CyclePagerViewController.m */; };
@@ -129,6 +137,21 @@
 		E1209F241F95EF56006E6D86 /* RealReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealReachability.m; sourceTree = "<group>"; };
 		E1209F311F95EFEF006E6D86 /* RealReachabilityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealReachabilityController.h; sourceTree = "<group>"; };
 		E1209F321F95EFEF006E6D86 /* RealReachabilityController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealReachabilityController.m; sourceTree = "<group>"; };
+		E1415D451F973F6C00390C4D /* SCTouchDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTouchDetector.h; sourceTree = "<group>"; };
+		E1415D461F973F6C00390C4D /* SCTouchDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTouchDetector.m; sourceTree = "<group>"; };
+		E1415D481F973F8200390C4D /* SCVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVideoPlayerViewController.m; sourceTree = "<group>"; };
+		E1415D491F973F8200390C4D /* SCVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVideoPlayerViewController.h; sourceTree = "<group>"; };
+		E1415D4B1F973F8A00390C4D /* SCEditVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEditVideoViewController.h; sourceTree = "<group>"; };
+		E1415D4C1F973F8A00390C4D /* SCRecordSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecordSessionManager.h; sourceTree = "<group>"; };
+		E1415D4D1F973F8A00390C4D /* SCRecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecorderViewController.m; sourceTree = "<group>"; };
+		E1415D4E1F973F8A00390C4D /* SCEditVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEditVideoViewController.m; sourceTree = "<group>"; };
+		E1415D4F1F973F8A00390C4D /* SCRecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRecorderViewController.h; sourceTree = "<group>"; };
+		E1415D501F973F8B00390C4D /* SCRecordSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRecordSessionManager.m; sourceTree = "<group>"; };
+		E1415D541F97400E00390C4D /* RecorderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecorderViewController.h; sourceTree = "<group>"; };
+		E1415D551F97400E00390C4D /* RecorderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecorderViewController.m; sourceTree = "<group>"; };
+		E1415D571F97428500390C4D /* a_filter.cisf */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = a_filter.cisf; sourceTree = "<group>"; };
+		E1415D591F97581D00390C4D /* SCWatermarkOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWatermarkOverlayView.h; sourceTree = "<group>"; };
+		E1415D5A1F97581D00390C4D /* SCWatermarkOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWatermarkOverlayView.m; sourceTree = "<group>"; };
 		E142B9871F946639002EAEF7 /* UIButton+Countdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Countdown.h"; sourceTree = "<group>"; };
 		E142B9881F946639002EAEF7 /* UIButton+Countdown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Countdown.m"; sourceTree = "<group>"; };
 		E142B98A1F946746002EAEF7 /* CountdownVCDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownVCDemo.h; sourceTree = "<group>"; };
@@ -218,6 +241,7 @@
 				E142B9AC1F9488E5002EAEF7 /* CyclePagerViewCell.m */,
 				E1209F311F95EFEF006E6D86 /* RealReachabilityController.h */,
 				E1209F321F95EFEF006E6D86 /* RealReachabilityController.m */,
+				E1415D441F973F5400390C4D /* SCRecorder(音视频录制) */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -410,6 +434,28 @@
 			path = Ping;
 			sourceTree = "<group>";
 		};
+		E1415D441F973F5400390C4D /* SCRecorder(音视频录制) */ = {
+			isa = PBXGroup;
+			children = (
+				E1415D541F97400E00390C4D /* RecorderViewController.h */,
+				E1415D551F97400E00390C4D /* RecorderViewController.m */,
+				E1415D4F1F973F8A00390C4D /* SCRecorderViewController.h */,
+				E1415D4D1F973F8A00390C4D /* SCRecorderViewController.m */,
+				E1415D4C1F973F8A00390C4D /* SCRecordSessionManager.h */,
+				E1415D501F973F8B00390C4D /* SCRecordSessionManager.m */,
+				E1415D451F973F6C00390C4D /* SCTouchDetector.h */,
+				E1415D461F973F6C00390C4D /* SCTouchDetector.m */,
+				E1415D491F973F8200390C4D /* SCVideoPlayerViewController.h */,
+				E1415D481F973F8200390C4D /* SCVideoPlayerViewController.m */,
+				E1415D4B1F973F8A00390C4D /* SCEditVideoViewController.h */,
+				E1415D4E1F973F8A00390C4D /* SCEditVideoViewController.m */,
+				E1415D591F97581D00390C4D /* SCWatermarkOverlayView.h */,
+				E1415D5A1F97581D00390C4D /* SCWatermarkOverlayView.m */,
+				E1415D571F97428500390C4D /* a_filter.cisf */,
+			);
+			path = "SCRecorder(音视频录制)";
+			sourceTree = "<group>";
+		};
 		E16762FB1F8F748100F1076F /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1415D581F97428500390C4D /* a_filter.cisf in Resources */,
 				E11043941F7DF55600372F21 /* Assets.xcassets in Resources */,
 				E11044061F7DFDD000372F21 /* TestClassList.plist in Resources */,
 			);
@@ -558,17 +605,23 @@
 				E1209F2C1F95EF90006E6D86 /* ReachStateWIFI.m in Sources */,
 				E1209F2B1F95EF89006E6D86 /* ReachStateUnReachable.m in Sources */,
 				E1209F2A1F95EF84006E6D86 /* ReachStateUnloaded.m in Sources */,
+				E1415D471F973F6C00390C4D /* SCTouchDetector.m in Sources */,
 				E1209F291F95EF7E006E6D86 /* ReachStateLoading.m in Sources */,
 				E1209F281F95EF77006E6D86 /* ReachState.m in Sources */,
 				E1209F271F95EF71006E6D86 /* FSMStateUtil.m in Sources */,
 				E1209F261F95EF6B006E6D86 /* FSMEngine.m in Sources */,
+				E1415D4A1F973F8200390C4D /* SCVideoPlayerViewController.m in Sources */,
 				E1209F251F95EF65006E6D86 /* LocalConnection.m in Sources */,
 				E1209F051F95A267006E6D86 /* UILabel+Wonderful.m in Sources */,
+				E1415D561F97400E00390C4D /* RecorderViewController.m in Sources */,
+				E1415D531F973F8B00390C4D /* SCRecordSessionManager.m in Sources */,
 				E1209F041F95A261006E6D86 /* UIColor+Wonderful.m in Sources */,
 				E1209F031F95A25C006E6D86 /* UIColor+Separate.m in Sources */,
 				E1209F021F95A254006E6D86 /* SXMarquee.m in Sources */,
 				E1209F011F95A24E006E6D86 /* SXHeadLine.m in Sources */,
 				E1209F331F95EFEF006E6D86 /* RealReachabilityController.m in Sources */,
+				E1415D511F973F8B00390C4D /* SCRecorderViewController.m in Sources */,
+				E1415D521F973F8B00390C4D /* SCEditVideoViewController.m in Sources */,
 				E1209F001F95A248006E6D86 /* SXColorLabel.m in Sources */,
 				E1209EFF1F95A243006E6D86 /* SXColorGradientView.m in Sources */,
 				E1209EFE1F95A23E006E6D86 /* TYPageControl.m in Sources */,
@@ -577,6 +630,7 @@
 				E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */,
 				E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */,
 				E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */,
+				E1415D5B1F97581D00390C4D /* SCWatermarkOverlayView.m in Sources */,
 				E16762F81F8F6EF800F1076F /* AYMFMessageViewController.m in Sources */,
 				E142B9AD1F9488E5002EAEF7 /* CyclePagerViewCell.m in Sources */,
 				E142B99A1F9484BD002EAEF7 /* CyclePagerViewController.m in Sources */,

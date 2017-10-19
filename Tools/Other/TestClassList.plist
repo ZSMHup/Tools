@@ -26,5 +26,11 @@
 		<key>class</key>
 		<string>RealReachabilityController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>音视频录制</string>
+		<key>class</key>
+		<string>RecorderViewController</string>
+	</dict>
 </array>
 </plist>
