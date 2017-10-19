@@ -17,9 +17,12 @@
 
 @implementation SCEditVideoViewController
 
+- (void)dealloc {
+    NSLog(@"SCEditVideoViewController dealloc");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"delete" style:UIBarButtonItemStylePlain target:self action:@selector(deletePressed:)];
     self.navigationItem.rightBarButtonItem = saveButton;
@@ -120,14 +123,14 @@
 - (SCVideoPlayerView *)videoPlayerView {
     if (!_videoPlayerView) {
         _videoPlayerView = [[SCVideoPlayerView alloc] init];
-        _videoPlayerView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 224);
+        _videoPlayerView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 214);
     }
     return _videoPlayerView;
 }
 
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 150, self.view.frame.size.width, 150)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 214, self.view.frame.size.width, 150)];
     }
     return _scrollView;
 }

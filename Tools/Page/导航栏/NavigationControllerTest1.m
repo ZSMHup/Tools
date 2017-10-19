@@ -1,45 +1,57 @@
 //
-//  ViewController.m
+//  NavigationControllerTest1.m
 //  Tools
 //
-//  Created by 张书孟 on 2017/9/29.
+//  Created by 张书孟 on 2017/10/19.
 //  Copyright © 2017年 张书孟. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "NavigationControllerTest1.h"
+#import "NavigationControllerTest2.h"
 #import "UITableViewCell+FastCell.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface NavigationControllerTest1 ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
 
-@implementation ViewController
+@implementation NavigationControllerTest1
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setNavTransparent:YES];
+    [self setNavBlackLine:NO];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self setNavTransparent:YES];
+    [self setNavBlackLine:NO];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"next" style:UIBarButtonItemStylePlain target:self action:@selector(saveToCameraRoll)];
+    self.navigationItem.rightBarButtonItem = saveButton;
+    
     [self addTableView];
+    
 }
 
+- (void)saveToCameraRoll {
+    NavigationControllerTest2 *t2 = [[NavigationControllerTest2 alloc] init];
+    [self.navigationController pushViewController:t2 animated:YES];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataSource.count;
+    return 30;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView];
-    NSDictionary *dic = self.dataSource[indexPath.row];
-    cell.textLabel.text = dic[@"name"];
+    cell.textLabel.text = [NSString stringWithFormat:@"test %ld",indexPath.row];
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *classDic = self.dataSource[indexPath.row];
-    NSString *className = classDic[@"class"];
-    UIViewController *vc = [[NSClassFromString(className) alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)addTableView {
@@ -57,13 +69,5 @@
     }
 }
 
-- (NSMutableArray *)dataSource {
-    if (!_dataSource) {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"TestClassList" ofType:@"plist"];
-        NSArray *array = [NSArray arrayWithContentsOfFile:filePath];
-        _dataSource = [NSMutableArray arrayWithArray:array];
-    }
-    return _dataSource;
-}
 
 @end

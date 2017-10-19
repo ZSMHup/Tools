@@ -15,9 +15,12 @@
 
 @implementation CountdownVCDemo
 
+- (void)dealloc {
+    NSLog(@"CountdownVCDemo dealloc");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
     [btn1 setTitle:@"10秒" forState:(UIControlStateNormal)];
     btn1.backgroundColor = [UIColor redColor];

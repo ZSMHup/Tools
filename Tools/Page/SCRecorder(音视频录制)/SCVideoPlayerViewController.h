@@ -6,10 +6,10 @@
 //  Copyright © 2017年 张书孟. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "SCRecorder.h"
 
-@interface SCVideoPlayerViewController : UIViewController<SCPlayerDelegate, SCAssetExportSessionDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface SCVideoPlayerViewController : BaseViewController<SCPlayerDelegate, SCAssetExportSessionDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) SCRecordSession *recordSession;
 @property (nonatomic, strong) SCSwipeableFilterView *filterSwitcherView;

@@ -32,5 +32,11 @@
 		<key>class</key>
 		<string>RecorderViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>导航栏</string>
+		<key>class</key>
+		<string>NavigationController</string>
+	</dict>
 </array>
 </plist>

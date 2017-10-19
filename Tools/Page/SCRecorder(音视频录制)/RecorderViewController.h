@@ -6,8 +6,8 @@
 //  Copyright © 2017年 张书孟. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface RecorderViewController : UIViewController
+@interface RecorderViewController : BaseViewController
 
 @end

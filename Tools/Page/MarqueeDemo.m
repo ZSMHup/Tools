@@ -16,11 +16,13 @@
 @end
 
 @implementation MarqueeDemo
+- (void)dealloc {
+    NSLog(@"MarqueeDemo dealloc");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"SXMarquee-SXHeadLine";
-    self.view.backgroundColor = [UIColor whiteColor];
     SXMarquee *mar = [[SXMarquee alloc] initWithFrame:CGRectMake(20, 255, 335, 35) speed:4 Msg:@"重大活动，天猫的双十一，然而并没卵用" bgColor:[UIColor salmonColor] txtColor:[UIColor whiteColor]];
     [mar changeMarqueeLabelFont:[UIFont systemFontOfSize:26]];
     [mar changeTapMarqueeAction:^{

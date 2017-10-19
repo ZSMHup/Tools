@@ -6,11 +6,11 @@
 //  Copyright © 2017年 张书孟. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 #import "SCRecorder.h"
 
-@interface SCEditVideoViewController : UIViewController
+@interface SCEditVideoViewController : BaseViewController
 
 @property (strong, nonatomic) SCRecordSession *recordSession;
 @property (strong, nonatomic) UIScrollView *scrollView;

@@ -29,6 +29,7 @@
     }
     
     [self cancelSaveToCameraRoll];
+    NSLog(@"SCVideoPlayerViewController dealloc");
 }
 
 #pragma mark - lifecycle
@@ -36,7 +37,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if (_recordSession.segments.count > 0) {
-        [_player setItemByAsset:_recordSession.assetRepresentingSegments];
+        [_player setItemByAsset:_recordSession.assetRepresentingSegments];//将文件路径转化为avasset，用于scplayer播放
         [_player play];
     }
 }
@@ -282,7 +283,7 @@
     if (!_editVideo) {
         _editVideo = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100, 70, 100, 30)];
         [_editVideo setTitle:@"编辑" forState:(UIControlStateNormal)];
-        [_editVideo setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
+        [_editVideo setTitleColor:[UIColor redColor] forState:(UIControlStateNormal)];
         [_editVideo addTarget:self action:@selector(editVideoClick) forControlEvents:(UIControlEventTouchUpInside)];
         [self.view addSubview:_editVideo];
     }

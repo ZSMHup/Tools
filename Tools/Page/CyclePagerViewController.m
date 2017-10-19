@@ -30,7 +30,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"dealloc");
+    NSLog(@"CyclePagerViewController dealloc");
 }
 
 - (void)loadData {

@@ -6,10 +6,10 @@
 //  Copyright © 2017年 张书孟. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "SCRecorder.h"
 
-@interface SCRecorderViewController : UIViewController
+@interface SCRecorderViewController : BaseViewController
 
 
 

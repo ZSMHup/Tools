@@ -21,7 +21,7 @@
 @implementation RealReachabilityController
 
 - (void)dealloc {
-    NSLog(@"dealloc");
+    NSLog(@"RealReachabilityController dealloc");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

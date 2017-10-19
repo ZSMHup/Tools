@@ -56,6 +56,7 @@
 
 - (void)dealloc {
     _recorder.previewView = nil;
+    NSLog(@"SCRecorderViewController dealloc");
 }
 
 #pragma mark - lifecycle
@@ -93,7 +94,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupUI];
 }
