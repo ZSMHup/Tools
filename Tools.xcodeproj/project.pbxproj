@@ -12,9 +12,13 @@
 		E110438F1F7DF55600372F21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E110438E1F7DF55600372F21 /* ViewController.m */; };
 		E11043941F7DF55600372F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11043931F7DF55600372F21 /* Assets.xcassets */; };
 		E110439A1F7DF55600372F21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043991F7DF55600372F21 /* main.m */; };
-		E11043B31F7DF6D700372F21 /* MarqueeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043B21F7DF6D700372F21 /* MarqueeDemo.m */; };
 		E11044061F7DFDD000372F21 /* TestClassList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E11044051F7DFDD000372F21 /* TestClassList.plist */; };
 		E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E11044081F7E006000372F21 /* UITableViewCell+FastCell.m */; };
+		E1167B1A1F98B51A0092E190 /* MarqueeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B0E1F98B51A0092E190 /* MarqueeDemo.m */; };
+		E1167B1B1F98B51A0092E190 /* CyclePagerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B111F98B51A0092E190 /* CyclePagerViewCell.m */; };
+		E1167B1C1F98B51A0092E190 /* CyclePagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B131F98B51A0092E190 /* CyclePagerViewController.m */; };
+		E1167B1D1F98B51A0092E190 /* CountdownVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B161F98B51A0092E190 /* CountdownVCDemo.m */; };
+		E1167B1E1F98B51A0092E190 /* RealReachabilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B191F98B51A0092E190 /* RealReachabilityController.m */; };
 		E1209EFC1F95A232006E6D86 /* TYCyclePagerTransformLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EE81F95A226006E6D86 /* TYCyclePagerTransformLayout.m */; };
 		E1209EFD1F95A238006E6D86 /* TYCyclePagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EEA1F95A226006E6D86 /* TYCyclePagerView.m */; };
 		E1209EFE1F95A23E006E6D86 /* TYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EEC1F95A226006E6D86 /* TYPageControl.m */; };
@@ -37,7 +41,6 @@
 		E1209F2E1F95EF9E006E6D86 /* PingFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209F1F1F95EF56006E6D86 /* PingFoundation.m */; };
 		E1209F2F1F95EFAC006E6D86 /* PingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209F211F95EF56006E6D86 /* PingHelper.m */; };
 		E1209F301F95EFB2006E6D86 /* RealReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209F241F95EF56006E6D86 /* RealReachability.m */; };
-		E1209F331F95EFEF006E6D86 /* RealReachabilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209F321F95EFEF006E6D86 /* RealReachabilityController.m */; };
 		E1415D471F973F6C00390C4D /* SCTouchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D461F973F6C00390C4D /* SCTouchDetector.m */; };
 		E1415D4A1F973F8200390C4D /* SCVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D481F973F8200390C4D /* SCVideoPlayerViewController.m */; };
 		E1415D511F973F8B00390C4D /* SCRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D4D1F973F8A00390C4D /* SCRecorderViewController.m */; };
@@ -47,9 +50,6 @@
 		E1415D581F97428500390C4D /* a_filter.cisf in Resources */ = {isa = PBXBuildFile; fileRef = E1415D571F97428500390C4D /* a_filter.cisf */; };
 		E1415D5B1F97581D00390C4D /* SCWatermarkOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1415D5A1F97581D00390C4D /* SCWatermarkOverlayView.m */; };
 		E142B9891F946639002EAEF7 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9881F946639002EAEF7 /* UIButton+Countdown.m */; };
-		E142B98C1F946746002EAEF7 /* CountdownVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B98B1F946746002EAEF7 /* CountdownVCDemo.m */; };
-		E142B99A1F9484BD002EAEF7 /* CyclePagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9991F9484BD002EAEF7 /* CyclePagerViewController.m */; };
-		E142B9AD1F9488E5002EAEF7 /* CyclePagerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E142B9AC1F9488E5002EAEF7 /* CyclePagerViewCell.m */; };
 		E14D42191F985AEE00952FD8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D42181F985AEE00952FD8 /* NavigationController.m */; };
 		E14D421C1F985B3D00952FD8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D421B1F985B3D00952FD8 /* BaseViewController.m */; };
 		E14D421F1F986F7000952FD8 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D421E1F986F7000952FD8 /* BaseNavigationController.m */; };
@@ -85,8 +85,6 @@
 		E11043931F7DF55600372F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E11043981F7DF55600372F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E11043991F7DF55600372F21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E11043B11F7DF6D700372F21 /* MarqueeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarqueeDemo.h; sourceTree = "<group>"; };
-		E11043B21F7DF6D700372F21 /* MarqueeDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarqueeDemo.m; sourceTree = "<group>"; };
 		E11043ED1F7DF73900372F21 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		E11043EE1F7DF73900372F21 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
 		E11043F01F7DF73900372F21 /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -102,6 +100,16 @@
 		E11044051F7DFDD000372F21 /* TestClassList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TestClassList.plist; sourceTree = "<group>"; };
 		E11044071F7E006000372F21 /* UITableViewCell+FastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FastCell.h"; sourceTree = "<group>"; };
 		E11044081F7E006000372F21 /* UITableViewCell+FastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FastCell.m"; sourceTree = "<group>"; };
+		E1167B0D1F98B51A0092E190 /* MarqueeDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeDemo.h; sourceTree = "<group>"; };
+		E1167B0E1F98B51A0092E190 /* MarqueeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeDemo.m; sourceTree = "<group>"; };
+		E1167B101F98B51A0092E190 /* CyclePagerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CyclePagerViewCell.h; sourceTree = "<group>"; };
+		E1167B111F98B51A0092E190 /* CyclePagerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CyclePagerViewCell.m; sourceTree = "<group>"; };
+		E1167B121F98B51A0092E190 /* CyclePagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CyclePagerViewController.h; sourceTree = "<group>"; };
+		E1167B131F98B51A0092E190 /* CyclePagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CyclePagerViewController.m; sourceTree = "<group>"; };
+		E1167B151F98B51A0092E190 /* CountdownVCDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownVCDemo.h; sourceTree = "<group>"; };
+		E1167B161F98B51A0092E190 /* CountdownVCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownVCDemo.m; sourceTree = "<group>"; };
+		E1167B181F98B51A0092E190 /* RealReachabilityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealReachabilityController.h; sourceTree = "<group>"; };
+		E1167B191F98B51A0092E190 /* RealReachabilityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealReachabilityController.m; sourceTree = "<group>"; };
 		E1209EE71F95A226006E6D86 /* TYCyclePagerTransformLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerTransformLayout.h; sourceTree = "<group>"; };
 		E1209EE81F95A226006E6D86 /* TYCyclePagerTransformLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerTransformLayout.m; sourceTree = "<group>"; };
 		E1209EE91F95A226006E6D86 /* TYCyclePagerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerView.h; sourceTree = "<group>"; };
@@ -149,8 +157,6 @@
 		E1209F221F95EF56006E6D86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E1209F231F95EF56006E6D86 /* RealReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealReachability.h; sourceTree = "<group>"; };
 		E1209F241F95EF56006E6D86 /* RealReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealReachability.m; sourceTree = "<group>"; };
-		E1209F311F95EFEF006E6D86 /* RealReachabilityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealReachabilityController.h; sourceTree = "<group>"; };
-		E1209F321F95EFEF006E6D86 /* RealReachabilityController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealReachabilityController.m; sourceTree = "<group>"; };
 		E1415D451F973F6C00390C4D /* SCTouchDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTouchDetector.h; sourceTree = "<group>"; };
 		E1415D461F973F6C00390C4D /* SCTouchDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTouchDetector.m; sourceTree = "<group>"; };
 		E1415D481F973F8200390C4D /* SCVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVideoPlayerViewController.m; sourceTree = "<group>"; };
@@ -168,12 +174,6 @@
 		E1415D5A1F97581D00390C4D /* SCWatermarkOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWatermarkOverlayView.m; sourceTree = "<group>"; };
 		E142B9871F946639002EAEF7 /* UIButton+Countdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Countdown.h"; sourceTree = "<group>"; };
 		E142B9881F946639002EAEF7 /* UIButton+Countdown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Countdown.m"; sourceTree = "<group>"; };
-		E142B98A1F946746002EAEF7 /* CountdownVCDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownVCDemo.h; sourceTree = "<group>"; };
-		E142B98B1F946746002EAEF7 /* CountdownVCDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountdownVCDemo.m; sourceTree = "<group>"; };
-		E142B9981F9484BD002EAEF7 /* CyclePagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CyclePagerViewController.h; sourceTree = "<group>"; };
-		E142B9991F9484BD002EAEF7 /* CyclePagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CyclePagerViewController.m; sourceTree = "<group>"; };
-		E142B9AB1F9488E5002EAEF7 /* CyclePagerViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CyclePagerViewCell.h; sourceTree = "<group>"; };
-		E142B9AC1F9488E5002EAEF7 /* CyclePagerViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CyclePagerViewCell.m; sourceTree = "<group>"; };
 		E14D42171F985AEE00952FD8 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		E14D42181F985AEE00952FD8 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		E14D421A1F985B3D00952FD8 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -279,18 +279,13 @@
 		E11043B01F7DF6BC00372F21 /* Page */ = {
 			isa = PBXGroup;
 			children = (
-				E11043B11F7DF6D700372F21 /* MarqueeDemo.h */,
-				E11043B21F7DF6D700372F21 /* MarqueeDemo.m */,
-				E142B98A1F946746002EAEF7 /* CountdownVCDemo.h */,
-				E142B98B1F946746002EAEF7 /* CountdownVCDemo.m */,
-				E142B9981F9484BD002EAEF7 /* CyclePagerViewController.h */,
-				E142B9991F9484BD002EAEF7 /* CyclePagerViewController.m */,
-				E142B9AB1F9488E5002EAEF7 /* CyclePagerViewCell.h */,
-				E142B9AC1F9488E5002EAEF7 /* CyclePagerViewCell.m */,
-				E1209F311F95EFEF006E6D86 /* RealReachabilityController.h */,
-				E1209F321F95EFEF006E6D86 /* RealReachabilityController.m */,
+				E1167B141F98B51A0092E190 /* 计时器 */,
+				E1167B0F1F98B51A0092E190 /* 轮播 */,
+				E1167B0C1F98B51A0092E190 /* 跑马灯 */,
+				E1167B171F98B51A0092E190 /* 网络检测 */,
 				E1415D441F973F5400390C4D /* SCRecorder(音视频录制) */,
 				E14D42161F98596900952FD8 /* 导航栏 */,
+				E1167B1F1F98B57B0092E190 /* 等待提示器 */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -379,6 +374,51 @@
 				E11044001F7DF73900372F21 /* AYTextView.m */,
 			);
 			path = UITextView;
+			sourceTree = "<group>";
+		};
+		E1167B0C1F98B51A0092E190 /* 跑马灯 */ = {
+			isa = PBXGroup;
+			children = (
+				E1167B0D1F98B51A0092E190 /* MarqueeDemo.h */,
+				E1167B0E1F98B51A0092E190 /* MarqueeDemo.m */,
+			);
+			path = "跑马灯";
+			sourceTree = "<group>";
+		};
+		E1167B0F1F98B51A0092E190 /* 轮播 */ = {
+			isa = PBXGroup;
+			children = (
+				E1167B101F98B51A0092E190 /* CyclePagerViewCell.h */,
+				E1167B111F98B51A0092E190 /* CyclePagerViewCell.m */,
+				E1167B121F98B51A0092E190 /* CyclePagerViewController.h */,
+				E1167B131F98B51A0092E190 /* CyclePagerViewController.m */,
+			);
+			path = "轮播";
+			sourceTree = "<group>";
+		};
+		E1167B141F98B51A0092E190 /* 计时器 */ = {
+			isa = PBXGroup;
+			children = (
+				E1167B151F98B51A0092E190 /* CountdownVCDemo.h */,
+				E1167B161F98B51A0092E190 /* CountdownVCDemo.m */,
+			);
+			path = "计时器";
+			sourceTree = "<group>";
+		};
+		E1167B171F98B51A0092E190 /* 网络检测 */ = {
+			isa = PBXGroup;
+			children = (
+				E1167B181F98B51A0092E190 /* RealReachabilityController.h */,
+				E1167B191F98B51A0092E190 /* RealReachabilityController.m */,
+			);
+			path = "网络检测";
+			sourceTree = "<group>";
+		};
+		E1167B1F1F98B57B0092E190 /* 等待提示器 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "等待提示器";
 			sourceTree = "<group>";
 		};
 		E1209EE51F95A226006E6D86 /* 3rdLib */ = {
@@ -719,7 +759,6 @@
 				E1209F031F95A25C006E6D86 /* UIColor+Separate.m in Sources */,
 				E1209F021F95A254006E6D86 /* SXMarquee.m in Sources */,
 				E1209F011F95A24E006E6D86 /* SXHeadLine.m in Sources */,
-				E1209F331F95EFEF006E6D86 /* RealReachabilityController.m in Sources */,
 				E1415D511F973F8B00390C4D /* SCRecorderViewController.m in Sources */,
 				E1415D521F973F8B00390C4D /* SCEditVideoViewController.m in Sources */,
 				E1209F001F95A248006E6D86 /* SXColorLabel.m in Sources */,
@@ -728,16 +767,18 @@
 				E14D42461F98810300952FD8 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				E1209EFD1F95A238006E6D86 /* TYCyclePagerView.m in Sources */,
 				E1209EFC1F95A232006E6D86 /* TYCyclePagerTransformLayout.m in Sources */,
+				E1167B1C1F98B51A0092E190 /* CyclePagerViewController.m in Sources */,
 				E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */,
 				E14D421F1F986F7000952FD8 /* BaseNavigationController.m in Sources */,
 				E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */,
 				E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */,
 				E1415D5B1F97581D00390C4D /* SCWatermarkOverlayView.m in Sources */,
+				E1167B1D1F98B51A0092E190 /* CountdownVCDemo.m in Sources */,
 				E14D42191F985AEE00952FD8 /* NavigationController.m in Sources */,
 				E16762F81F8F6EF800F1076F /* AYMFMessageViewController.m in Sources */,
-				E142B9AD1F9488E5002EAEF7 /* CyclePagerViewCell.m in Sources */,
 				E14D42431F98810300952FD8 /* KMWeakObjectContainer.m in Sources */,
-				E142B99A1F9484BD002EAEF7 /* CyclePagerViewController.m in Sources */,
+				E1167B1A1F98B51A0092E190 /* MarqueeDemo.m in Sources */,
+				E1167B1E1F98B51A0092E190 /* RealReachabilityController.m in Sources */,
 				E16762F61F8F6EED00F1076F /* UIView+Extension.m in Sources */,
 				E16762F51F8F6EE500F1076F /* UITextView+Placeholder.m in Sources */,
 				E16762F41F8F6EDA00F1076F /* UIView+ViewTools.m in Sources */,
@@ -745,13 +786,12 @@
 				E14D42441F98810300952FD8 /* NSObject+KMNavigationBarTransition.m in Sources */,
 				E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */,
 				E110438F1F7DF55600372F21 /* ViewController.m in Sources */,
-				E11043B31F7DF6D700372F21 /* MarqueeDemo.m in Sources */,
 				E142B9891F946639002EAEF7 /* UIButton+Countdown.m in Sources */,
 				E110439A1F7DF55600372F21 /* main.m in Sources */,
 				E14D42451F98810300952FD8 /* UINavigationBar+KMNavigationBarTransition.m in Sources */,
+				E1167B1B1F98B51A0092E190 /* CyclePagerViewCell.m in Sources */,
 				E14D422B1F98727F00952FD8 /* NavigationControllerTest3.m in Sources */,
 				E110438C1F7DF55600372F21 /* AppDelegate.m in Sources */,
-				E142B98C1F946746002EAEF7 /* CountdownVCDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
