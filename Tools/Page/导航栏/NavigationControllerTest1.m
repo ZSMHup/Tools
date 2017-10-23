@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIView *navView;
+@property (nonatomic, strong) UIImageView *headImg;
 
 @end
 
@@ -30,6 +31,16 @@
     [super viewDidAppear:animated];
     [self setNavTransparent:YES];
     [self setNavBlackLine:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidLoad {
@@ -70,9 +81,10 @@
 
 - (void)addTableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStylePlain)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -64, self.view.frame.size.width, self.view.frame.size.height + 64) style:(UITableViewStylePlain)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.tableHeaderView = self.headImg;
         _tableView.tableFooterView = [UIView new];
         if (@available(iOS 11.0 ,*)) {
             _tableView.estimatedRowHeight = 0;
@@ -89,6 +101,14 @@
         _navView.backgroundColor = [UIColor blackColor];
         [self.view addSubview:_navView];
     }
+}
+
+- (UIImageView *)headImg {
+    if (!_headImg) {
+        _headImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 0, 200)];
+        _headImg.image = [UIImage imageNamed:@"4"];
+    }
+    return _headImg;
 }
 
 

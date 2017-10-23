@@ -38,5 +38,17 @@
 		<key>class</key>
 		<string>NavigationController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>等待提示器</string>
+		<key>class</key>
+		<string>WaitingForTipsController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>弹框</string>
+		<key>class</key>
+		<string>AlertViewController</string>
+	</dict>
 </array>
 </plist>

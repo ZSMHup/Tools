@@ -8,7 +8,7 @@
 
 #import "NavigationControllerTest2.h"
 #import "UITableViewCell+FastCell.h"
-
+#import "AlertView.h"
 @interface NavigationControllerTest2 ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -21,7 +21,6 @@
     [super viewWillAppear:animated];
     [self setNavTransparent:NO];
     [self setNavBlackLine:NO];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -33,6 +32,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addTableView];
+    
+    UIButton *titleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+//    titleBtn.backgroundColor = [UIColor redColor];
+    [titleBtn setTitle:@"title" forState:(UIControlStateNormal)];
+    [titleBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    [titleBtn addTarget:self action:@selector(titleBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
+    self.navigationItem.titleView = titleBtn;
+    
+}
+
+- (void)titleBtnClick {
+    [AlertView showAlertViewWithTitle:@"title" block:^(NSInteger index) {
+        
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

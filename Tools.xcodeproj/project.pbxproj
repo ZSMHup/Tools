@@ -19,6 +19,10 @@
 		E1167B1C1F98B51A0092E190 /* CyclePagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B131F98B51A0092E190 /* CyclePagerViewController.m */; };
 		E1167B1D1F98B51A0092E190 /* CountdownVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B161F98B51A0092E190 /* CountdownVCDemo.m */; };
 		E1167B1E1F98B51A0092E190 /* RealReachabilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B191F98B51A0092E190 /* RealReachabilityController.m */; };
+		E1167B281F98B68D0092E190 /* WaitingForTipsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B271F98B68D0092E190 /* WaitingForTipsController.m */; };
+		E1167B2B1F98B8050092E190 /* SVProgressHUDController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B2A1F98B8050092E190 /* SVProgressHUDController.m */; };
+		E1167B2F1F98C2260092E190 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B2E1F98C2260092E190 /* AlertViewController.m */; };
+		E1167B321F98C2770092E190 /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1167B311F98C2770092E190 /* AlertView.m */; };
 		E1209EFC1F95A232006E6D86 /* TYCyclePagerTransformLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EE81F95A226006E6D86 /* TYCyclePagerTransformLayout.m */; };
 		E1209EFD1F95A238006E6D86 /* TYCyclePagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EEA1F95A226006E6D86 /* TYCyclePagerView.m */; };
 		E1209EFE1F95A23E006E6D86 /* TYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E1209EEC1F95A226006E6D86 /* TYPageControl.m */; };
@@ -71,6 +75,7 @@
 		E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043FD1F7DF73900372F21 /* AYTextField.m */; };
 		E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E11044001F7DF73900372F21 /* AYTextView.m */; };
 		E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */ = {isa = PBXBuildFile; fileRef = E16762FD1F8F748100F1076F /* UIButton+Alignment.m */; };
+		E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +115,14 @@
 		E1167B161F98B51A0092E190 /* CountdownVCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownVCDemo.m; sourceTree = "<group>"; };
 		E1167B181F98B51A0092E190 /* RealReachabilityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealReachabilityController.h; sourceTree = "<group>"; };
 		E1167B191F98B51A0092E190 /* RealReachabilityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealReachabilityController.m; sourceTree = "<group>"; };
+		E1167B261F98B68D0092E190 /* WaitingForTipsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitingForTipsController.h; sourceTree = "<group>"; };
+		E1167B271F98B68D0092E190 /* WaitingForTipsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitingForTipsController.m; sourceTree = "<group>"; };
+		E1167B291F98B8050092E190 /* SVProgressHUDController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUDController.h; sourceTree = "<group>"; };
+		E1167B2A1F98B8050092E190 /* SVProgressHUDController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUDController.m; sourceTree = "<group>"; };
+		E1167B2D1F98C2260092E190 /* AlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		E1167B2E1F98C2260092E190 /* AlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
+		E1167B301F98C2770092E190 /* AlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
+		E1167B311F98C2770092E190 /* AlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
 		E1209EE71F95A226006E6D86 /* TYCyclePagerTransformLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerTransformLayout.h; sourceTree = "<group>"; };
 		E1209EE81F95A226006E6D86 /* TYCyclePagerTransformLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerTransformLayout.m; sourceTree = "<group>"; };
 		E1209EE91F95A226006E6D86 /* TYCyclePagerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerView.h; sourceTree = "<group>"; };
@@ -208,6 +221,8 @@
 		E14D42401F98810300952FD8 /* UIViewController+KMNavigationBarTransition_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KMNavigationBarTransition_internal.h"; sourceTree = "<group>"; };
 		E16762FC1F8F748100F1076F /* UIButton+Alignment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Alignment.h"; sourceTree = "<group>"; };
 		E16762FD1F8F748100F1076F /* UIButton+Alignment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Alignment.m"; sourceTree = "<group>"; };
+		E17913C61F99D717002FE1A6 /* CAKeyframeAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAKeyframeAnimationController.h; sourceTree = "<group>"; };
+		E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAKeyframeAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +301,7 @@
 				E1415D441F973F5400390C4D /* SCRecorder(音视频录制) */,
 				E14D42161F98596900952FD8 /* 导航栏 */,
 				E1167B1F1F98B57B0092E190 /* 等待提示器 */,
+				E1167B2C1F98C2030092E190 /* 弹框 */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -417,8 +433,23 @@
 		E1167B1F1F98B57B0092E190 /* 等待提示器 */ = {
 			isa = PBXGroup;
 			children = (
+				E1167B261F98B68D0092E190 /* WaitingForTipsController.h */,
+				E1167B271F98B68D0092E190 /* WaitingForTipsController.m */,
+				E1167B291F98B8050092E190 /* SVProgressHUDController.h */,
+				E1167B2A1F98B8050092E190 /* SVProgressHUDController.m */,
 			);
 			path = "等待提示器";
+			sourceTree = "<group>";
+		};
+		E1167B2C1F98C2030092E190 /* 弹框 */ = {
+			isa = PBXGroup;
+			children = (
+				E1167B2D1F98C2260092E190 /* AlertViewController.h */,
+				E1167B2E1F98C2260092E190 /* AlertViewController.m */,
+				E1167B301F98C2770092E190 /* AlertView.h */,
+				E1167B311F98C2770092E190 /* AlertView.m */,
+			);
+			path = "弹框";
 			sourceTree = "<group>";
 		};
 		E1209EE51F95A226006E6D86 /* 3rdLib */ = {
@@ -559,6 +590,8 @@
 				E14D42271F98727300952FD8 /* NavigationControllerTest2.m */,
 				E14D42291F98727F00952FD8 /* NavigationControllerTest3.h */,
 				E14D422A1F98727F00952FD8 /* NavigationControllerTest3.m */,
+				E17913C61F99D717002FE1A6 /* CAKeyframeAnimationController.h */,
+				E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */,
 			);
 			path = "导航栏";
 			sourceTree = "<group>";
@@ -748,6 +781,7 @@
 				E1209F291F95EF7E006E6D86 /* ReachStateLoading.m in Sources */,
 				E1209F281F95EF77006E6D86 /* ReachState.m in Sources */,
 				E1209F271F95EF71006E6D86 /* FSMStateUtil.m in Sources */,
+				E1167B321F98C2770092E190 /* AlertView.m in Sources */,
 				E1209F261F95EF6B006E6D86 /* FSMEngine.m in Sources */,
 				E1415D4A1F973F8200390C4D /* SCVideoPlayerViewController.m in Sources */,
 				E14D42481F98810300952FD8 /* UIViewController+KMNavigationBarTransition.m in Sources */,
@@ -760,6 +794,7 @@
 				E1209F021F95A254006E6D86 /* SXMarquee.m in Sources */,
 				E1209F011F95A24E006E6D86 /* SXHeadLine.m in Sources */,
 				E1415D511F973F8B00390C4D /* SCRecorderViewController.m in Sources */,
+				E1167B281F98B68D0092E190 /* WaitingForTipsController.m in Sources */,
 				E1415D521F973F8B00390C4D /* SCEditVideoViewController.m in Sources */,
 				E1209F001F95A248006E6D86 /* SXColorLabel.m in Sources */,
 				E1209EFF1F95A243006E6D86 /* SXColorGradientView.m in Sources */,
@@ -771,6 +806,7 @@
 				E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */,
 				E14D421F1F986F7000952FD8 /* BaseNavigationController.m in Sources */,
 				E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */,
+				E1167B2F1F98C2260092E190 /* AlertViewController.m in Sources */,
 				E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */,
 				E1415D5B1F97581D00390C4D /* SCWatermarkOverlayView.m in Sources */,
 				E1167B1D1F98B51A0092E190 /* CountdownVCDemo.m in Sources */,
@@ -781,8 +817,10 @@
 				E1167B1E1F98B51A0092E190 /* RealReachabilityController.m in Sources */,
 				E16762F61F8F6EED00F1076F /* UIView+Extension.m in Sources */,
 				E16762F51F8F6EE500F1076F /* UITextView+Placeholder.m in Sources */,
+				E1167B2B1F98B8050092E190 /* SVProgressHUDController.m in Sources */,
 				E16762F41F8F6EDA00F1076F /* UIView+ViewTools.m in Sources */,
 				E14D421C1F985B3D00952FD8 /* BaseViewController.m in Sources */,
+				E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */,
 				E14D42441F98810300952FD8 /* NSObject+KMNavigationBarTransition.m in Sources */,
 				E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */,
 				E110438F1F7DF55600372F21 /* ViewController.m in Sources */,

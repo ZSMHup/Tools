@@ -1,59 +1,47 @@
 //
-//  NavigationController.m
+//  WaitingForTipsController.m
 //  Tools
 //
 //  Created by 张书孟 on 2017/10/19.
 //  Copyright © 2017年 张书孟. All rights reserved.
 //
 
-#import "NavigationController.h"
-#import "NavigationControllerTest1.h"
-#import "NavigationControllerTest3.h"
+#import "WaitingForTipsController.h"
 #import "UITableViewCell+FastCell.h"
-#import "CAKeyframeAnimationController.h"
+#import "SVProgressHUDController.h"
 
-@interface NavigationController ()<UITableViewDelegate,UITableViewDataSource>
+@interface WaitingForTipsController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @end
 
-@implementation NavigationController
+@implementation WaitingForTipsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"next" style:UIBarButtonItemStylePlain target:self action:@selector(saveToCameraRoll)];
-    self.navigationItem.rightBarButtonItem = saveButton;
     [self addTableView];
-}
-
-- (void)saveToCameraRoll {
-    NavigationControllerTest1 *t1 = [[NavigationControllerTest1 alloc] init];
-    [self.navigationController pushViewController:t1 animated:YES];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView];
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"CABasicAnimation基础动画";
-    } else if (indexPath.row == 1) {
-        cell.textLabel.text = @"CAKeyframeAnimation基础动画";
+        cell.textLabel.text = @"SVProgressHUD";
     }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        NavigationControllerTest3 *test3 = [[NavigationControllerTest3 alloc] init];
-        [self.navigationController pushViewController:test3 animated:YES];
-    } else if (indexPath.row == 1) {
-        CAKeyframeAnimationController *test4 = [[CAKeyframeAnimationController alloc] init];
-        [self.navigationController pushViewController:test4 animated:YES];
+        SVProgressHUDController *sv = [[SVProgressHUDController alloc] init];
+        [self.navigationController pushViewController:sv animated:YES];
     }
+    
 }
 
 - (void)addTableView {
@@ -70,6 +58,8 @@
         [self.view addSubview:_tableView];
     }
 }
+
+
 
 
 @end
