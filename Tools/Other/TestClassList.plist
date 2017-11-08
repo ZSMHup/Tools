@@ -50,5 +50,11 @@
 		<key>class</key>
 		<string>AlertViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>ZFPlayer</string>
+		<key>class</key>
+		<string>PlayerViewController</string>
+	</dict>
 </array>
 </plist>

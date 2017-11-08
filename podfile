@@ -2,4 +2,5 @@ platform :ios, '7.0'
 target 'Tools' do
 pod 'SCRecorder'
 pod 'SVProgressHUD'
+pod 'ZFPlayer'
 end

@@ -1,15 +1,21 @@
 PODS:
+  - Masonry (1.1.0)
   - SCRecorder (2.7.0)
   - SVProgressHUD (2.1.2)
+  - ZFPlayer (2.1.5):
+    - Masonry
 
 DEPENDENCIES:
   - SCRecorder
   - SVProgressHUD
+  - ZFPlayer
 
 SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
-PODFILE CHECKSUM: b021b1341721aa5fb18b4d5613f481bb9750c4fd
+PODFILE CHECKSUM: 900e04baff3afb7bd21c23000e8298430aa3417f
 
 COCOAPODS: 1.2.1
