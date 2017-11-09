@@ -54,7 +54,7 @@
 		<key>name</key>
 		<string>ZFPlayer</string>
 		<key>class</key>
-		<string>PlayerViewController</string>
+		<string>VideoListViewController</string>
 	</dict>
 </array>
 </plist>

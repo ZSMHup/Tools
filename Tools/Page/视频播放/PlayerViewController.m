@@ -10,6 +10,7 @@
 #import <ZFPlayer/ZFPlayer.h>
 #import <Masonry/Masonry.h>
 #import "UINavigationController+ZFFullscreenPopGesture.h"
+#import "PlayerControlView.h"
 
 @interface PlayerViewController ()<ZFPlayerDelegate,ZFPlayerControlViewDelagate>
 
@@ -48,7 +49,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self.view addSubview:self.playerFatherView];
     [self.playerFatherView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view);
@@ -76,8 +76,8 @@
 - (ZFPlayerModel *)playerModel {
     if (!_playerModel) {
         _playerModel = [[ZFPlayerModel alloc] init];
-        _playerModel.title = @"这里设置视频标题";
-        _playerModel.videoURL = [NSURL URLWithString:@"http://7xqhmn.media1.z0.glb.clouddn.com/femorning-20161106.mp4"];
+        _playerModel.title = self.title;
+        _playerModel.videoURL = self.videoUrl;
         _playerModel.placeholderImage = [UIImage imageNamed:@"loading_bgView1"];
         _playerModel.fatherView = self.playerFatherView;
     }
@@ -87,7 +87,8 @@
 - (ZFPlayerView *)playerView {
     if (!_playerView) {
         _playerView = [[ZFPlayerView alloc] init];
-        [_playerView playerControlView:nil playerModel:self.playerModel];
+        PlayerControlView *cv = [[PlayerControlView alloc] init];
+        [_playerView playerControlView:cv playerModel:self.playerModel];
         // 设置代理
         _playerView.delegate = self;
     }

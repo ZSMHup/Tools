@@ -3,4 +3,5 @@ target 'Tools' do
 pod 'SCRecorder'
 pod 'SVProgressHUD'
 pod 'ZFPlayer'
+pod 'SDWebImage'
 end

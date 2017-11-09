@@ -10,4 +10,7 @@
 
 @interface PlayerViewController : BaseViewController
 
+@property (nonatomic, strong) NSURL *videoUrl;
+@property (nonatomic, copy) NSString *title;
+
 @end

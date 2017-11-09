@@ -1,21 +1,26 @@
 PODS:
   - Masonry (1.1.0)
   - SCRecorder (2.7.0)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
   - SVProgressHUD (2.1.2)
   - ZFPlayer (2.1.5):
     - Masonry
 
 DEPENDENCIES:
   - SCRecorder
+  - SDWebImage
   - SVProgressHUD
   - ZFPlayer
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
-PODFILE CHECKSUM: 900e04baff3afb7bd21c23000e8298430aa3417f
+PODFILE CHECKSUM: bfe7f1c4438c435644d0f7e397af399a22dc1d25
 
 COCOAPODS: 1.2.1

@@ -70,6 +70,7 @@
 		E14D42481F98810300952FD8 /* UIViewController+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D423F1F98810300952FD8 /* UIViewController+KMNavigationBarTransition.m */; };
 		E15ED6361FB2B59C00BC4D1D /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED6351FB2B59C00BC4D1D /* PlayerViewController.m */; };
 		E15ED63A1FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED6391FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.m */; };
+		E15ED63D1FB308B100BC4D1D /* PlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED63C1FB308B100BC4D1D /* PlayerControlView.m */; };
 		E16762F41F8F6EDA00F1076F /* UIView+ViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043F31F7DF73900372F21 /* UIView+ViewTools.m */; };
 		E16762F51F8F6EE500F1076F /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043EE1F7DF73900372F21 /* UITextView+Placeholder.m */; };
 		E16762F61F8F6EED00F1076F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043F11F7DF73900372F21 /* UIView+Extension.m */; };
@@ -77,6 +78,12 @@
 		E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043FD1F7DF73900372F21 /* AYTextField.m */; };
 		E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E11044001F7DF73900372F21 /* AYTextView.m */; };
 		E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */ = {isa = PBXBuildFile; fileRef = E16762FD1F8F748100F1076F /* UIButton+Alignment.m */; };
+		E16D8FDC1FB3E9EC00E142A5 /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FDB1FB3E9EC00E142A5 /* VideoListViewController.m */; };
+		E16D8FDF1FB3EE9400E142A5 /* PlayerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FDE1FB3EE9400E142A5 /* PlayerTableViewController.m */; };
+		E16D8FE11FB3F04900E142A5 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = E16D8FE01FB3F04900E142A5 /* videoData.json */; };
+		E16D8FE41FB3F26400E142A5 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FE31FB3F26400E142A5 /* VideoModel.m */; };
+		E16D8FE71FB3F36000E142A5 /* VideoResolution.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FE61FB3F36000E142A5 /* VideoResolution.m */; };
+		E16D8FEA1FB3F47400E142A5 /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FE91FB3F47400E142A5 /* PlayerTableViewCell.m */; };
 		E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */; };
 /* End PBXBuildFile section */
 
@@ -225,8 +232,21 @@
 		E15ED6351FB2B59C00BC4D1D /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		E15ED6381FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ZFFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		E15ED6391FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ZFFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		E15ED63B1FB308B100BC4D1D /* PlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerControlView.h; sourceTree = "<group>"; };
+		E15ED63C1FB308B100BC4D1D /* PlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerControlView.m; sourceTree = "<group>"; };
 		E16762FC1F8F748100F1076F /* UIButton+Alignment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Alignment.h"; sourceTree = "<group>"; };
 		E16762FD1F8F748100F1076F /* UIButton+Alignment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Alignment.m"; sourceTree = "<group>"; };
+		E16D8FDA1FB3E9EC00E142A5 /* VideoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListViewController.h; sourceTree = "<group>"; };
+		E16D8FDB1FB3E9EC00E142A5 /* VideoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListViewController.m; sourceTree = "<group>"; };
+		E16D8FDD1FB3EE9400E142A5 /* PlayerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewController.h; sourceTree = "<group>"; };
+		E16D8FDE1FB3EE9400E142A5 /* PlayerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewController.m; sourceTree = "<group>"; };
+		E16D8FE01FB3F04900E142A5 /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videoData.json; sourceTree = "<group>"; };
+		E16D8FE21FB3F26400E142A5 /* VideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
+		E16D8FE31FB3F26400E142A5 /* VideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
+		E16D8FE51FB3F36000E142A5 /* VideoResolution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoResolution.h; sourceTree = "<group>"; };
+		E16D8FE61FB3F36000E142A5 /* VideoResolution.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoResolution.m; sourceTree = "<group>"; };
+		E16D8FE81FB3F47400E142A5 /* PlayerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewCell.h; sourceTree = "<group>"; };
+		E16D8FE91FB3F47400E142A5 /* PlayerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewCell.m; sourceTree = "<group>"; };
 		E17913C61F99D717002FE1A6 /* CAKeyframeAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAKeyframeAnimationController.h; sourceTree = "<group>"; };
 		E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAKeyframeAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -634,8 +654,21 @@
 			isa = PBXGroup;
 			children = (
 				E15ED6371FB2D0E500BC4D1D /* ZFNavigationController */,
+				E16D8FDA1FB3E9EC00E142A5 /* VideoListViewController.h */,
+				E16D8FDB1FB3E9EC00E142A5 /* VideoListViewController.m */,
 				E15ED6341FB2B59C00BC4D1D /* PlayerViewController.h */,
 				E15ED6351FB2B59C00BC4D1D /* PlayerViewController.m */,
+				E16D8FDD1FB3EE9400E142A5 /* PlayerTableViewController.h */,
+				E16D8FDE1FB3EE9400E142A5 /* PlayerTableViewController.m */,
+				E15ED63B1FB308B100BC4D1D /* PlayerControlView.h */,
+				E15ED63C1FB308B100BC4D1D /* PlayerControlView.m */,
+				E16D8FE81FB3F47400E142A5 /* PlayerTableViewCell.h */,
+				E16D8FE91FB3F47400E142A5 /* PlayerTableViewCell.m */,
+				E16D8FE21FB3F26400E142A5 /* VideoModel.h */,
+				E16D8FE31FB3F26400E142A5 /* VideoModel.m */,
+				E16D8FE51FB3F36000E142A5 /* VideoResolution.h */,
+				E16D8FE61FB3F36000E142A5 /* VideoResolution.m */,
+				E16D8FE01FB3F04900E142A5 /* videoData.json */,
 			);
 			path = "视频播放";
 			sourceTree = "<group>";
@@ -733,6 +766,7 @@
 				E14D42411F98810300952FD8 /* Info.plist in Resources */,
 				E1415D581F97428500390C4D /* a_filter.cisf in Resources */,
 				E11043941F7DF55600372F21 /* Assets.xcassets in Resources */,
+				E16D8FE11FB3F04900E142A5 /* videoData.json in Resources */,
 				E11044061F7DFDD000372F21 /* TestClassList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,11 +828,13 @@
 			files = (
 				E1209F301F95EFB2006E6D86 /* RealReachability.m in Sources */,
 				E1209F2F1F95EFAC006E6D86 /* PingHelper.m in Sources */,
+				E16D8FE71FB3F36000E142A5 /* VideoResolution.m in Sources */,
 				E1209F2E1F95EF9E006E6D86 /* PingFoundation.m in Sources */,
 				E1209F2D1F95EF96006E6D86 /* ReachStateWWAN.m in Sources */,
 				E1209F2C1F95EF90006E6D86 /* ReachStateWIFI.m in Sources */,
 				E14D42281F98727300952FD8 /* NavigationControllerTest2.m in Sources */,
 				E14D42471F98810300952FD8 /* UIScrollView+KMNavigationBarTransition.m in Sources */,
+				E16D8FEA1FB3F47400E142A5 /* PlayerTableViewCell.m in Sources */,
 				E14D42421F98810300952FD8 /* KMSwizzle.m in Sources */,
 				E1209F2B1F95EF89006E6D86 /* ReachStateUnReachable.m in Sources */,
 				E14D42251F98726600952FD8 /* NavigationControllerTest1.m in Sources */,
@@ -821,9 +857,12 @@
 				E1209F011F95A24E006E6D86 /* SXHeadLine.m in Sources */,
 				E1415D511F973F8B00390C4D /* SCRecorderViewController.m in Sources */,
 				E1167B281F98B68D0092E190 /* WaitingForTipsController.m in Sources */,
+				E15ED63D1FB308B100BC4D1D /* PlayerControlView.m in Sources */,
+				E16D8FDC1FB3E9EC00E142A5 /* VideoListViewController.m in Sources */,
 				E1415D521F973F8B00390C4D /* SCEditVideoViewController.m in Sources */,
 				E1209F001F95A248006E6D86 /* SXColorLabel.m in Sources */,
 				E1209EFF1F95A243006E6D86 /* SXColorGradientView.m in Sources */,
+				E16D8FDF1FB3EE9400E142A5 /* PlayerTableViewController.m in Sources */,
 				E1209EFE1F95A23E006E6D86 /* TYPageControl.m in Sources */,
 				E14D42461F98810300952FD8 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				E1209EFD1F95A238006E6D86 /* TYCyclePagerView.m in Sources */,
@@ -850,6 +889,7 @@
 				E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */,
 				E14D42441F98810300952FD8 /* NSObject+KMNavigationBarTransition.m in Sources */,
 				E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */,
+				E16D8FE41FB3F26400E142A5 /* VideoModel.m in Sources */,
 				E110438F1F7DF55600372F21 /* ViewController.m in Sources */,
 				E142B9891F946639002EAEF7 /* UIButton+Countdown.m in Sources */,
 				E15ED63A1FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.m in Sources */,
