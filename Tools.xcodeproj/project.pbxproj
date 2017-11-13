@@ -85,6 +85,14 @@
 		E16D8FE71FB3F36000E142A5 /* VideoResolution.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FE61FB3F36000E142A5 /* VideoResolution.m */; };
 		E16D8FEA1FB3F47400E142A5 /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FE91FB3F47400E142A5 /* PlayerTableViewCell.m */; };
 		E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */; };
+		E1C68AD71FB5869200D24601 /* NetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AD41FB5869200D24601 /* NetworkCache.m */; };
+		E1C68AD81FB5869200D24601 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AD61FB5869200D24601 /* NetworkHelper.m */; };
+		E1C68ADB1FB586CC00D24601 /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68ADA1FB586CC00D24601 /* NetworkViewController.m */; };
+		E1C68ADF1FB58A4600D24601 /* NetworkRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68ADE1FB58A4600D24601 /* NetworkRequestManager.m */; };
+		E1C68AE21FB58B3500D24601 /* NetworkRequestCode.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AE11FB58B3500D24601 /* NetworkRequestCode.m */; };
+		E1C68AE51FB59AA800D24601 /* NetworkRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AE41FB59AA800D24601 /* NetworkRequestModel.m */; };
+		E1C68AE81FB5A6CF00D24601 /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AE71FB5A6CF00D24601 /* LiveListModel.m */; };
+		E1C68AEB1FB5AF0600D24601 /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AEA1FB5AF0600D24601 /* NetWorkRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -249,6 +257,22 @@
 		E16D8FE91FB3F47400E142A5 /* PlayerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewCell.m; sourceTree = "<group>"; };
 		E17913C61F99D717002FE1A6 /* CAKeyframeAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAKeyframeAnimationController.h; sourceTree = "<group>"; };
 		E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAKeyframeAnimationController.m; sourceTree = "<group>"; };
+		E1C68AD31FB5869200D24601 /* NetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCache.h; sourceTree = "<group>"; };
+		E1C68AD41FB5869200D24601 /* NetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCache.m; sourceTree = "<group>"; };
+		E1C68AD51FB5869200D24601 /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
+		E1C68AD61FB5869200D24601 /* NetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
+		E1C68AD91FB586CC00D24601 /* NetworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkViewController.h; sourceTree = "<group>"; };
+		E1C68ADA1FB586CC00D24601 /* NetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
+		E1C68ADD1FB58A4600D24601 /* NetworkRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkRequestManager.h; sourceTree = "<group>"; };
+		E1C68ADE1FB58A4600D24601 /* NetworkRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkRequestManager.m; sourceTree = "<group>"; };
+		E1C68AE01FB58B3500D24601 /* NetworkRequestCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkRequestCode.h; sourceTree = "<group>"; };
+		E1C68AE11FB58B3500D24601 /* NetworkRequestCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkRequestCode.m; sourceTree = "<group>"; };
+		E1C68AE31FB59AA800D24601 /* NetworkRequestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkRequestModel.h; sourceTree = "<group>"; };
+		E1C68AE41FB59AA800D24601 /* NetworkRequestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkRequestModel.m; sourceTree = "<group>"; };
+		E1C68AE61FB5A6CF00D24601 /* LiveListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveListModel.h; sourceTree = "<group>"; };
+		E1C68AE71FB5A6CF00D24601 /* LiveListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveListModel.m; sourceTree = "<group>"; };
+		E1C68AE91FB5AF0600D24601 /* NetWorkRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkRequest.h; sourceTree = "<group>"; };
+		E1C68AEA1FB5AF0600D24601 /* NetWorkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +344,7 @@
 		E11043B01F7DF6BC00372F21 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				E1C68AD11FB5869200D24601 /* NetworkHelper */,
 				E15ED6331FB2B57B00BC4D1D /* 视频播放 */,
 				E1167B141F98B51A0092E190 /* 计时器 */,
 				E1167B0F1F98B51A0092E190 /* 轮播 */,
@@ -693,6 +718,45 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		E1C68AD11FB5869200D24601 /* NetworkHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E1C68ADC1FB58A2200D24601 /* NetworkRequestManager */,
+				E1C68AD21FB5869200D24601 /* NetworkHelper */,
+				E1C68AD91FB586CC00D24601 /* NetworkViewController.h */,
+				E1C68ADA1FB586CC00D24601 /* NetworkViewController.m */,
+				E1C68AE61FB5A6CF00D24601 /* LiveListModel.h */,
+				E1C68AE71FB5A6CF00D24601 /* LiveListModel.m */,
+			);
+			path = NetworkHelper;
+			sourceTree = "<group>";
+		};
+		E1C68AD21FB5869200D24601 /* NetworkHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E1C68AD31FB5869200D24601 /* NetworkCache.h */,
+				E1C68AD41FB5869200D24601 /* NetworkCache.m */,
+				E1C68AD51FB5869200D24601 /* NetworkHelper.h */,
+				E1C68AD61FB5869200D24601 /* NetworkHelper.m */,
+			);
+			path = NetworkHelper;
+			sourceTree = "<group>";
+		};
+		E1C68ADC1FB58A2200D24601 /* NetworkRequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				E1C68ADD1FB58A4600D24601 /* NetworkRequestManager.h */,
+				E1C68ADE1FB58A4600D24601 /* NetworkRequestManager.m */,
+				E1C68AE91FB5AF0600D24601 /* NetWorkRequest.h */,
+				E1C68AEA1FB5AF0600D24601 /* NetWorkRequest.m */,
+				E1C68AE01FB58B3500D24601 /* NetworkRequestCode.h */,
+				E1C68AE11FB58B3500D24601 /* NetworkRequestCode.m */,
+				E1C68AE31FB59AA800D24601 /* NetworkRequestModel.h */,
+				E1C68AE41FB59AA800D24601 /* NetworkRequestModel.m */,
+			);
+			path = NetworkRequestManager;
+			sourceTree = "<group>";
+		};
 		F0E43B9EDAC796B281284F87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -853,6 +917,7 @@
 				E1415D531F973F8B00390C4D /* SCRecordSessionManager.m in Sources */,
 				E1209F041F95A261006E6D86 /* UIColor+Wonderful.m in Sources */,
 				E1209F031F95A25C006E6D86 /* UIColor+Separate.m in Sources */,
+				E1C68AE21FB58B3500D24601 /* NetworkRequestCode.m in Sources */,
 				E1209F021F95A254006E6D86 /* SXMarquee.m in Sources */,
 				E1209F011F95A24E006E6D86 /* SXHeadLine.m in Sources */,
 				E1415D511F973F8B00390C4D /* SCRecorderViewController.m in Sources */,
@@ -860,16 +925,22 @@
 				E15ED63D1FB308B100BC4D1D /* PlayerControlView.m in Sources */,
 				E16D8FDC1FB3E9EC00E142A5 /* VideoListViewController.m in Sources */,
 				E1415D521F973F8B00390C4D /* SCEditVideoViewController.m in Sources */,
+				E1C68ADB1FB586CC00D24601 /* NetworkViewController.m in Sources */,
+				E1C68AE81FB5A6CF00D24601 /* LiveListModel.m in Sources */,
 				E1209F001F95A248006E6D86 /* SXColorLabel.m in Sources */,
 				E1209EFF1F95A243006E6D86 /* SXColorGradientView.m in Sources */,
+				E1C68AD81FB5869200D24601 /* NetworkHelper.m in Sources */,
 				E16D8FDF1FB3EE9400E142A5 /* PlayerTableViewController.m in Sources */,
 				E1209EFE1F95A23E006E6D86 /* TYPageControl.m in Sources */,
+				E1C68ADF1FB58A4600D24601 /* NetworkRequestManager.m in Sources */,
 				E14D42461F98810300952FD8 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				E1209EFD1F95A238006E6D86 /* TYCyclePagerView.m in Sources */,
 				E1209EFC1F95A232006E6D86 /* TYCyclePagerTransformLayout.m in Sources */,
+				E1C68AEB1FB5AF0600D24601 /* NetWorkRequest.m in Sources */,
 				E1167B1C1F98B51A0092E190 /* CyclePagerViewController.m in Sources */,
 				E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */,
 				E14D421F1F986F7000952FD8 /* BaseNavigationController.m in Sources */,
+				E1C68AE51FB59AA800D24601 /* NetworkRequestModel.m in Sources */,
 				E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */,
 				E1167B2F1F98C2260092E190 /* AlertViewController.m in Sources */,
 				E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */,
@@ -887,6 +958,7 @@
 				E16762F41F8F6EDA00F1076F /* UIView+ViewTools.m in Sources */,
 				E14D421C1F985B3D00952FD8 /* BaseViewController.m in Sources */,
 				E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */,
+				E1C68AD71FB5869200D24601 /* NetworkCache.m in Sources */,
 				E14D42441F98810300952FD8 /* NSObject+KMNavigationBarTransition.m in Sources */,
 				E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */,
 				E16D8FE41FB3F26400E142A5 /* VideoModel.m in Sources */,

@@ -71,18 +71,18 @@
     [moveView.layer addAnimation:moveAnim forKey:@"moveAnim"];
     
     /**------------------------背景颜色变化动画--------------------------colorView-----------*/
-    UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(20, 240, 70, 70)];
-    colorView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:colorView];
-    
-    CABasicAnimation *colorAnim = [[CABasicAnimation alloc] init];
-    colorAnim.keyPath = @"backgroundColor";
-    colorAnim.fromValue = CFBridgingRelease([UIColor greenColor].CGColor);
-    colorAnim.toValue = CFBridgingRelease([UIColor orangeColor].CGColor);
-    colorAnim.autoreverses = YES;
-    colorAnim.duration = 1.5;
-    colorAnim.repeatCount = HUGE_VALF;
-    [colorView.layer addAnimation:colorAnim forKey:@"colorAnim"];
+//    UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(20, 240, 70, 70)];
+//    colorView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:colorView];
+//
+//    CABasicAnimation *colorAnim = [[CABasicAnimation alloc] init];
+//    colorAnim.keyPath = @"backgroundColor";
+//    colorAnim.fromValue = (id)([UIColor greenColor].CGColor);
+//    colorAnim.toValue = (id)([UIColor orangeColor].CGColor);
+//    colorAnim.autoreverses = YES;
+//    colorAnim.duration = 1.5;
+//    colorAnim.repeatCount = HUGE_VALF;
+//    [colorView.layer addAnimation:colorAnim forKey:@"colorAnim"];
     
     /**------------------------内容变化动画-------------------------------------*/
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(150, 240, 70, 70)];
@@ -91,8 +91,8 @@
     
     CABasicAnimation *contentsAnim = [[CABasicAnimation alloc] init];
     contentsAnim.keyPath = @"contents";
-    contentsAnim.fromValue = CFBridgingRelease([UIImage imageNamed:@"1"].CGImage);
-    contentsAnim.toValue = CFBridgingRelease([UIImage imageNamed:@"5"].CGImage);
+    contentsAnim.fromValue = (id)([UIImage imageNamed:@"1"].CGImage);
+    contentsAnim.toValue = (id)([UIImage imageNamed:@"5"].CGImage);
     contentsAnim.autoreverses = YES;
     contentsAnim.duration = 1.5;
     contentsAnim.repeatCount = HUGE_VALF;

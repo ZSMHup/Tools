@@ -56,5 +56,11 @@
 		<key>class</key>
 		<string>VideoListViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>网络请求测试</string>
+		<key>class</key>
+		<string>NetworkViewController</string>
+	</dict>
 </array>
 </plist>

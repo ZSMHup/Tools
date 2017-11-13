@@ -33,8 +33,12 @@
         self.title = value;
     } else if ([key isEqualToString:@"playUrl"]) {
         self.playUrl = value;
+    } else if ([key isEqualToString:@"coverForSharing"]) {
+        self.coverForSharing = value;
     } else if ([key isEqualToString:@"coverForFeed"]) {
         self.coverForFeed = value;
+    } else if ([key isEqualToString:@"icon"]) {
+        self.icon = value;
     }
     
 }

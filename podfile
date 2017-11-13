@@ -4,4 +4,8 @@ pod 'SCRecorder'
 pod 'SVProgressHUD'
 pod 'ZFPlayer'
 pod 'SDWebImage'
+pod 'AFNetworking'
+pod 'YYCache'
+pod 'YYModel'
+pod 'MJRefresh'
 end
