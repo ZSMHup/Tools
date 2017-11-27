@@ -6,10 +6,10 @@
 //  Copyright © 2017年 张书孟. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NetworkRequestModel.h"
 #import "VideoResolution.h"
 
-@interface VideoModel : NSObject
+@interface VideoModel : NetworkRequestModel
 
 /** 标题 */
 @property (nonatomic, copy) NSString *title;

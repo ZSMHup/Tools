@@ -63,7 +63,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView];
-    cell.textLabel.text = [NSString stringWithFormat:@"test %ld",indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"test %ld",(long)indexPath.row];
     return cell;
 }
 

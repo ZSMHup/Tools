@@ -10,8 +10,7 @@
 
 @interface AlertView : UIView
 
-+ (void)showAlertViewWithTitle:(NSString *)title block:(void(^)(NSInteger index))block;
-
++ (void)showAlertViewWithTitle:(NSString *)title content:(NSString *)content tips:(NSString *)tips block:(void (^)(NSInteger index))block;
 
 
 @end

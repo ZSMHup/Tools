@@ -10,4 +10,8 @@
 
 @implementation LiveListModel
 
++ (NSString *)bg_uniqueKey {
+    return @"liveId";
+}
+
 @end

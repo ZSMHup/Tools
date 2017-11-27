@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class LiveListModel;
+@class TwoModel;
 
 @interface NetWorkRequest : NSObject
 
@@ -16,5 +17,10 @@
                        responseCaches:(void (^)(LiveListModel *model))responseCaches
                               success:(void (^)(LiveListModel *model))success
                               failure:(void (^)(NSError *error))failure;
+
++ (void)requestAnalysListWithParameters:(NSDictionary *)parameters
+                         responseCaches:(void (^)(TwoModel *model))responseCaches
+                                success:(void (^)(TwoModel *model))success
+                                failure:(void (^)(NSError *error))failure;
 
 @end

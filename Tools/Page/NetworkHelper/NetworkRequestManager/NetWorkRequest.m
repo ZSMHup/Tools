@@ -9,6 +9,7 @@
 #import "NetWorkRequest.h"
 #import "NetworkRequestManager.h"
 #import "LiveListModel.h"
+#import "TwoModel.h"
 
 @implementation NetWorkRequest
 
@@ -24,6 +25,28 @@
         }
     } success:^(id responseObject) {
         LiveListModel *model = (LiveListModel *)responseObject;
+        if (success) {
+            success(model);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
++ (void)requestAnalysListWithParameters:(NSDictionary *)parameters
+                       responseCaches:(void (^)(TwoModel *model))responseCaches
+                              success:(void (^)(TwoModel *model))success
+                              failure:(void (^)(NSError *error))failure {
+    
+    [NetworkRequestManager postRequestWithParameters:parameters modelClass:[TwoModel class] responseCaches:^(id responseCache) {
+        TwoModel *model = (TwoModel *)responseCache;
+        if (responseCaches) {
+            responseCaches(model);
+        }
+    } success:^(id responseObject) {
+        TwoModel *model = (TwoModel *)responseObject;
         if (success) {
             success(model);
         }

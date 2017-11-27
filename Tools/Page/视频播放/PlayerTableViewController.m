@@ -33,6 +33,7 @@
 - (void)dealloc {
     NSLog(@"%@释放了",self.class);
 }
+
 // 页面消失时候
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -127,6 +128,7 @@
         _listtableView.delegate = self;
         _listtableView.dataSource = self;
         _listtableView.rowHeight = 350.0;
+        
         [self.view addSubview:_listtableView];
         [_listtableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.right.bottom.equalTo(self.view);

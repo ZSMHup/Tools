@@ -8,4 +8,7 @@ pod 'AFNetworking'
 pod 'YYCache'
 pod 'YYModel'
 pod 'MJRefresh'
+pod 'MBProgressHUD'
+pod 'CYLTabBarController'
+pod 'TZImagePickerController'
 end

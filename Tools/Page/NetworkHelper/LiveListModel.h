@@ -7,6 +7,7 @@
 //
 
 #import "NetworkRequestModel.h"
+#import "BGFMDB.h"
 
 @interface LiveListModel : NetworkRequestModel
 

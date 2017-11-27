@@ -16,18 +16,20 @@
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
     dispatch_source_set_timer(timer, dispatch_walltime(NULL, 0), 1.0 * NSEC_PER_SEC, 0);
+    __weak typeof(self) weakSelf = self;
     dispatch_source_set_event_handler(timer, ^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         if (tempSecond <= 1) {
             dispatch_source_cancel(timer);
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.enabled = YES;
-                [self setTitle:@"获取验证码" forState:UIControlStateNormal];
+                strongSelf.enabled = YES;
+                [strongSelf setTitle:@"获取验证码" forState:UIControlStateNormal];
             });
         } else {
             tempSecond--;
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.enabled = NO;
-                [self setTitle:[NSString stringWithFormat:@"%lds", (long)tempSecond] forState:UIControlStateNormal];
+                strongSelf.enabled = NO;
+                [strongSelf setTitle:[NSString stringWithFormat:@"%lds", (long)tempSecond] forState:UIControlStateNormal];
             });
         }
     });
@@ -40,18 +42,20 @@
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
     dispatch_source_set_timer(timer, dispatch_walltime(NULL, 0), 1.0 * NSEC_PER_SEC, 0);
+    __weak typeof(self) weakSelf = self;
     dispatch_source_set_event_handler(timer, ^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         if (tempSecond <= 1) {
             dispatch_source_cancel(timer);
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.enabled = YES;
-                [self setTitle:@"获取验证码" forState:UIControlStateNormal];
+                strongSelf.enabled = YES;
+                [strongSelf setTitle:@"获取验证码" forState:UIControlStateNormal];
             });
         } else {
             tempSecond--;
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.enabled = NO;
-                [self setTitle:[NSString stringWithFormat:@"%ld秒", (long)tempSecond] forState:UIControlStateNormal];
+                strongSelf.enabled = NO;
+                [strongSelf setTitle:[NSString stringWithFormat:@"%ld秒", (long)tempSecond] forState:UIControlStateNormal];
             });
         }
     });
@@ -64,18 +68,20 @@
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
     dispatch_source_set_timer(timer, dispatch_walltime(NULL, 0), 1.0 * NSEC_PER_SEC, 0);
+    __weak typeof(self) weakSelf = self;
     dispatch_source_set_event_handler(timer, ^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         if (tempSecond <= 1) {
             dispatch_source_cancel(timer);
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.enabled = YES;
+                strongSelf.enabled = YES;
                 block();
             });
         } else {
             tempSecond--;
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.enabled = NO;
-                [self setTitle:[NSString stringWithFormat:@"%lds", (long)tempSecond] forState:UIControlStateNormal];
+                strongSelf.enabled = NO;
+                [strongSelf setTitle:[NSString stringWithFormat:@"%lds", (long)tempSecond] forState:UIControlStateNormal];
             });
         }
     });
@@ -88,18 +94,20 @@
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
     dispatch_source_set_timer(timer, dispatch_walltime(NULL, 0), 1.0 * NSEC_PER_SEC, 0);
+    __weak typeof(self) weakSelf = self;
     dispatch_source_set_event_handler(timer, ^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         if (tempSecond <= 1) {
             dispatch_source_cancel(timer);
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.enabled = YES;
+                strongSelf.enabled = YES;
                 block();
             });
         } else {
             tempSecond--;
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.enabled = NO;
-                [self setTitle:[NSString stringWithFormat:@"%ld秒", (long)tempSecond] forState:UIControlStateNormal];
+                strongSelf.enabled = NO;
+                [strongSelf setTitle:[NSString stringWithFormat:@"%ld秒", (long)tempSecond] forState:UIControlStateNormal];
             });
         }
     });

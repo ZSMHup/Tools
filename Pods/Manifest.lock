@@ -14,13 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - CYLTabBarController (1.14.1)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.13)
   - SCRecorder (2.7.0)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
   - SVProgressHUD (2.1.2)
+  - TZImagePickerController (1.9.3)
   - YYCache (1.0.4)
   - YYModel (1.0.4)
   - ZFPlayer (2.1.5):
@@ -28,25 +31,31 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - CYLTabBarController
+  - MBProgressHUD
   - MJRefresh
   - SCRecorder
   - SDWebImage
   - SVProgressHUD
+  - TZImagePickerController
   - YYCache
   - YYModel
   - ZFPlayer
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CYLTabBarController: ec44b6e44166d9869fa649ce22bc728d107ecafc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: 56a28aa628c9895e97a518dabaecf70b18f92f32
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TZImagePickerController: 079ab986018c22793462e531045a75e366b18252
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
-PODFILE CHECKSUM: e23c905e29254fe8ecb062ef75e41a5e9f9f0082
+PODFILE CHECKSUM: 1e331c4dbfd099239056c24b79bbab97600e2663
 
 COCOAPODS: 1.2.1

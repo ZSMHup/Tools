@@ -24,18 +24,25 @@
 
 @implementation NetworkViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+    if (self.contentChanged) {
+        self.contentChanged();
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addTableView];
     [self.tableView.mj_header beginRefreshing];
-    
 }
 
 - (void)loadData {
     NSString *page = [NSString stringWithFormat:@"%ld",self.page];
     NSDictionary *dic = @{
                           @"requestCode":@"80003",
-                          @"user_id":@"36720",
+                          @"user_id":@"110430",
                           @"type":@"2",
                           @"limit":@"20",
                           @"page":page,
@@ -86,6 +93,7 @@
     UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView];
     LiveListModel *model = self.dataSource[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"test -- %@",model.subject];
+    cell.textLabel.numberOfLines = 0;
     return cell;
 }
 
@@ -96,7 +104,7 @@
         _tableView.dataSource = self;
         [self.view addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.right.bottom.equalTo(self.view);
+            make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 0, 64, 0));
         }];
         __weak typeof(self) weakSelf = self;
         _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

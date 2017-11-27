@@ -10,8 +10,10 @@
 #import "ViewController.h"
 #import "RealReachability.h"
 #import "BaseNavigationController.h"
+#import "TabBarController.h"
+#import "PlusButton.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -25,9 +27,17 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
+//    self.window = [[UIWindow alloc]init];
+//    self.window.frame = [UIScreen mainScreen].bounds;
+//    [PlusButton registerPlusButton];
+//    TabBarController *tabBarControllerConfig = [[TabBarController alloc] init];
+//    CYLTabBarController *tabBarController = tabBarControllerConfig.tabBarController;
+//    [self.window setRootViewController:tabBarController];
+//    tabBarController.delegate = self;
+//    [self.window makeKeyAndVisible];
+    
     //开启网络监测
     [GLobalRealReachability startNotifier];
-    
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     return YES;

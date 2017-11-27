@@ -62,5 +62,23 @@
 		<key>class</key>
 		<string>NetworkViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>BGFMDB</string>
+		<key>class</key>
+		<string>BGFMDBViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ScrollViewTableviewController</string>
+		<key>class</key>
+		<string>ScrollViewTableviewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>选择图片</string>
+		<key>class</key>
+		<string>SelectPictureViewController</string>
+	</dict>
 </array>
 </plist>

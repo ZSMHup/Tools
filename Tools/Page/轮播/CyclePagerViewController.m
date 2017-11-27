@@ -36,7 +36,7 @@
 - (void)loadData {
     NSMutableArray *datas = [NSMutableArray array];
     for (NSInteger i = 0; i < 5; i++) {
-        [datas addObject:[NSString stringWithFormat:@"%ld",i]];
+        [datas addObject:[NSString stringWithFormat:@"%ld",(long)i]];
     }
     _datas = [datas copy];
     _pageControl.numberOfPages = _datas.count;
@@ -74,12 +74,12 @@
 }
 
 - (void)pagerView:(TYCyclePagerView *)pageView didSelectedItemCell:(__kindof UICollectionViewCell *)cell atIndex:(NSInteger)index {
-    NSLog(@"点击了: %ld",index);
+    NSLog(@"点击了: %ld",(long)index);
 }
 
 - (void)pagerView:(TYCyclePagerView *)pageView didScrollFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
     _pageControl.currentPage = toIndex;
-    NSLog(@"%ld ->  %ld",fromIndex,toIndex);
+    NSLog(@"%ld ->  %ld",(long)fromIndex,(long)toIndex);
 }
 
 #pragma mark -- getter

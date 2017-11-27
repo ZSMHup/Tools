@@ -56,14 +56,16 @@
 }
 
 - (void)btn3Click:(UIButton *)sender {
+    __weak typeof(sender) weakSender = sender;
     [sender countdownWithSec:10 completion:^{
-        [sender setTitle:@"重新获取" forState:(UIControlStateNormal)];
+        [weakSender setTitle:@"重新获取" forState:(UIControlStateNormal)];
     }];
 }
 
 - (void)btn4Click:(UIButton *)sender {
+    __weak typeof(sender) weakSender = sender;
     [sender countdownWithSecond:10 completion:^{
-        [sender setTitle:@"重新获取" forState:(UIControlStateNormal)];
+        [weakSender setTitle:@"重新获取" forState:(UIControlStateNormal)];
     }];
 }
 

@@ -10,6 +10,13 @@
 
 @interface BaseViewController : UIViewController
 
+/**
+ *  在控制器内部的滚动视图, 大小变化时会回调该方法
+ */
+@property (nonatomic, copy) void(^contentChanged)(void);
+@property (nonatomic, weak) UIScrollView *scrollview;
+
+
 - (void)setNavTransparent:(BOOL)isTransparent;
 - (void)setNavBlackLine:(BOOL)showLine;
 

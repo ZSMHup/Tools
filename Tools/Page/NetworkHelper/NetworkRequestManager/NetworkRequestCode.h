@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define DevelopSever 1
-#define ProductSever 0
+#define DevelopSever 0
+#define ProductSever 1
 
 UIKIT_EXTERN NSString *const kApiPrefix;
 

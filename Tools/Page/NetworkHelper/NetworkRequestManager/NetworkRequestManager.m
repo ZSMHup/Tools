@@ -10,6 +10,8 @@
 #import "NetworkRequestCode.h"
 #import <YYModel/YYModel.h>
 #import "LiveListModel.h"
+#import "MBProgressHUD+NH.h"
+#define kWindow [UIApplication sharedApplication].delegate.window
 
 @implementation NetworkRequestManager
 
@@ -40,12 +42,14 @@
                                         success:(HttpRequestSuccess)success
                                         failure:(HttpRequestFailed)failure {
     
+//    [MBProgressHUD showMessage:@"loading..." ToView:kWindow];
+    
     NetworkRequestManager *manager = [[NetworkRequestManager alloc] init];
     parameter = [self configParameters:parameter];
     manager.modelClass = modelClass;
     
     return [NetworkHelper POST:kApiPrefix parameters:parameter responseCache:^(id responseCache) {
-    
+        
         if (responseCache) {
             id object = [manager convertToModel:[responseCache yy_modelToJSONString]];
             
@@ -54,11 +58,13 @@
             }
         }
     } success:^(id responseObject) {
+        [MBProgressHUD hideHUD];
         id object = [manager convertToModel:[responseObject yy_modelToJSONString]];
         if (success) {
             success(object);
         }
     } failure:^(NSError *error) {
+        [MBProgressHUD hideHUD];
         if (failure) {
             failure(error);
         }
@@ -68,7 +74,7 @@
 
 + (NSDictionary *)configParameters:(NSDictionary *)parameters {
     NSMutableDictionary *mDic = [NSMutableDictionary dictionary];
-    NSString *accessToken = @"efbbd7e4ed2c555318c433afb94e1f1f";
+    NSString *accessToken = @"7e5958a30295d4beab9e27ef8bdb5f";
     if (accessToken) {
         [mDic setObject:accessToken forKey:@"accessToken"];
     } else {
@@ -111,9 +117,7 @@
 - (NSDictionary *)dictionaryWithJSON:(NSString *)string {
     NSError *error = nil;
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-//    if (!data) {
-//        data = nil;
-//    }
+
     id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error];
     if (result != nil && error == nil) {
         return result;

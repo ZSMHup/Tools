@@ -27,7 +27,15 @@
 }
 
 - (void)btn1Click:(UIButton *)sender {
-    [AlertView showAlertViewWithTitle:@"提示弹框" block:^(NSInteger index) {
+//    [AlertView showAlertViewWithTitle:@"提示弹框提示弹框提示弹框提示弹框提示弹框提示弹框提示弹框提示弹框提示弹框提示弹框提示弹框" block:^(NSInteger index) {
+//        if (index == 0) {
+//            NSLog(@"取消");
+//        } else {
+//            NSLog(@"确定：%ld",index);
+//        }
+//    }];
+    
+    [AlertView showAlertViewWithTitle:@"标题" content:@"啦啦啦啦啦啦啦啦啦" tips:nil block:^(NSInteger index) {
         if (index == 0) {
             NSLog(@"取消");
         } else {
