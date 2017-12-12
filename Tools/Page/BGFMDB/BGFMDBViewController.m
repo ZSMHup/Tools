@@ -10,8 +10,10 @@
 #import "UITableViewCell+FastCell.h"
 #import "NetworkRequest.h"
 #import "LiveListModel.h"
+#import <QuickLook/QuickLook.h>
+#import "UIButton+Alignment.h"
 
-@interface BGFMDBViewController ()
+@interface BGFMDBViewController ()<QLPreviewControllerDelegate,QLPreviewControllerDataSource>
 @property (nonatomic, strong) UILabel *attTV;
 
 @end
@@ -20,20 +22,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self loadData];
-    [self testAttribute];
-//    UIButton *saveBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-//    saveBtn.backgroundColor = [UIColor redColor];
-//    [saveBtn setTitle:@"查询" forState:(UIControlStateNormal)];
-//    [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
-//    [self.view addSubview:saveBtn];
-////
-//    UIButton *deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 100, 100)];
-//    deleteBtn.backgroundColor = [UIColor redColor];
-//    [deleteBtn setTitle:@"删除" forState:(UIControlStateNormal)];
-//    [deleteBtn addTarget:self action:@selector(deleteBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
-//    [self.view addSubview:deleteBtn];
+//    [self testBGFMDB];
+//    [self testAttribute];
+    
+    UIButton *saveBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 56, 61)];
+    saveBtn.backgroundColor = [UIColor redColor];
+    [saveBtn setImage:[UIImage imageNamed:@"defaultUserIcon"] forState:(UIControlStateNormal)];
+    [saveBtn setTitle:@"查询" forState:(UIControlStateNormal)];
+    [saveBtn imageTitleVerticalAlignmentWithSpace:5];
+    [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:saveBtn];
+    
+//    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 100, 200)];
+//
+//    [self.view addSubview:v];
+//
+//    [self drawDashLine:v lineWidth:1 lineLength:5 lineSpacing:3 lineColor:[UIColor redColor] fillColor:[UIColor clearColor] cornerRadius:0];
+    
+    
+
 }
+
+
+/**
+ 虚线边框
+
+ @param lineView 需要虚线边框的View
+ @param lineWidth 边框宽度
+ @param lineLength 边框长度
+ @param lineSpacing 边框间距
+ @param lineColor 边框颜色
+ @param fillColor 填充颜色
+ @param cornerRadius 圆角
+ */
+- (void)drawDashLine:(UIView *)lineView lineWidth:(int)lineWidth lineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor fillColor:(UIColor *)fillColor cornerRadius:(int)cornerRadius {
+    CAShapeLayer *border = [CAShapeLayer layer];
+    //边框颜色
+    border.strokeColor = lineColor.CGColor;
+    //填充的颜色
+    border.fillColor = fillColor.CGColor;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:lineView.bounds cornerRadius:cornerRadius];
+    //设置路径
+    border.path = path.CGPath;
+    border.frame = lineView.bounds;
+    //边框的宽度
+    border.lineWidth = lineWidth;
+    //设置线条的样式
+//    border.lineCap = @"round";
+    //虚线的虚线长度与间隔
+    border.lineDashPattern = @[@(lineLength), @(lineSpacing)];
+    [lineView.layer addSublayer:border];
+}
+
+
+
 
 - (void)loadData {
     
@@ -51,8 +93,10 @@
 }
 
 - (void)saveBtnClick {
-    NSArray *model = [LiveListModel bg_findAll];
-    NSLog(@"%@",model);
+//    NSArray *model = [LiveListModel bg_findAll];
+//    NSLog(@"%@",model);
+    
+    [self testReaderPDF];
 }
 
 - (void)deleteBtnClick {
@@ -156,6 +200,39 @@
 //    [attrStr addAttribute:NSBaselineOffsetAttributeName value:@(50) range:range];
     
     self.attTV.attributedText = attrStr;
+}
+
+- (void)testBGFMDB {
+    [self loadData];
+    UIButton *saveBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    saveBtn.backgroundColor = [UIColor redColor];
+    [saveBtn setTitle:@"查询" forState:(UIControlStateNormal)];
+    [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:saveBtn];
+//
+    UIButton *deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 100, 100)];
+    deleteBtn.backgroundColor = [UIColor redColor];
+    [deleteBtn setTitle:@"删除" forState:(UIControlStateNormal)];
+    [deleteBtn addTarget:self action:@selector(deleteBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:deleteBtn];
+}
+
+- (void)testReaderPDF {
+    QLPreviewController * qlPreview = [[QLPreviewController alloc]init];
+    qlPreview.dataSource = self; //需要打开的文件的信息要实现dataSource中的方法
+    qlPreview.delegate = self;  //视图显示的控制
+    [self presentViewController:qlPreview animated:YES completion:nil];
+}
+
+-(NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller
+{
+    return 1; //需要显示的文件的个数
+}
+-(id<QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index
+{
+    //返回要打开文件的地址，包括网络或者本地的地址
+    NSURL *url = [NSURL URLWithString:@"http://web.touyanshe.com.cn/touyanshe_web/outImages/20171127/20171127_8959205.pdf"];
+    return url;
 }
 
 

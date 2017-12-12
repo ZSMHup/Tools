@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray <LiveListModel *> *dataSource;
 @property (nonatomic, assign) NSInteger page;
+@property (nonatomic, strong) UIView *footerView;
 
 @end
 
@@ -36,6 +37,9 @@
     [super viewDidLoad];
     [self addTableView];
     [self.tableView.mj_header beginRefreshing];
+    
+    self.footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    self.footerView.backgroundColor = [UIColor redColor];
 }
 
 - (void)loadData {
@@ -50,10 +54,11 @@
                           };
     [NetWorkRequest requestLiveListWithParameters:dic responseCaches:^(LiveListModel *model) {
         if ([self.tableView.mj_header isRefreshing]) {
-            [self.tableView.mj_header endRefreshing];
+//            [self.tableView.mj_header endRefreshing];
             if ([model success]) {
                 self.dataSource = [model.responseResultList mutableCopy];
             }
+//            self.tableView.tableFooterView = nil;
         } else {
             if ([model success]) {
                 [self.dataSource addObjectsFromArray:[model.responseResultList mutableCopy]];
@@ -67,15 +72,18 @@
             if ([model success]) {
                 self.dataSource = [model.responseResultList mutableCopy];
             }
+            self.tableView.tableFooterView = nil;
         }
         if ([self.tableView.mj_footer isRefreshing]) {
             [self.tableView.mj_footer endRefreshing];
             if (model.responseResultList.count == 0) {
                 [self.tableView.mj_footer endRefreshingWithNoMoreData];
+                self.tableView.tableFooterView = self.footerView;
             } else {
                 if ([model success]) {
                     [self.dataSource addObjectsFromArray:[model.responseResultList mutableCopy]];
                 }
+                self.tableView.tableFooterView = nil;
             }
         }
         [self.tableView reloadData];
@@ -104,7 +112,7 @@
         _tableView.dataSource = self;
         [self.view addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 0, 64, 0));
+            make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
         __weak typeof(self) weakSelf = self;
         _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

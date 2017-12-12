@@ -74,7 +74,7 @@
 
 + (NSDictionary *)configParameters:(NSDictionary *)parameters {
     NSMutableDictionary *mDic = [NSMutableDictionary dictionary];
-    NSString *accessToken = @"7e5958a30295d4beab9e27ef8bdb5f";
+    NSString *accessToken = @"e1312ff6aadf383177dca4e47c979d22";
     if (accessToken) {
         [mDic setObject:accessToken forKey:@"accessToken"];
     } else {

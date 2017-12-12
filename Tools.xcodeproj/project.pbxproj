@@ -214,6 +214,7 @@
 		E1209F241F95EF56006E6D86 /* RealReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealReachability.m; sourceTree = "<group>"; };
 		E1391E051FC57CB6009DEE79 /* SelectPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectPictureViewController.h; sourceTree = "<group>"; };
 		E1391E061FC57CB6009DEE79 /* SelectPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectPictureViewController.m; sourceTree = "<group>"; };
+		E140B0341FCE455500F4558D /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		E1415D451F973F6C00390C4D /* SCTouchDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTouchDetector.h; sourceTree = "<group>"; };
 		E1415D461F973F6C00390C4D /* SCTouchDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTouchDetector.m; sourceTree = "<group>"; };
 		E1415D481F973F8200390C4D /* SCVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVideoPlayerViewController.m; sourceTree = "<group>"; };
@@ -368,6 +369,7 @@
 		2275C54257D90974EA3AEABD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E140B0341FCE455500F4558D /* QuickLook.framework */,
 				E19E2B761FBBF11100BEEA2C /* libsqlite3.tbd */,
 				D75A0273E9CCF4728241A80B /* libPods-Tools.a */,
 			);
