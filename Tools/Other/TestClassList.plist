@@ -80,5 +80,11 @@
 		<key>class</key>
 		<string>SelectPictureViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>左右切换控制器</string>
+		<key>class</key>
+		<string>PageViewController</string>
+	</dict>
 </array>
 </plist>
