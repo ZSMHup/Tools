@@ -82,6 +82,8 @@
 		E15BC7701FE0CE36001B25C1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC76F1FE0CE36001B25C1 /* FirstViewController.m */; };
 		E15BC7731FE0CE5C001B25C1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7721FE0CE5C001B25C1 /* SecondViewController.m */; };
 		E15BC7761FE0CE73001B25C1 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7751FE0CE73001B25C1 /* ThirdViewController.m */; };
+		E15BC7C81FE10DF6001B25C1 /* SwitchVCContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7C51FE10DF5001B25C1 /* SwitchVCContentView.m */; };
+		E15BC7C91FE10DF6001B25C1 /* TabPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7C71FE10DF5001B25C1 /* TabPageView.m */; };
 		E15ED6361FB2B59C00BC4D1D /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED6351FB2B59C00BC4D1D /* PlayerViewController.m */; };
 		E15ED63A1FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED6391FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.m */; };
 		E15ED63D1FB308B100BC4D1D /* PlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED63C1FB308B100BC4D1D /* PlayerControlView.m */; };
@@ -102,8 +104,6 @@
 		E16D8FEA1FB3F47400E142A5 /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FE91FB3F47400E142A5 /* PlayerTableViewCell.m */; };
 		E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */; };
 		E18844B81FDF86BA0012C2B1 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18844B71FDF86BA0012C2B1 /* PageViewController.m */; };
-		E18844BB1FDF88220012C2B1 /* SwitchVCContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E18844BA1FDF88220012C2B1 /* SwitchVCContentView.m */; };
-		E18844BE1FDF8BE80012C2B1 /* TabPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E18844BD1FDF8BE80012C2B1 /* TabPageView.m */; };
 		E19E2B771FBBF11100BEEA2C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E19E2B761FBBF11100BEEA2C /* libsqlite3.tbd */; };
 		E19E2BE51FBBF1F300BEEA2C /* BGDB.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E2BCD1FBBF1F300BEEA2C /* BGDB.m */; };
 		E19E2BE61FBBF1F300BEEA2C /* BGModelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E2BD11FBBF1F300BEEA2C /* BGModelInfo.m */; };
@@ -297,6 +297,10 @@
 		E15BC7721FE0CE5C001B25C1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E15BC7741FE0CE73001B25C1 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		E15BC7751FE0CE73001B25C1 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		E15BC7C41FE10DF5001B25C1 /* SwitchVCContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchVCContentView.h; sourceTree = "<group>"; };
+		E15BC7C51FE10DF5001B25C1 /* SwitchVCContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchVCContentView.m; sourceTree = "<group>"; };
+		E15BC7C61FE10DF5001B25C1 /* TabPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabPageView.h; sourceTree = "<group>"; };
+		E15BC7C71FE10DF5001B25C1 /* TabPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabPageView.m; sourceTree = "<group>"; };
 		E15ED6341FB2B59C00BC4D1D /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		E15ED6351FB2B59C00BC4D1D /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		E15ED6381FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ZFFullscreenPopGesture.h"; sourceTree = "<group>"; };
@@ -324,10 +328,6 @@
 		E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAKeyframeAnimationController.m; sourceTree = "<group>"; };
 		E18844B61FDF86BA0012C2B1 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		E18844B71FDF86BA0012C2B1 /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
-		E18844B91FDF88220012C2B1 /* SwitchVCContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchVCContentView.h; sourceTree = "<group>"; };
-		E18844BA1FDF88220012C2B1 /* SwitchVCContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchVCContentView.m; sourceTree = "<group>"; };
-		E18844BC1FDF8BE80012C2B1 /* TabPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabPageView.h; sourceTree = "<group>"; };
-		E18844BD1FDF8BE80012C2B1 /* TabPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabPageView.m; sourceTree = "<group>"; };
 		E19E2B761FBBF11100BEEA2C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		E19E2BCC1FBBF1F300BEEA2C /* BGDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGDB.h; sourceTree = "<group>"; };
 		E19E2BCD1FBBF1F300BEEA2C /* BGDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGDB.m; sourceTree = "<group>"; };
@@ -811,6 +811,17 @@
 			path = KMNavigationBarTransition;
 			sourceTree = "<group>";
 		};
+		E15BC7C31FE10DF5001B25C1 /* TabPageVC */ = {
+			isa = PBXGroup;
+			children = (
+				E15BC7C41FE10DF5001B25C1 /* SwitchVCContentView.h */,
+				E15BC7C51FE10DF5001B25C1 /* SwitchVCContentView.m */,
+				E15BC7C61FE10DF5001B25C1 /* TabPageView.h */,
+				E15BC7C71FE10DF5001B25C1 /* TabPageView.m */,
+			);
+			path = TabPageVC;
+			sourceTree = "<group>";
+		};
 		E15ED6331FB2B57B00BC4D1D /* 视频播放 */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,6 +877,7 @@
 		E18844B51FDF86930012C2B1 /* 左右切换控制器 */ = {
 			isa = PBXGroup;
 			children = (
+				E15BC7C31FE10DF5001B25C1 /* TabPageVC */,
 				E18844B61FDF86BA0012C2B1 /* PageViewController.h */,
 				E18844B71FDF86BA0012C2B1 /* PageViewController.m */,
 				E15BC76E1FE0CE36001B25C1 /* FirstViewController.h */,
@@ -876,10 +888,6 @@
 				E15BC7751FE0CE73001B25C1 /* ThirdViewController.m */,
 				E15BC76B1FE0BC40001B25C1 /* FourViewController.h */,
 				E15BC76C1FE0BC40001B25C1 /* FourViewController.m */,
-				E18844B91FDF88220012C2B1 /* SwitchVCContentView.h */,
-				E18844BA1FDF88220012C2B1 /* SwitchVCContentView.m */,
-				E18844BC1FDF8BE80012C2B1 /* TabPageView.h */,
-				E18844BD1FDF8BE80012C2B1 /* TabPageView.m */,
 			);
 			path = "左右切换控制器";
 			sourceTree = "<group>";
@@ -1133,12 +1141,13 @@
 				E14D42471F98810300952FD8 /* UIScrollView+KMNavigationBarTransition.m in Sources */,
 				E16D8FEA1FB3F47400E142A5 /* PlayerTableViewCell.m in Sources */,
 				E19E2BE81FBBF1F300BEEA2C /* NSCache+BGCache.m in Sources */,
+				E15BC7C91FE10DF6001B25C1 /* TabPageView.m in Sources */,
 				E1581C181FBADA0300650313 /* TabBarController.m in Sources */,
 				E1453D531FC4211E00E0FA82 /* ScrollViewTableviewController.m in Sources */,
 				E14D42421F98810300952FD8 /* KMSwizzle.m in Sources */,
 				E1209F2B1F95EF89006E6D86 /* ReachStateUnReachable.m in Sources */,
 				E14D42251F98726600952FD8 /* NavigationControllerTest1.m in Sources */,
-				E18844BE1FDF8BE80012C2B1 /* TabPageView.m in Sources */,
+				E15BC7C81FE10DF6001B25C1 /* SwitchVCContentView.m in Sources */,
 				E1209F2A1F95EF84006E6D86 /* ReachStateUnloaded.m in Sources */,
 				E1415D471F973F6C00390C4D /* SCTouchDetector.m in Sources */,
 				E1209F291F95EF7E006E6D86 /* ReachStateLoading.m in Sources */,
@@ -1213,7 +1222,6 @@
 				E14D421C1F985B3D00952FD8 /* BaseViewController.m in Sources */,
 				E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */,
 				E1C68AD71FB5869200D24601 /* NetworkCache.m in Sources */,
-				E18844BB1FDF88220012C2B1 /* SwitchVCContentView.m in Sources */,
 				E19E2BE51FBBF1F300BEEA2C /* BGDB.m in Sources */,
 				E14D42441F98810300952FD8 /* NSObject+KMNavigationBarTransition.m in Sources */,
 				E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */,
