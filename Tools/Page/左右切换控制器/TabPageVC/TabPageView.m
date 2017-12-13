@@ -169,9 +169,6 @@
             [UIView animateWithDuration:0.25 animations:^{
                 _tabLineView.frame = CGRectMake(kWidth / self.tabTitleArray.count * selectedIndex + 20, kHeight - _tabLineHeight, kWidth / _tabTitleArray.count - 40, _tabLineHeight);
             }];
-//            if (_index) {
-//                _index(i);
-//            }
         } else {
             _selectesTabBtn.backgroundColor = _tabBgColorNormal;
             [_selectesTabBtn setTitleColor:_titleColorNormal forState:(UIControlStateNormal)];

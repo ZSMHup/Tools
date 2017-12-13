@@ -25,7 +25,7 @@
 - (SwitchVCContentView *)contentView {
     if (!_contentView) {
         NSArray *controllers = @[@"FirstViewController",@"SecondViewController",@"ThirdViewController",@"FourViewController"];
-        _contentView = [[SwitchVCContentView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) titleArray:@[@"000",@"1111",@"22",@"33333"] controllersArray:controllers];
+        _contentView = [[SwitchVCContentView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 200) titleArray:@[@"000",@"1111",@"22",@"33333"] controllersArray:controllers];
     }
     return _contentView;
 }

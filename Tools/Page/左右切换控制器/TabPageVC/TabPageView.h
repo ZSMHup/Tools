@@ -39,12 +39,4 @@ typedef void(^selectIndex)(NSInteger index);
 - (instancetype)initWithFrame:(CGRect)frame titleArray:(NSArray *)titleArray;
 
 
-
-
-
-
-
-
-
-
 @end

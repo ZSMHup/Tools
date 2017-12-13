@@ -53,6 +53,7 @@
     self.tabPageView.selectedIndex = index;
     NSString *vc = self.controllersArray[index];
     
+    self.tabPageView.userInteractionEnabled = YES;
     if ([self.controllers containsObject: vc]) return;
     UIViewController *willShowVc = [[NSClassFromString(vc) alloc] init];
     if ([willShowVc isViewLoaded]) return;
@@ -73,6 +74,7 @@
         _tabPageView = [[TabPageView alloc] initWithFrame:CGRectMake(0, 0, kWidth, tabHeight) titleArray:self.titleArray];
         __weak typeof(self) weakSelf = self;
         _tabPageView.index = ^(NSInteger index) {
+            weakSelf.tabPageView.userInteractionEnabled = NO;
             if (index >= self.controllersArray.count) return ;
             if (weakSelf.scrollView) {
                 CGPoint offset = weakSelf.scrollView.contentOffset;
@@ -90,8 +92,8 @@
         _scrollView.backgroundColor = [UIColor whiteColor];
         _scrollView.contentSize = CGSizeMake(kWidth * self.controllersArray.count, 0);
         _scrollView.pagingEnabled = YES;
-//        _scrollView.showsVerticalScrollIndicator = NO;
-//        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.showsVerticalScrollIndicator = NO;
+        _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.delegate = self;
         [self addSubview:_scrollView];
     }
