@@ -7,11 +7,14 @@
 //
 
 #import "QRCodeScanningViewController.h"
+#import "QRCodeScanningSuccessVC.h"
+
 #import "QRCodeScanManager.h"
 #import "QRCodeScanningView.h"
+#import "QRCodeAlbumManager.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface QRCodeScanningViewController ()<QRCodeScanManagerDelegate>
+@interface QRCodeScanningViewController ()<QRCodeScanManagerDelegate, QRCodeAlbumManagerDelegate>
 
 @property (nonatomic, strong) QRCodeScanManager *manager;
 @property (nonatomic, strong) QRCodeScanningView *scanningView;
@@ -31,30 +34,29 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.scanningView addTimer];
-    [_manager resetSampleBufferDelegate];
+    [self.manager startRunning];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.scanningView removeTimer];
-    
-    [_manager cancelSampleBufferDelegate];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [_manager stopRunning];
-    [_manager videoPreviewLayerRemoveFromSuperlayer];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNavigationBar];
     [self setupQRCodeScanning];
     [self.view addSubview:self.scanningView];
     [self addFlashlightBtn];
 }
 
 #pragma mark - private
+
+- (void)setupNavigationBar {
+    self.navigationItem.title = @"扫一扫";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册" style:(UIBarButtonItemStyleDone) target:self action:@selector(rightBarButtonItenAction)];
+}
+
 - (void)setupQRCodeScanning {
     self.manager = [QRCodeScanManager shareQRCodeScanManager];
     NSArray *arr = @[AVMetadataObjectTypeQRCode, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
@@ -68,6 +70,7 @@
     [self.scanningView removeTimer];
     [self.scanningView removeFromSuperview];
     self.scanningView = nil;
+    [self.manager videoPreviewLayerRemoveFromSuperlayer];
 }
 
 - (void)flashlightBtnClick:(UIButton *)sender {
@@ -81,10 +84,20 @@
     }
 }
 
+- (void)rightBarButtonItenAction {
+    QRCodeAlbumManager *manager = [QRCodeAlbumManager shareQRCodeAlbumManager];
+    [manager readQRCodeFromAlbumWithCurrentController:self];
+    manager.delegate = self;
+
+    if (manager.isPHAuthorization == YES) {
+        [self.scanningView removeTimer];
+    }
+}
+
 #pragma mark - getter
 - (QRCodeScanningView *)scanningView {
     if (!_scanningView) {
-        _scanningView = [[QRCodeScanningView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        _scanningView = [[QRCodeScanningView alloc] initWithFrame:CGRectMake(0, -64, self.view.frame.size.width, self.view.frame.size.height)];
 //        _scanningView.scanningImageName = @"QRCodeScanningLineGrid";
 //        _scanningView.scanningAnimationStyle = ScanningAnimationStyleGrid;
 //        _scanningView.cornerColor = [UIColor orangeColor];
@@ -108,23 +121,35 @@
     if (metadataObjects != nil && metadataObjects.count > 0) {
         [scanManager palySoundName:@"sound.caf"];
         [scanManager stopRunning];
-        [scanManager videoPreviewLayerRemoveFromSuperlayer];
+//        [scanManager videoPreviewLayerRemoveFromSuperlayer];
         AVMetadataMachineReadableCodeObject *obj = metadataObjects[0];
         NSLog(@"stringValue: %@",obj.stringValue);
+        
+        QRCodeScanningSuccessVC *vc = [[QRCodeScanningSuccessVC alloc] init];
+        vc.urlString = obj.stringValue;
+        [self.navigationController pushViewController:vc animated:YES];
+        
     } else {
         NSLog(@"暂未识别出扫描的二维码");
     }
 }
 
-
-
-
-
-
-
-
-
-
-
+#pragma mark - - - SGQRCodeAlbumManagerDelegate
+- (void)QRCodeAlbumManagerDidCancelWithImagePickerController:(QRCodeAlbumManager *)albumManager {
+    NSLog(@"取消");
+}
+- (void)QRCodeAlbumManager:(QRCodeAlbumManager *)albumManager didFinishPickingMediaWithResult:(NSString *)result {
+    NSLog(@"result: %@",result);
+    
+    if (result) {
+        [self.manager stopRunning];
+        QRCodeScanningSuccessVC *vc = [[QRCodeScanningSuccessVC alloc] init];
+        vc.urlString = result;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        NSLog(@"未能识别");
+    }
+    
+}
 
 @end

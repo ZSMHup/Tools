@@ -33,12 +33,12 @@
 
 - (void)btnClick {
     TZImagePickerController *picker = [[TZImagePickerController alloc] initWithMaxImagesCount:1 delegate:self];
-    picker.allowCrop = YES;//是否允许裁剪
-    // 设置竖屏下的裁剪尺寸
-    NSInteger left = 0;
-    NSInteger widthHeight = self.view.frame.size.width;
-    NSInteger top = self.view.frame.size.height / 2 - (widthHeight * 9 / 16 / 2) ;
-    picker.cropRect = CGRectMake(left, top, widthHeight, widthHeight * 9 / 16);
+//    picker.allowCrop = YES;//是否允许裁剪
+//    // 设置竖屏下的裁剪尺寸
+//    NSInteger left = 0;
+//    NSInteger widthHeight = self.view.frame.size.width;
+//    NSInteger top = self.view.frame.size.height / 2 - (widthHeight * 9 / 16 / 2) ;
+//    picker.cropRect = CGRectMake(left, top, widthHeight, widthHeight * 9 / 16);
     __weak typeof(self) weakSelf = self;
     [picker setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
         weakSelf.imageView.image = photos[0];

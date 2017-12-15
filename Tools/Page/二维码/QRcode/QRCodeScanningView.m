@@ -164,7 +164,7 @@
     [rightBottomPath stroke];
 }
 
-#pragma mark - - - Public
+#pragma mark Public
 // 添加定时器
 - (void)addTimer {
     CGFloat scanninglineX = 0;
@@ -280,7 +280,7 @@
     return _scanningline;
 }
 
-#pragma mark - - - setter
+#pragma mark  setter
 - (void)setScanningAnimationStyle:(ScanningAnimationStyle)scanningAnimationStyle {
     _scanningAnimationStyle = scanningAnimationStyle;
 }
