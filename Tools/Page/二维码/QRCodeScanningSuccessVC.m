@@ -26,11 +26,10 @@
     _webView = [CommonWebView webViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _webView.isNavigationBarOrTranslucent = NO;
     _webView.delegate = self;
-    [self.view addSubview:_webView];
     [_webView loadRequestWithUrlString:self.urlString];
-    
 //    [_webView loadFileURL:self.urlString];
-//
+    [self.view addSubview:_webView];
+    
 }
 
 - (void)setupNavigationItem {

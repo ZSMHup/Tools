@@ -36,13 +36,13 @@
 }
 
 - (void)generateClick {
-    QRCodeGenerateViewController *generateVC = [[QRCodeGenerateViewController alloc] init];
-    generateVC.title = @"生成二维码";
-    [self.navigationController pushViewController:generateVC animated:YES];
+//    QRCodeGenerateViewController *generateVC = [[QRCodeGenerateViewController alloc] init];
+//    generateVC.title = @"生成二维码";
+//    [self.navigationController pushViewController:generateVC animated:YES];
     
-//    QRCodeScanningSuccessVC *vc = [[QRCodeScanningSuccessVC alloc] init];
-//    vc.urlString = @"http://www.jianshu.com/p/167620343089";
-//    [self.navigationController pushViewController:vc animated:YES];
+    QRCodeScanningSuccessVC *vc = [[QRCodeScanningSuccessVC alloc] init];
+    vc.urlString = @"http://www.jianshu.com/p/167620343089";
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 

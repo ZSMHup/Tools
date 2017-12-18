@@ -108,7 +108,6 @@
 		E15BC8181FE12EC2001B25C1 /* GXTabMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC8101FE12EC2001B25C1 /* GXTabMenuView.m */; };
 		E15BC8191FE12EC2001B25C1 /* GXTabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC8121FE12EC2001B25C1 /* GXTabScrollView.m */; };
 		E15D38451FE3768700305810 /* CommonWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D38441FE3768700305810 /* CommonWebView.m */; };
-		E15D38471FE3999E00305810 /* 投研社接口文档_1.0.0.23.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E15D38461FE3999E00305810 /* 投研社接口文档_1.0.0.23.pdf */; };
 		E15D38501FE3BCD500305810 /* HSDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D384A1FE3BCD500305810 /* HSDownloadManager.m */; };
 		E15D38511FE3BCD500305810 /* HSSessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D384C1FE3BCD500305810 /* HSSessionModel.m */; };
 		E15D38521FE3BCD500305810 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D384F1FE3BCD500305810 /* NSString+Hash.m */; };
@@ -371,7 +370,6 @@
 		E15BC8121FE12EC2001B25C1 /* GXTabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXTabScrollView.m; sourceTree = "<group>"; };
 		E15D38431FE3768700305810 /* CommonWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonWebView.h; sourceTree = "<group>"; };
 		E15D38441FE3768700305810 /* CommonWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonWebView.m; sourceTree = "<group>"; };
-		E15D38461FE3999E00305810 /* 投研社接口文档_1.0.0.23.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "投研社接口文档_1.0.0.23.pdf"; sourceTree = "<group>"; };
 		E15D38491FE3BCD500305810 /* HSDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSDownloadManager.h; sourceTree = "<group>"; };
 		E15D384A1FE3BCD500305810 /* HSDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSDownloadManager.m; sourceTree = "<group>"; };
 		E15D384B1FE3BCD500305810 /* HSSessionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSSessionModel.h; sourceTree = "<group>"; };
@@ -520,7 +518,6 @@
 				E11043981F7DF55600372F21 /* Info.plist */,
 				E11043991F7DF55600372F21 /* main.m */,
 				E11044051F7DFDD000372F21 /* TestClassList.plist */,
-				E15D38461FE3999E00305810 /* 投研社接口文档_1.0.0.23.pdf */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1241,7 +1238,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E14D42411F98810300952FD8 /* Info.plist in Resources */,
-				E15D38471FE3999E00305810 /* 投研社接口文档_1.0.0.23.pdf in Resources */,
 				E1415D581F97428500390C4D /* a_filter.cisf in Resources */,
 				E11043941F7DF55600372F21 /* Assets.xcassets in Resources */,
 				E1486A241FE26FF10041BFAF /* QRCodeScanningLine@2x.png in Resources */,
