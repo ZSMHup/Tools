@@ -424,7 +424,7 @@ static FileDownloadManager *_downloadManager;
     FileSessionModel *sessionModel = [self getSessionModel:task.taskIdentifier];
     if (!sessionModel) return;
     
-    if ([self isCompletion:sessionModel.url fileName:nil]) {
+    if ([self isCompletion:sessionModel.url fileName:self.fileName]) {
         // 下载完成
         sessionModel.stateBlock(DownloadStateCompleted);
     } else if (error){
