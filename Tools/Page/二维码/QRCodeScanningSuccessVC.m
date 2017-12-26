@@ -27,7 +27,7 @@
     _webView.isNavigationBarOrTranslucent = NO;
     _webView.delegate = self;
     [_webView loadRequestWithUrlString:self.urlString];
-//    [_webView loadFileURL:self.urlString];
+//    [_webView loadFileName:@"BAHome.html"];
     [self.view addSubview:_webView];
     
 }

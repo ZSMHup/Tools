@@ -76,16 +76,16 @@
 /**
  加载本地资源
 
- @param fileURL 该资源的路径
+ @param fileName 该资源的名称（一定要加后缀）
  */
-- (void)loadFileURL:(NSString *)fileURL;
+- (void)loadFileName:(NSString *)fileName;
 
 /**
  加载 HTML
 
  @param HTMLString HTMLString
  */
-- (void)loadHTMLString:(NSString *)HTMLString;
+//- (void)loadHTMLString:(NSString *)HTMLString;
 
 /**
  刷新数据

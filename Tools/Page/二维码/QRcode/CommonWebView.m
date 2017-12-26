@@ -69,8 +69,10 @@ static CGFloat const progressViewHeight = 2;
 }
 
 // 加载本地资源
-- (void)loadFileURL:(NSString *)fileURL {
-    NSString *readAccessToURL = [fileURL stringByDeletingLastPathComponent];
+- (void)loadFileName:(NSString *)fileName {
+    
+    NSString *fileURL = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
+    NSString *readAccessToURL = [fileURL stringByDeletingLastPathComponent]; // 获取上一级路径
     if (@available(iOS 9.0, *)) {
         [self.wkWebView loadFileURL:[NSURL fileURLWithPath:fileURL] allowingReadAccessToURL:[NSURL fileURLWithPath:readAccessToURL]];
     } else { // 9.0以下
@@ -85,10 +87,10 @@ static CGFloat const progressViewHeight = 2;
     }
 }
 
-// 加载 HTML
-- (void)loadHTMLString:(NSString *)HTMLString {
-    [self.wkWebView loadHTMLString:HTMLString baseURL:nil];
-}
+//// 加载 HTML
+//- (void)loadHTMLString:(NSString *)HTMLString {
+//    [self.wkWebView loadHTMLString:HTMLString baseURL:nil];
+//}
 
 // 刷新数据
 - (void)reloadData {
