@@ -14,9 +14,9 @@
 
 @implementation BaseViewController
 
-- (void)dealloc {
-    NSLog(@"%@ dealloc",self.class);
-}
+//- (void)dealloc {
+//    NSLog(@"%@ dealloc",self.class);
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

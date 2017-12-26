@@ -92,5 +92,11 @@
 		<key>class</key>
 		<string>QRCodeDemoViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>下载</string>
+		<key>class</key>
+		<string>DownloadViewController</string>
+	</dict>
 </array>
 </plist>

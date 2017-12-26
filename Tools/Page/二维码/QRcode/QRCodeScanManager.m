@@ -244,7 +244,7 @@ static QRCodeScanManager *_instance;
     }
 }
 
-void soundCompleteCallback(SystemSoundID soundID, void *clientData){
+void soundCompleteCallback(SystemSoundID soundID, void *clientData) {
     
 }
 

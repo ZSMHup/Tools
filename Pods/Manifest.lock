@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - CYLTabBarController (1.14.1)
+  - JTCalendar (2.1.10)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.13)
@@ -32,6 +33,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - CYLTabBarController
+  - JTCalendar
   - MBProgressHUD
   - MJRefresh
   - SCRecorder
@@ -45,6 +47,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CYLTabBarController: ec44b6e44166d9869fa649ce22bc728d107ecafc
+  JTCalendar: d85b0222e9378007a2d185b15c90b7d707a2abe0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: 56a28aa628c9895e97a518dabaecf70b18f92f32
@@ -56,6 +59,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
-PODFILE CHECKSUM: 1e331c4dbfd099239056c24b79bbab97600e2663
+PODFILE CHECKSUM: 85e256cdc3d01c1302c5a50484972da8116a82e7
 
 COCOAPODS: 1.2.1

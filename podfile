@@ -11,4 +11,5 @@ pod 'MJRefresh'
 pod 'MBProgressHUD'
 pod 'CYLTabBarController'
 pod 'TZImagePickerController'
+pod 'JTCalendar'
 end

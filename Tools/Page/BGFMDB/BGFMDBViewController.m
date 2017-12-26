@@ -12,9 +12,17 @@
 #import "LiveListModel.h"
 #import <QuickLook/QuickLook.h>
 #import "UIButton+Alignment.h"
+#import "JTCalendar.h"
 
-@interface BGFMDBViewController ()<QLPreviewControllerDelegate,QLPreviewControllerDataSource>
+@interface BGFMDBViewController ()<QLPreviewControllerDelegate,QLPreviewControllerDataSource,JTCalendarDelegate>
+{
+    NSDate *_dateSelected;
+}
 @property (nonatomic, strong) UILabel *attTV;
+//创建一个管理者，并且通过属性强引用，使其不会被释放
+@property (strong, nonatomic) JTCalendarManager *calendarManager;
+
+@property (nonatomic, strong) JTHorizontalCalendarView *calendarContentView;
 
 @end
 
@@ -25,22 +33,113 @@
 //    [self testBGFMDB];
 //    [self testAttribute];
     
-    UIButton *saveBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 56, 61)];
-    saveBtn.backgroundColor = [UIColor redColor];
-    [saveBtn setImage:[UIImage imageNamed:@"defaultUserIcon"] forState:(UIControlStateNormal)];
-    [saveBtn setTitle:@"查询" forState:(UIControlStateNormal)];
-    [saveBtn imageTitleVerticalAlignmentWithSpace:5];
-    [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
-    [self.view addSubview:saveBtn];
+//    UIButton *saveBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 56, 61)];
+//    saveBtn.backgroundColor = [UIColor redColor];
+//    [saveBtn setImage:[UIImage imageNamed:@"defaultUserIcon"] forState:(UIControlStateNormal)];
+//    [saveBtn setTitle:@"查询" forState:(UIControlStateNormal)];
+//    [saveBtn imageTitleVerticalAlignmentWithSpace:5];
+//    [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
+//    [self.view addSubview:saveBtn];
     
 //    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 100, 200)];
 //
 //    [self.view addSubview:v];
 //
 //    [self drawDashLine:v lineWidth:1 lineLength:5 lineSpacing:3 lineColor:[UIColor redColor] fillColor:[UIColor clearColor] cornerRadius:0];
-    
+    self.calendarManager = [JTCalendarManager new];
+    self.calendarManager.settings.weekModeEnabled = YES;
+    self.calendarManager.delegate = self;
+    self.calendarContentView = [[JTHorizontalCalendarView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 36)];
+//    self.calendarContentView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.calendarContentView];
+    //设置需要显示月份的View,我这里是自定义的，所以注释掉了
+    //[self.calendarManager setMenuView:self.CalendarMenuView];
+    //设置需要显示日历的View
+    [self.calendarManager setContentView:self.calendarContentView];
+    //在日历显示初始化的时候就需要
+    [self.calendarManager setDate:[NSDate date]];
     
 
+}
+
+- (void)calendar:(JTCalendarManager *)calendar prepareDayView:(JTCalendarDayView *)dayView
+{
+    // Today
+    if([_calendarManager.dateHelper date:[NSDate date] isTheSameDayThan:dayView.date]){
+        dayView.circleView.hidden = NO;
+        dayView.circleView.backgroundColor = [UIColor blueColor];
+        dayView.dotView.backgroundColor = [UIColor whiteColor];
+        dayView.textLabel.textColor = [UIColor whiteColor];
+    }
+    // Selected date
+    else if(_dateSelected && [_calendarManager.dateHelper date:_dateSelected isTheSameDayThan:dayView.date]){
+        dayView.circleView.hidden = NO;
+        dayView.circleView.backgroundColor = [UIColor redColor];
+        dayView.dotView.backgroundColor = [UIColor whiteColor];
+        dayView.textLabel.textColor = [UIColor whiteColor];
+    }
+    // Other month
+    else if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
+        dayView.circleView.hidden = YES;
+        dayView.dotView.backgroundColor = [UIColor redColor];
+        dayView.textLabel.textColor = [UIColor lightGrayColor];
+    }
+    // Another day of the current month
+    else{
+        dayView.circleView.hidden = YES;
+        dayView.dotView.backgroundColor = [UIColor redColor];
+        dayView.textLabel.textColor = [UIColor blackColor];
+    }
+    
+//    if([self haveEventForDay:dayView.date]){
+//        dayView.dotView.hidden = NO;
+//    }
+//    else{
+//        dayView.dotView.hidden = YES;
+//    }
+}
+- (void)calendar:(JTCalendarManager *)calendar didTouchDayView:(JTCalendarDayView *)dayView
+{
+    _dateSelected = dayView.date;
+    
+    // Animation for the circleView
+    dayView.circleView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
+    [UIView transitionWithView:dayView
+                      duration:.3
+                       options:0
+                    animations:^{
+                        dayView.circleView.transform = CGAffineTransformIdentity;
+                        [_calendarManager reload];
+                    } completion:nil];
+    
+    
+    // Don't change page in week mode because block the selection of days in first and last weeks of the month
+    if(_calendarManager.settings.weekModeEnabled){
+        return;
+    }
+    
+    // Load the previous or next page if touch a day from another month
+    
+    if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
+        if([_calendarContentView.date compare:dayView.date] == NSOrderedAscending){
+            [_calendarContentView loadNextPageWithAnimation];
+        }
+        else{
+            [_calendarContentView loadPreviousPageWithAnimation];
+        }
+    }
+}
+
+- (UIView *)calendarBuildMenuItemView:(JTCalendarManager *)calendar
+{
+    UILabel *label = [[UILabel alloc]init];
+    
+    if (label != nil) {
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = [UIFont systemFontOfSize:10];
+        
+    }
+    return label;
 }
 
 
@@ -100,7 +199,7 @@
 }
 
 - (void)deleteBtnClick {
-    [LiveListModel bg_drop];
+//    [LiveListModel bg_drop];
 }
 
 - (void)testAttribute {
