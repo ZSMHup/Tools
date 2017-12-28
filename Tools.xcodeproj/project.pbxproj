@@ -150,6 +150,7 @@
 		E16D8FE41FB3F26400E142A5 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FE31FB3F26400E142A5 /* VideoModel.m */; };
 		E16D8FE71FB3F36000E142A5 /* VideoResolution.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FE61FB3F36000E142A5 /* VideoResolution.m */; };
 		E16D8FEA1FB3F47400E142A5 /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FE91FB3F47400E142A5 /* PlayerTableViewCell.m */; };
+		E171F5351FF3739C0089DA75 /* DownloadTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E171F5341FF3739C0089DA75 /* DownloadTestCell.m */; };
 		E176B9271FE74D88006998ED /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E176B9261FE74D88006998ED /* index.html */; };
 		E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */; };
 		E18844B81FDF86BA0012C2B1 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18844B71FDF86BA0012C2B1 /* PageViewController.m */; };
@@ -453,6 +454,8 @@
 		E16D8FE61FB3F36000E142A5 /* VideoResolution.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoResolution.m; sourceTree = "<group>"; };
 		E16D8FE81FB3F47400E142A5 /* PlayerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewCell.h; sourceTree = "<group>"; };
 		E16D8FE91FB3F47400E142A5 /* PlayerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewCell.m; sourceTree = "<group>"; };
+		E171F5331FF3738D0089DA75 /* DownloadTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTestCell.h; sourceTree = "<group>"; };
+		E171F5341FF3739C0089DA75 /* DownloadTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTestCell.m; sourceTree = "<group>"; };
 		E176B9261FE74D88006998ED /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		E17913C61F99D717002FE1A6 /* CAKeyframeAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAKeyframeAnimationController.h; sourceTree = "<group>"; };
 		E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAKeyframeAnimationController.m; sourceTree = "<group>"; };
@@ -1193,6 +1196,8 @@
 			children = (
 				E1BB8CD11FEA56C9009596A7 /* DownloadViewController.h */,
 				E1BB8CD21FEA56C9009596A7 /* DownloadViewController.m */,
+				E171F5331FF3738D0089DA75 /* DownloadTestCell.h */,
+				E171F5341FF3739C0089DA75 /* DownloadTestCell.m */,
 			);
 			path = DownloadManager;
 			sourceTree = "<group>";
@@ -1432,6 +1437,7 @@
 				E1415D561F97400E00390C4D /* RecorderViewController.m in Sources */,
 				E1F06D1D1FB9A44100A9F315 /* MBProgressHUD+NH.m in Sources */,
 				E15BC76D1FE0BC40001B25C1 /* FourViewController.m in Sources */,
+				E171F5351FF3739C0089DA75 /* DownloadTestCell.m in Sources */,
 				E1415D531F973F8B00390C4D /* SCRecordSessionManager.m in Sources */,
 				E1209F041F95A261006E6D86 /* UIColor+Wonderful.m in Sources */,
 				E1209F031F95A25C006E6D86 /* UIColor+Separate.m in Sources */,

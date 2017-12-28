@@ -16,7 +16,7 @@
 #define CachesFileName(fileName) [CachesDirectory stringByAppendingPathComponent:fileName]
 
 // 保存文件名
-#define FileName(url) [NSString stringWithFormat:@"%@.%@", url.md5String, url.pathExtension]
+#define FileName(url) url.pathExtension.length ? [NSString stringWithFormat:@"%@.%@", url.md5String, url.pathExtension] : url.md5String
 
 // 文件的存放路径（caches）
 #define FileFullpath(url,fileName) [CachesFileName(fileName) stringByAppendingPathComponent:FileName(url)]
@@ -178,7 +178,6 @@ static FileDownloadManager *_downloadManager;
 {
     NSURLSessionDataTask *task = [self getTask:url];
     [task resume];
-    
     [self getSessionModel:task.taskIdentifier].stateBlock(DownloadStateStart);
 }
 
@@ -188,9 +187,13 @@ static FileDownloadManager *_downloadManager;
 - (void)pause:(NSString *)url
 {
     NSURLSessionDataTask *task = [self getTask:url];
-    [task suspend];
-    
-    [self getSessionModel:task.taskIdentifier].stateBlock(DownloadStateSuspended);
+    if (task) {
+        [task suspend];
+        [self getSessionModel:task.taskIdentifier].stateBlock(DownloadStateSuspended);
+        [[self getSessionModel:task.taskIdentifier].stream close];
+        [self.sessionModels removeObjectForKey:@([self getTask:url].taskIdentifier).stringValue];
+        [self.tasks removeObjectForKey:FileName(url)];
+    }
 }
 
 /**
@@ -257,29 +260,24 @@ static FileDownloadManager *_downloadManager;
 /**
  *  获取文件存放路径（Documents)
  */
-- (NSString *)getFileRoute {
+- (NSString *)getFileRoute
+{
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 /**
  *  获取下载文件的信息
  */
-- (NSArray *)getAttribute:(NSString *)fileName {
+- (NSArray *)getAttribute:(NSString *)fileName
+{
     if (!fileName) {
         fileName = DefaultFileName;
     }
     self.fileName = fileName;
     
     NSMutableArray *attributArr = [NSMutableArray array];
-    
-    NSMutableDictionary *dataDic = [NSMutableDictionary dictionaryWithContentsOfFile:AttributeFullpath(fileName)];
-    
-    NSMutableArray *mArr = [NSMutableArray array];
-    for (NSString *dic in dataDic) {
-        NSDictionary *dict = [dataDic valueForKey:dic];
-        [mArr addObject:dict];
-    }
-    for (NSInteger i = 0; i < mArr.count; i++) {
-        [attributArr addObject:mArr[i][@"attribute"]];
+    NSMutableArray *dataArr = [NSMutableArray arrayWithContentsOfFile:AttributeFullpath(fileName)];
+    for (NSInteger i = 0; i < dataArr.count; i++) {
+        [attributArr addObject:dataArr[i][@"attribute"]];
     }
     return [attributArr copy];
 }
@@ -293,15 +291,20 @@ static FileDownloadManager *_downloadManager;
         fileName = DefaultFileName;
     }
     self.fileName = fileName;
-    
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:FileFullpath(url,fileName)]) {
         
         // 删除沙盒中的资源
         [fileManager removeItemAtPath:FileFullpath(url,fileName) error:nil];
+        
         // 删除任务
-        [self.tasks removeObjectForKey:FileName(url)];
-        [self.sessionModels removeObjectForKey:@([self getTask:url].taskIdentifier).stringValue];
+        NSURLSessionDataTask *task = [self getTask:url];
+        if (task) {
+            [task cancel];
+            [self getSessionModel:task.taskIdentifier].stateBlock(DownloadStateFailed);
+            [self.sessionModels removeObjectForKey:@([self getTask:url].taskIdentifier).stringValue];
+            [self.tasks removeObjectForKey:FileName(url)];
+        }
         
         // 删除资源总长度
         if ([fileManager fileExistsAtPath:TotalLengthFullpath(fileName)]) {
@@ -309,22 +312,17 @@ static FileDownloadManager *_downloadManager;
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:TotalLengthFullpath(fileName)];
             [dict removeObjectForKey:FileName(url)];
             [dict writeToFile:TotalLengthFullpath(fileName) atomically:YES];
-            
         }
         
+        // 删除资源信息
         if ([fileManager fileExistsAtPath:AttributeFullpath(fileName)]) {
-            NSMutableDictionary *dataDic = [NSMutableDictionary dictionaryWithContentsOfFile:AttributeFullpath(fileName)];
-            if (!dataDic) {
-                return;
-            }
-            for (NSString *mdURL in dataDic) {
-                if ([mdURL isEqualToString:FileName(url)]) {
-                    [dataDic removeObjectForKey:mdURL];
-                    NSLog(@"%@",dataDic);
-                    break;
+            NSMutableArray *dataArr = [NSMutableArray arrayWithContentsOfFile:AttributeFullpath(fileName)];
+            for (NSInteger i = 0; i < dataArr.count; i++) {
+                if ([dataArr[i][@"mdUrl"] isEqualToString:FileName(url)]) {
+                    [dataArr removeObjectAtIndex:i];
                 }
             }
-            [dataDic writeToFile:AttributeFullpath(fileName) atomically:YES];
+            [dataArr writeToFile:AttributeFullpath(fileName) atomically:YES];
         }
     }
 }
@@ -348,14 +346,71 @@ static FileDownloadManager *_downloadManager;
         [self.sessionModels removeAllObjects];
         
         // 删除资源总长度
-        //        if ([fileManager fileExistsAtPath:TotalLengthFullpath(self.fileName)]) {
-        //            [fileManager removeItemAtPath:HSTotalLengthFullpath(self.fileName) error:nil];
-        //        }
-        //
-        //        if ([fileManager fileExistsAtPath:AttributeFullpath(self.fileName)]) {
-        //            [fileManager removeItemAtPath:AttributeFullpath(self.fileName) error:nil];
-        //        }
+        if ([fileManager fileExistsAtPath:TotalLengthFullpath(self.fileName)]) {
+            [fileManager removeItemAtPath:TotalLengthFullpath(self.fileName) error:nil];
+        }
+        if ([fileManager fileExistsAtPath:AttributeFullpath(self.fileName)]) {
+            [fileManager removeItemAtPath:AttributeFullpath(self.fileName) error:nil];
+        }
     }
+}
+
+/**
+ *  获取总缓存大小
+ */
+- (CGFloat)getCacheSize
+{
+    //获取文件管理器对象
+    NSFileManager *fileManger = [NSFileManager defaultManager];
+    
+    //通过缓存文件路径创建文件遍历器
+    NSDirectoryEnumerator *fileEnumrator = [fileManger enumeratorAtPath:CachesDirectory];
+    
+    //先定义一个缓存目录总大小的变量
+    NSInteger fileTotalSize = 0;
+    
+    for (NSString *fileName in fileEnumrator)
+    {
+        //拼接文件全路径（注意：是文件）
+        NSString *filePath = [CachesDirectory stringByAppendingPathComponent:fileName];
+        
+        //获取文件属性
+        NSDictionary *fileAttributes = [fileManger attributesOfItemAtPath:filePath error:nil];
+        
+        //根据文件属性判断是否是文件夹（如果是文件夹就跳过文件夹，不将文件夹大小累加到文件总大小）
+        if ([fileAttributes[NSFileType] isEqualToString:NSFileTypeDirectory]) continue;
+        
+        //获取单个文件大小,并累加到总大小
+        fileTotalSize += [fileAttributes[NSFileSize] integerValue];
+    }
+    //将字节大小转为MB，然后传出去
+    return fileTotalSize / 1000.0 / 1000.0;
+}
+
+/**
+ 暂停所有任务
+ */
+- (void)suspendAllTasks {
+    [[self.tasks allValues] makeObjectsPerformSelector:@selector(suspend)];
+    [self.tasks removeAllObjects];
+    for (FileSessionModel *sessionModel in [self.sessionModels allValues]) {
+        [sessionModel.stream close];
+        sessionModel.stateBlock(DownloadStateSuspended);
+    }
+    [self.sessionModels removeAllObjects];
+}
+
+/**
+ 取消所有任务
+ */
+- (void)cancelAllTasks {
+    [[self.tasks allValues] makeObjectsPerformSelector:@selector(cancel)];
+    [self.tasks removeAllObjects];
+    for (FileSessionModel *sessionModel in [self.sessionModels allValues]) {
+        [sessionModel.stream close];
+        sessionModel.stateBlock(DownloadStateFailed);
+    }
+    [self.sessionModels removeAllObjects];
 }
 
 #pragma mark - 代理
@@ -365,7 +420,6 @@ static FileDownloadManager *_downloadManager;
  */
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSHTTPURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
 {
-    
     FileSessionModel *sessionModel = [self getSessionModel:dataTask.taskIdentifier];
     
     // 打开流
@@ -376,17 +430,22 @@ static FileDownloadManager *_downloadManager;
     sessionModel.totalLength = totalLength;
     
     // 储存文件信息
-    NSMutableDictionary *dataDic = [NSMutableDictionary dictionaryWithContentsOfFile:AttributeFullpath(self.fileName)];
-    if (dataDic == nil) dataDic = [NSMutableDictionary dictionary];
-    
+    NSMutableArray *dataArr = [NSMutableArray arrayWithContentsOfFile:AttributeFullpath(self.fileName)];
+    if (dataArr == nil) dataArr = [NSMutableArray array];
+
+    for (NSInteger i = 0; i < dataArr.count; i++) {
+        if ([dataArr[i][@"mdUrl"] isEqualToString:FileName(sessionModel.url)]) {
+            [dataArr removeObjectAtIndex:i];
+        }
+    }
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[@"totalLength"] = @(totalLength);
     dict[@"mdUrl"] = FileName(sessionModel.url);
     dict[@"attribute"] = [sessionModel.attribute mutableCopy];
     [dict[@"attribute"] setObject:dict[@"mdUrl"] forKey:@"mdUrl"];
     [dict[@"attribute"] setObject:dict[@"totalLength"] forKey:@"totalLength"];
-    [dataDic setObject:dict forKey:FileName(sessionModel.url)];
-    [dataDic writeToFile:AttributeFullpath(self.fileName) atomically:YES];
+    [dataArr addObject:dict];
+    [dataArr writeToFile:AttributeFullpath(self.fileName) atomically:YES];
     
     // 存储总长度
     NSMutableDictionary *dict1 = [NSMutableDictionary dictionaryWithContentsOfFile:TotalLengthFullpath(self.fileName)];

@@ -15,7 +15,7 @@
 /**
  单例
 
- @return @return 返回单例对象
+ @return 返回单例对象
  */
 + (instancetype)sharedInstance;
 
@@ -63,6 +63,13 @@
 - (NSInteger)fileTotalLength:(NSString *)url fileName:(NSString *)fileName;
 
 /**
+ 获取总缓存大小
+ 
+ @return 缓存大小 单位: MB
+ */
+- (CGFloat)getCacheSize;
+
+/**
  判断该资源是否下载完成
 
  @param url 下载地址
@@ -107,5 +114,15 @@
  @return 文件属性
  */
 - (NSArray *)getAttribute:(NSString *)fileName;
+
+/**
+ 暂停所有任务
+ */
+- (void)suspendAllTasks;
+
+/**
+ 取消所有任务(非删除)
+ */
+- (void)cancelAllTasks;
 
 @end
