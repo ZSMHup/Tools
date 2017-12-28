@@ -52,8 +52,15 @@
 }
 
 - (void)btnClick {
-    [[FileDownloadManager sharedInstance] suspendAllTasks];
-    [self.tableView reloadData];
+    NSArray *attributeArr = [[FileDownloadManager sharedInstance] getAttribute:FileName];
+    __weak typeof(self) weakSelf = self;
+    [[FileDownloadManager sharedInstance] startTaskWithAttribute:attributeArr fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
+        
+    } state:^(DownloadState state) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView reloadData];
+        });
+    }];
 }
 
 #pragma mark 按钮状态
@@ -92,7 +99,7 @@
     __weak typeof(self) weakSelf = self;
     cell.downloadBtnClick = ^(UIButton *sender, UILabel *label) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [[FileDownloadManager sharedInstance] downloadWithUrl:strongSelf.dataSource[indexPath.row][@"url"] fileName:FileName attribute:strongSelf.dataSource[indexPath.row] progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
+        [[FileDownloadManager sharedInstance] downloadWithAttribute:strongSelf.dataSource[indexPath.row] fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 label.text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
                 NSLog(@"---progress---: %lf",progress * 100);

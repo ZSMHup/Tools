@@ -117,16 +117,15 @@ static FileDownloadManager *_downloadManager;
 /**
  *  开启任务下载资源
  */
-- (void)downloadWithUrl:(NSString *)url fileName:(NSString *)fileName attribute:(NSDictionary *)attribute progress:(void(^)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress))progressBlock state:(void(^)(DownloadState state))stateBlock
+- (void)downloadWithAttribute:(NSDictionary *)attribute fileName:(NSString *)fileName  progress:(void(^)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress))progressBlock state:(void(^)(DownloadState state))stateBlock
 {
+    NSString *url = attribute[@"url"];
     if (!url) return;
-    if (!fileName) {
-        fileName = DefaultFileName;
-    }
+    if (!fileName) fileName = DefaultFileName;
+    
     self.fileName = fileName;
     if ([self isCompletion:url fileName:fileName]) {
         stateBlock(DownloadStateCompleted);
-        NSLog(@"----该资源已下载完成");
         return;
     }
     
@@ -277,7 +276,9 @@ static FileDownloadManager *_downloadManager;
     NSMutableArray *attributArr = [NSMutableArray array];
     NSMutableArray *dataArr = [NSMutableArray arrayWithContentsOfFile:AttributeFullpath(fileName)];
     for (NSInteger i = 0; i < dataArr.count; i++) {
-        [attributArr addObject:dataArr[i][@"attribute"]];
+        if (dataArr[i][@"attribute"]) {
+            [attributArr addObject:dataArr[i][@"attribute"]];
+        }
     }
     return [attributArr copy];
 }
@@ -390,7 +391,8 @@ static FileDownloadManager *_downloadManager;
 /**
  暂停所有任务
  */
-- (void)suspendAllTasks {
+- (void)suspendAllTasks
+{
     [[self.tasks allValues] makeObjectsPerformSelector:@selector(suspend)];
     [self.tasks removeAllObjects];
     for (FileSessionModel *sessionModel in [self.sessionModels allValues]) {
@@ -403,7 +405,8 @@ static FileDownloadManager *_downloadManager;
 /**
  取消所有任务
  */
-- (void)cancelAllTasks {
+- (void)cancelAllTasks
+{
     [[self.tasks allValues] makeObjectsPerformSelector:@selector(cancel)];
     [self.tasks removeAllObjects];
     for (FileSessionModel *sessionModel in [self.sessionModels allValues]) {
@@ -411,6 +414,31 @@ static FileDownloadManager *_downloadManager;
         sessionModel.stateBlock(DownloadStateFailed);
     }
     [self.sessionModels removeAllObjects];
+}
+
+/**
+ 开始多个任务
+ */
+- (void)startTaskWithAttribute:(NSArray *)attribute fileName:(NSString *)fileName progress:(void(^)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress))progressBlock state:(void(^)(DownloadState state))stateBlock
+{
+    if (!fileName) {
+        fileName = DefaultFileName;
+    }
+    self.fileName = fileName;
+    
+    for (NSInteger i = 0; i < attribute.count; i++) {
+        if (![self isCompletion:attribute[i][@"url"] fileName:fileName]) {
+            [self downloadWithAttribute:attribute[i] fileName:fileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
+                if (progressBlock) {
+                    progressBlock(receivedSize, expectedSize, progress);
+                }
+            } state:^(DownloadState state) {
+                if (stateBlock) {
+                    stateBlock(state);
+                }
+            }];
+        }
+    }
 }
 
 #pragma mark - 代理
@@ -471,8 +499,9 @@ static FileDownloadManager *_downloadManager;
     NSUInteger receivedSize = DownloadLength(sessionModel.url,self.fileName);
     NSUInteger expectedSize = sessionModel.totalLength;
     CGFloat progress = 1.0 * receivedSize / expectedSize;
-    
-    sessionModel.progressBlock(receivedSize, expectedSize, progress);
+    if (sessionModel.progressBlock) {
+        sessionModel.progressBlock(receivedSize, expectedSize, progress);
+    }
 }
 
 /**
