@@ -10,4 +10,6 @@
 
 @interface ThirdViewController : BaseViewController
 
+@property (nonatomic, strong) UITableView *tableView;
+
 @end

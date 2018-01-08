@@ -10,4 +10,6 @@
 
 @interface FirstViewController : BaseViewController
 
+@property (nonatomic, strong) UITableView *tableView;
+
 @end

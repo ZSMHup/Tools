@@ -8,14 +8,18 @@
 
 #import "GXTabMenuCell.h"
 
-#import "GXConfigConst.h"
+@implementation GXTabMenuModel
 
-#import <Masonry/Masonry.h>
+@end
+
+const CGFloat GXTabMenuUnderlineHeight = 2.f;
+const CGFloat GXTabMenuBackgroundDefaultHeight = 3.f;
 
 @interface GXTabMenuCell ()
 
+@property (nonatomic, strong) CALayer *backgroundLayer;
 @property (nonatomic, strong) UIButton *titleButton;
-@property (nonatomic, strong) UIImageView *badgeImageView;
+@property (nonatomic, strong) CALayer *underline;
 
 @end
 
@@ -35,60 +39,53 @@
     _titleButton.frame = self.contentView.bounds;
 }
 
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+
+    if (_model.deselectDisabled) {
+        return;
+    }
+
+    _titleButton.selected = selected;
+
+    _backgroundLayer.frame = selected ? self.contentView.bounds : CGRectMake(0, 0, CGRectGetWidth(self.bounds), GXTabMenuBackgroundDefaultHeight);
+
+    CGFloat pointX = selected ? 0 : self.contentView.center.x;
+    CGFloat width = selected ? CGRectGetWidth(self.contentView.bounds) : 0.f;
+    _underline.frame = CGRectMake(pointX, CGRectGetHeight(self.bounds) - GXTabMenuUnderlineHeight, width, GXTabMenuUnderlineHeight);
+}
+
 - (void)gx_addSubviews
 {
+    _backgroundLayer = [[CALayer alloc] init];
+    _backgroundLayer.frame = CGRectMake(0, 0, CGRectGetWidth(self.contentView.bounds), GXTabMenuBackgroundDefaultHeight);
+    _backgroundLayer.backgroundColor = [UIColor cyanColor].CGColor;
+    [self.contentView.layer addSublayer:_backgroundLayer];
+
     _titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _titleButton.userInteractionEnabled = NO;
-    
-    _badgeImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"default_badge"]];
-    _badgeImageView.hidden = YES;
-    [_titleButton addSubview:_badgeImageView];
-    [_badgeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_titleButton.titleLabel.mas_right);
-        make.bottom.equalTo(_titleButton.titleLabel.mas_top);
-    }];
-    
-    _titleButton.titleLabel.font = gx_kTabMenuTitleFont;
-    [_titleButton setTitleColor:gx_kTabMenuTitleNormalColor forState:UIControlStateNormal];
-    [_titleButton setTitleColor:gx_kTabMenuTitleSelectedColor forState:UIControlStateSelected];
+    _titleButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    [_titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_titleButton setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
     [self.contentView addSubview:_titleButton];
+
+    _underline = [[CALayer alloc] init];
+    _underline.frame = CGRectMake(self.contentView.center.x, CGRectGetHeight(self.contentView.bounds) - GXTabMenuUnderlineHeight, 0, GXTabMenuUnderlineHeight);
+    _underline.backgroundColor = [UIColor blueColor].CGColor;
+    [self.contentView.layer addSublayer:_underline];
 }
 
-- (void)setTabMenuTitleNormalColor:(UIColor *)tabMenuTitleNormalColor
+- (void)setModel:(GXTabMenuModel *)model
 {
-    [_titleButton setTitleColor:tabMenuTitleNormalColor forState:UIControlStateNormal];
-}
+    _model = model;
 
-- (void)setTabMenuTitleSelectedColor:(UIColor *)tabMenuTitleSelectedColor
-{
-    [_titleButton setTitleColor:tabMenuTitleSelectedColor forState:UIControlStateSelected];
-}
-
-- (void)setLineHidden:(BOOL)lineHidden
-{
-    if (!lineHidden) {
-        CALayer *vLine = [[CALayer alloc] init];
-        vLine.frame = CGRectMake(-0.5, 12, 0.5, gx_kTabMenuHeight - 24);
-        vLine.backgroundColor = [UIColor grayColor].CGColor;
-        [self.contentView.layer addSublayer:vLine];
-    }
-}
-
-- (void)setTitle:(NSString *)title
-{
-    _title = title;
-    [_titleButton setTitle:title forState:UIControlStateNormal];
-}
-
-- (void)setChecked:(BOOL)checked
-{
-    _titleButton.selected = checked;
-}
-
-- (void)setShowBadge:(BOOL)showBadge
-{
-    _showBadge = showBadge;
-    _badgeImageView.hidden = !showBadge;
+    [_titleButton setTitle:model.title forState:UIControlStateNormal];
+    [_titleButton setTitleColor:model.titleNormalColor ?: [UIColor blackColor] forState:UIControlStateNormal];
+    [_titleButton setTitleColor:model.titleSelectedColor ?: [UIColor blueColor] forState:UIControlStateSelected];
+    _backgroundLayer.backgroundColor = model.backgroundLayerColor.CGColor;
+    _underline.backgroundColor = model.underlineColor.CGColor;
 }
 
 @end
+

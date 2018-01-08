@@ -80,6 +80,8 @@
  */
 - (void)loadFileName:(NSString *)fileName;
 
+- (void)loadFileWithFilePath:(NSString *)filePath;
+
 /**
  加载 HTML
 

@@ -13,21 +13,18 @@
 #import "FourViewController.h"
 
 #import "SwitchVCContentView.h"
-#import "GXPageScrollView.h"
 #import "GXTabScrollView.h"
 
 #import <Masonry/Masonry.h>
 
-@interface PageViewController ()<GXPageScrollViewDataSource, GXPageScrollViewDelegate>
+#define kHeaderTableViewHeight 140.0f
 
-@property (nonatomic, strong) GXPageScrollView *pageScrollView;
+@interface PageViewController ()<UITableViewDelegate, UITableViewDataSource, GXTabScrollViewDataSource>
+
+@property (nonatomic, strong) UITableView *headerTableView;
 @property (nonatomic, strong) GXTabScrollView *tabScrollView;
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UIView *headView;
 
 @property (nonatomic, strong) NSArray *titles;
-
-@property (nonatomic, strong) SwitchVCContentView *contentView;
 
 @end
 
@@ -35,8 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self.view addSubview:self.contentView];
-    [self tys_addChildViewControllers];
+    
     [self tys_addSubviews];
 }
 
@@ -45,104 +41,105 @@
 {
     self.navigationItem.title = @"我的下载";
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    [self.view addSubview:self.pageScrollView];
-    [self.pageScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.bottom.equalTo(self.view);
-    }];
+    [self tys_addChildViewControllers];
+    
+    
 }
 
 - (void)tys_addChildViewControllers
 {
-    FirstViewController *myDownloadAudioVC = [[FirstViewController alloc] init];
-    myDownloadAudioVC.view.frame = self.view.frame;
-    [self addChildViewController:myDownloadAudioVC];
+    FirstViewController *firstVC = [[FirstViewController alloc] init];
+    firstVC.view.frame = self.view.frame;
+    [self addChildViewController:firstVC];
     
-    SecondViewController *myDownloadDataVC = [[SecondViewController alloc] init];
-    myDownloadDataVC.view.frame = self.view.frame;
-    [self addChildViewController:myDownloadDataVC];
+    SecondViewController *secondVC = [[SecondViewController alloc] init];
+    secondVC.view.frame = self.view.frame;
+    [self addChildViewController:secondVC];
     
-//    ThirdViewController *myDownloadDemoDocVC = [[ThirdViewController alloc] init];
-//    myDownloadDemoDocVC.view.frame = self.view.frame;
-//    [self addChildViewController:myDownloadDemoDocVC];
+    ThirdViewController *thirdVC = [[ThirdViewController alloc] init];
+    thirdVC.view.frame = self.view.frame;
+    [self addChildViewController:thirdVC];
+    
+    [self.view addSubview:self.tabScrollView];
+    [self.tabScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.bottom.equalTo(self.view);
+    }];
+//    self.tabScrollView.headerView = self.headerTableView;
 }
 
-#pragma mark - GXPageScrollViewDataSource
-- (NSUInteger)numberOfItemsInPageScrollView:(GXPageScrollView *)pageScrollView
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    cell.backgroundColor = [UIColor orangeColor];
+    return cell;
+}
+
+#pragma mark - GXTabScrollViewDataSource
+- (NSUInteger)numberOfItemsInPageScrollView:(GXTabScrollView *)pageScrollView
 {
     return self.childViewControllers.count;
 }
 
-- (UIView *)pageScrollView:(GXPageScrollView *)pageScrollView contentViewForIndex:(NSUInteger)index
-{
-    BaseViewController *contentVC = self.childViewControllers[index];
-    return contentVC.view;
-}
-
-- (NSString *)pageScrollView:(GXPageScrollView *)pageScrollView titleForItemAtIndex:(NSUInteger)index
+- (NSString *)tabScrollView:(GXTabScrollView *)tabScrollView titleForItemAtIndex:(NSUInteger)index
 {
     return self.titles[index];
 }
 
-//- (NSUInteger)numberOfItemsInPageScrollView:(GXTabScrollView *)pageScrollView {
-//    return self.childViewControllers.count;
-//}
-//
-//- (UIScrollView *)tabScrollView:(GXTabScrollView *)tabScrollView scrollViewForIndex:(NSUInteger)index {
-//    PageViewController *firstContentVC = self.childViewControllers[index];
-//
-//    return firstContentVC.tableView;
-//}
-//
-//- (NSString *)tabScrollView:(GXTabScrollView *)tabScrollView titleForItemAtIndex:(NSUInteger)index {
-//    return self.titles[index];
-//}
-
-#pragma mark - getter
-- (GXPageScrollView *)pageScrollView
+- (UIView *)tabScrollView:(GXTabScrollView *)tabScrollView scrollViewForIndex:(NSUInteger)index
 {
-    if (!_pageScrollView) {
-        _pageScrollView = [[GXPageScrollView alloc] init];
-        _pageScrollView.lineHidden = YES;
-        _pageScrollView.dataSource = self;
-        _pageScrollView.delegate = self;
-        _pageScrollView.animated = YES;
+    if (0 == index) {
+        FirstViewController *recReadingVC = self.childViewControllers[index];
+        return recReadingVC.tableView;
+    } else if (1 == index) {
+        SecondViewController *roadShowVC = self.childViewControllers[index];
+        return roadShowVC.tableView;
+    } else {
+        ThirdViewController *thirdVC = self.childViewControllers[index];
+        return thirdVC.tableView;
     }
-    return _pageScrollView;
 }
 
-//- (GXTabScrollView *)pageScrollView
-//{
-//    if (!_tabScrollView) {
-//        _tabScrollView = [[GXTabScrollView alloc] init];
-//        _tabScrollView.dataSource = self;
-//        _tabScrollView.delegate = self;
-//    }
-//    return _tabScrollView;
-//}
+#pragma mark - getter
+- (GXTabScrollView *)tabScrollView
+{
+    if (!_tabScrollView) {
+        _tabScrollView = [[GXTabScrollView alloc] init];
+        _tabScrollView.dataSource = self;
+//        _tabScrollView.delegate  = self;
+        _tabScrollView.backgroundColor = [UIColor redColor];
+    }
+    return _tabScrollView;
+}
+
+- (UITableView *)headerTableView
+{
+    if (!_headerTableView) {
+        _headerTableView = [[UITableView alloc] initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width, kHeaderTableViewHeight) style:UITableViewStylePlain];
+        _headerTableView.dataSource = self;
+        _headerTableView.delegate = self;
+        _headerTableView.backgroundColor = [UIColor orangeColor];
+//        _headerTableView.estimatedRowHeight = 50.f;
+        _headerTableView.estimatedSectionHeaderHeight = 0.f;
+        _headerTableView.estimatedSectionFooterHeight = 0.f;
+        _headerTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _headerTableView.scrollEnabled = NO;
+        [_headerTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    }
+    return _headerTableView;
+}
 
 - (NSArray *)titles
 {
     if (!_titles) {
-        _titles = @[@"回放", @"下载资料"];
+        _titles = @[@"回放", @"下载资料", @"下载资料"];
     }
     return _titles;
 }
-
-//- (SwitchVCContentView *)contentView {
-//    if (!_contentView) {
-//        NSArray *controllers = @[@"FirstViewController",@"SecondViewController",@"ThirdViewController",@"FourViewController"];
-//        _contentView = [[SwitchVCContentView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 200) titleArray:@[@"000",@"1111",@"22",@"33333"] controllersArray:controllers];
-//    }
-//    return _contentView;
-//}
-
-//- (UIView *)headView {
-//    if (!_headView) {
-//        _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-//        _headView.backgroundColor = [UIColor redColor];
-//    }
-//    return _headView;
-//}
 
 @end

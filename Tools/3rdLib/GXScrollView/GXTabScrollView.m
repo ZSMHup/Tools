@@ -71,6 +71,9 @@
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.showsVerticalScrollIndicator = NO;
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
         _tableView.allowsSelection = NO;
         _tableView.rowHeight = CGRectGetHeight(self.frame) - gx_kTabMenuOffsetTop;
         [_tableView registerClass:[GXScrollTableViewCell class] forCellReuseIdentifier:@"GXScrollTableViewCell"];
@@ -214,7 +217,7 @@
                 }
                 
                 if (self.dataSource && [self.dataSource respondsToSelector:@selector(tabScrollView:scrollViewForIndex:)]) {
-                    UIScrollView *scrollView = [self.dataSource tabScrollView:self scrollViewForIndex:i];
+                    UIView *scrollView = [self.dataSource tabScrollView:self scrollViewForIndex:i];
                     if (scrollView) {
                         [mDic setObject:scrollView forKey:@"itemView"];
                     }

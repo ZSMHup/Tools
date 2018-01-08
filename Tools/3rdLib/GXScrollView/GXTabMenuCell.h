@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@interface GXTabMenuModel : NSObject
+
+@property (nonatomic, strong) UIColor *backgroundLayerColor;
+@property (nonatomic, strong) UIColor *titleNormalColor;
+@property (nonatomic, strong) UIColor *titleSelectedColor;
+@property (nonatomic, strong) UIColor *underlineColor;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) BOOL deselectDisabled;
+
+@end
+
 @interface GXTabMenuCell : UICollectionViewCell
 
-@property (nonatomic, strong) UIColor *tabMenuTitleNormalColor;
-@property (nonatomic, strong) UIColor *tabMenuTitleSelectedColor;
-@property (nonatomic, assign) BOOL lineHidden;
-
-@property (nonatomic, copy) NSString *title;
-
-@property (nonatomic, assign) BOOL checked;
-@property (nonatomic, assign) BOOL showBadge;
+@property (nonatomic, strong) GXTabMenuModel *model;
 
 @end

@@ -46,7 +46,7 @@
 
 - (void)selectItemAtIndex:(NSUInteger)index
 {
-    [self.tabMenuView selectItemAtIndex:index];
+    [self.tabMenuView didSelectItemAtIndex:index];
     [self.tabContentView setContentOffset:CGPointMake(index * gx_kScreenWidth, 0) animated:self.animated];
 }
 
@@ -62,7 +62,7 @@
     _tabMenuView.tabMenuTitleSelectedColor = self.tabMenuTitleSelectedColor;
     _tabMenuView.lineHidden = self.lineHidden;
     __weak typeof(self) weakSelf = self;
-    _tabMenuView.didselectItemAtIndex = ^(NSUInteger index) {
+    _tabMenuView.didSelectItemHandler = ^(NSUInteger index) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(pageScrollView:didSelectItemAtIndex:)]) {
             [strongSelf.delegate pageScrollView:strongSelf didSelectItemAtIndex:index];
@@ -142,7 +142,7 @@
 {
     CGFloat offsetX = scrollView.contentOffset.x;
     NSInteger pageIndex = offsetX / gx_kScreenWidth;
-    [_tabMenuView selectItemAtIndex:pageIndex];
+    [_tabMenuView didSelectItemAtIndex:pageIndex];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(pageScrollView:didScrollToIndex:forState:)]) {
         [self.delegate pageScrollView:self didScrollToIndex:pageIndex forState:GXPageScrollViewScrollStateDidEndDecelerating];
@@ -169,7 +169,7 @@
             pageIndex = 0;
         }
         if (scrollView.isDragging) {
-            [_tabMenuView selectItemAtIndex:pageIndex];
+            [_tabMenuView didSelectItemAtIndex:pageIndex];
         }
         self.currentIndex = pageIndex;
         if (self.delegate && [self.delegate respondsToSelector:@selector(pageScrollView:didScrollToIndex:forState:)]) {

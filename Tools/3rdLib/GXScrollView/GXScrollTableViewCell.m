@@ -58,7 +58,7 @@
 {
     _tabMenuView = [[GXTabMenuView alloc] initWithTitles:self.titles];
     __weak typeof(self) weakSelf = self;
-    _tabMenuView.didselectItemAtIndex = ^(NSUInteger index) {
+    _tabMenuView.didSelectItemHandler = ^(NSUInteger index) {
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(scrollTableViewCell:didSelectItemAtIndex:)]) {
             [weakSelf.delegate scrollTableViewCell:weakSelf didSelectItemAtIndex:index];
         }
@@ -67,10 +67,9 @@
     [self.contentView addSubview:_tabMenuView];
 }
 
-- (void)gx_addItemView:(UIScrollView *)itemView atIndex:(NSUInteger)index
+- (void)gx_addItemView:(UIView *)itemView atIndex:(NSUInteger)index
 {
     itemView.frame = CGRectMake(index * gx_kScreenWidth, 0, gx_kScreenWidth, CGRectGetHeight(_tabContentView.frame));
-    itemView.alwaysBounceVertical = YES;
     [_tabContentView addSubview:itemView];
 }
 
@@ -79,7 +78,7 @@
 {
     CGFloat offsetX = scrollView.contentOffset.x;
     NSInteger pageIndex = offsetX / gx_kScreenWidth;
-    [_tabMenuView selectItemAtIndex:pageIndex];
+    [_tabMenuView didSelectItemAtIndex:pageIndex];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(scrollTableViewCell:horizontalScrollToIndex:forState:)]) {
         [self.delegate scrollTableViewCell:self horizontalScrollToIndex:pageIndex forState:GXPageScrollViewHorizontalScrollStateDidEndDecelerating];
@@ -106,7 +105,7 @@
             pageIndex = 0;
         }
         if (scrollView.isDragging) {
-            [_tabMenuView selectItemAtIndex:pageIndex];
+            [_tabMenuView didSelectItemAtIndex:pageIndex];
         }
         self.currentIndex = pageIndex;
         if (self.delegate && [self.delegate respondsToSelector:@selector(scrollTableViewCell:horizontalScrollToIndex:forState:)]) {
@@ -134,7 +133,7 @@
             if (obj[@"title"]) {
                 [self.titles addObject:obj[@"title"]];
             }
-            UIScrollView *tabItemView = obj[@"itemView"];
+            UIView *tabItemView = obj[@"itemView"];
             [self gx_addItemView:tabItemView atIndex:idx];
         }];
         CGFloat tabContentOffset = 0;

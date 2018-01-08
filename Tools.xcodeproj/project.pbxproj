@@ -124,13 +124,6 @@
 		E15BC7761FE0CE73001B25C1 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7751FE0CE73001B25C1 /* ThirdViewController.m */; };
 		E15BC7C81FE10DF6001B25C1 /* SwitchVCContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7C51FE10DF5001B25C1 /* SwitchVCContentView.m */; };
 		E15BC7C91FE10DF6001B25C1 /* TabPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7C71FE10DF5001B25C1 /* TabPageView.m */; };
-		E15BC8131FE12EC2001B25C1 /* GXContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC8061FE12EC2001B25C1 /* GXContentViewController.m */; };
-		E15BC8141FE12EC2001B25C1 /* GXPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC8081FE12EC2001B25C1 /* GXPageScrollView.m */; };
-		E15BC8151FE12EC2001B25C1 /* GXScrollTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC80A1FE12EC2001B25C1 /* GXScrollTableView.m */; };
-		E15BC8161FE12EC2001B25C1 /* GXScrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC80C1FE12EC2001B25C1 /* GXScrollTableViewCell.m */; };
-		E15BC8171FE12EC2001B25C1 /* GXTabMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC80E1FE12EC2001B25C1 /* GXTabMenuCell.m */; };
-		E15BC8181FE12EC2001B25C1 /* GXTabMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC8101FE12EC2001B25C1 /* GXTabMenuView.m */; };
-		E15BC8191FE12EC2001B25C1 /* GXTabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC8121FE12EC2001B25C1 /* GXTabScrollView.m */; };
 		E15D38451FE3768700305810 /* CommonWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D38441FE3768700305810 /* CommonWebView.m */; };
 		E15ED6361FB2B59C00BC4D1D /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED6351FB2B59C00BC4D1D /* PlayerViewController.m */; };
 		E15ED63A1FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED6391FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.m */; };
@@ -154,6 +147,13 @@
 		E176B9271FE74D88006998ED /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E176B9261FE74D88006998ED /* index.html */; };
 		E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */; };
 		E18844B81FDF86BA0012C2B1 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18844B71FDF86BA0012C2B1 /* PageViewController.m */; };
+		E19282A01FF60A73007D6E51 /* GXContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282931FF60A73007D6E51 /* GXContentViewController.m */; };
+		E19282A11FF60A73007D6E51 /* GXPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282951FF60A73007D6E51 /* GXPageScrollView.m */; };
+		E19282A21FF60A73007D6E51 /* GXScrollTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282971FF60A73007D6E51 /* GXScrollTableView.m */; };
+		E19282A31FF60A73007D6E51 /* GXScrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282991FF60A73007D6E51 /* GXScrollTableViewCell.m */; };
+		E19282A41FF60A73007D6E51 /* GXTabMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E192829B1FF60A73007D6E51 /* GXTabMenuCell.m */; };
+		E19282A51FF60A73007D6E51 /* GXTabMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E192829D1FF60A73007D6E51 /* GXTabMenuView.m */; };
+		E19282A61FF60A73007D6E51 /* GXTabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E192829F1FF60A73007D6E51 /* GXTabScrollView.m */; };
 		E19E2B771FBBF11100BEEA2C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E19E2B761FBBF11100BEEA2C /* libsqlite3.tbd */; };
 		E19E2BF31FBBF2DE00BEEA2C /* BGFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E2BF21FBBF2DE00BEEA2C /* BGFMDBViewController.m */; };
 		E1BB8CD31FEA56C9009596A7 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BB8CD21FEA56C9009596A7 /* DownloadViewController.m */; };
@@ -414,21 +414,6 @@
 		E15BC7C51FE10DF5001B25C1 /* SwitchVCContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchVCContentView.m; sourceTree = "<group>"; };
 		E15BC7C61FE10DF5001B25C1 /* TabPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabPageView.h; sourceTree = "<group>"; };
 		E15BC7C71FE10DF5001B25C1 /* TabPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabPageView.m; sourceTree = "<group>"; };
-		E15BC8041FE12EC2001B25C1 /* GXConfigConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXConfigConst.h; sourceTree = "<group>"; };
-		E15BC8051FE12EC2001B25C1 /* GXContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXContentViewController.h; sourceTree = "<group>"; };
-		E15BC8061FE12EC2001B25C1 /* GXContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXContentViewController.m; sourceTree = "<group>"; };
-		E15BC8071FE12EC2001B25C1 /* GXPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXPageScrollView.h; sourceTree = "<group>"; };
-		E15BC8081FE12EC2001B25C1 /* GXPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXPageScrollView.m; sourceTree = "<group>"; };
-		E15BC8091FE12EC2001B25C1 /* GXScrollTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXScrollTableView.h; sourceTree = "<group>"; };
-		E15BC80A1FE12EC2001B25C1 /* GXScrollTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXScrollTableView.m; sourceTree = "<group>"; };
-		E15BC80B1FE12EC2001B25C1 /* GXScrollTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXScrollTableViewCell.h; sourceTree = "<group>"; };
-		E15BC80C1FE12EC2001B25C1 /* GXScrollTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXScrollTableViewCell.m; sourceTree = "<group>"; };
-		E15BC80D1FE12EC2001B25C1 /* GXTabMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXTabMenuCell.h; sourceTree = "<group>"; };
-		E15BC80E1FE12EC2001B25C1 /* GXTabMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXTabMenuCell.m; sourceTree = "<group>"; };
-		E15BC80F1FE12EC2001B25C1 /* GXTabMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXTabMenuView.h; sourceTree = "<group>"; };
-		E15BC8101FE12EC2001B25C1 /* GXTabMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXTabMenuView.m; sourceTree = "<group>"; };
-		E15BC8111FE12EC2001B25C1 /* GXTabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXTabScrollView.h; sourceTree = "<group>"; };
-		E15BC8121FE12EC2001B25C1 /* GXTabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXTabScrollView.m; sourceTree = "<group>"; };
 		E15D38431FE3768700305810 /* CommonWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonWebView.h; sourceTree = "<group>"; };
 		E15D38441FE3768700305810 /* CommonWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonWebView.m; sourceTree = "<group>"; };
 		E15ED6341FB2B59C00BC4D1D /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
@@ -461,6 +446,21 @@
 		E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAKeyframeAnimationController.m; sourceTree = "<group>"; };
 		E18844B61FDF86BA0012C2B1 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		E18844B71FDF86BA0012C2B1 /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		E19282911FF60A73007D6E51 /* GXConfigConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXConfigConst.h; sourceTree = "<group>"; };
+		E19282921FF60A73007D6E51 /* GXContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXContentViewController.h; sourceTree = "<group>"; };
+		E19282931FF60A73007D6E51 /* GXContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXContentViewController.m; sourceTree = "<group>"; };
+		E19282941FF60A73007D6E51 /* GXPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXPageScrollView.h; sourceTree = "<group>"; };
+		E19282951FF60A73007D6E51 /* GXPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXPageScrollView.m; sourceTree = "<group>"; };
+		E19282961FF60A73007D6E51 /* GXScrollTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXScrollTableView.h; sourceTree = "<group>"; };
+		E19282971FF60A73007D6E51 /* GXScrollTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXScrollTableView.m; sourceTree = "<group>"; };
+		E19282981FF60A73007D6E51 /* GXScrollTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXScrollTableViewCell.h; sourceTree = "<group>"; };
+		E19282991FF60A73007D6E51 /* GXScrollTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXScrollTableViewCell.m; sourceTree = "<group>"; };
+		E192829A1FF60A73007D6E51 /* GXTabMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXTabMenuCell.h; sourceTree = "<group>"; };
+		E192829B1FF60A73007D6E51 /* GXTabMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXTabMenuCell.m; sourceTree = "<group>"; };
+		E192829C1FF60A73007D6E51 /* GXTabMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXTabMenuView.h; sourceTree = "<group>"; };
+		E192829D1FF60A73007D6E51 /* GXTabMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXTabMenuView.m; sourceTree = "<group>"; };
+		E192829E1FF60A73007D6E51 /* GXTabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXTabScrollView.h; sourceTree = "<group>"; };
+		E192829F1FF60A73007D6E51 /* GXTabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXTabScrollView.m; sourceTree = "<group>"; };
 		E19E2B761FBBF11100BEEA2C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		E19E2BF11FBBF2DE00BEEA2C /* BGFMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGFMDBViewController.h; sourceTree = "<group>"; };
 		E19E2BF21FBBF2DE00BEEA2C /* BGFMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGFMDBViewController.m; sourceTree = "<group>"; };
@@ -731,10 +731,10 @@
 		E1209EE51F95A226006E6D86 /* 3rdLib */ = {
 			isa = PBXGroup;
 			children = (
+				E19282901FF60A73007D6E51 /* GXScrollView */,
 				E14660AB1FF1EAB5004A97F9 /* FileDownloadManager */,
 				E146607F1FF1E2C4004A97F9 /* BGFMDB */,
 				E122C3D31FECEE78004DD51D /* Calendar */,
-				E15BC8031FE12EC2001B25C1 /* GXScrollView */,
 				E14D422C1F98810300952FD8 /* KMNavigationBarTransition */,
 				E1209F061F95EF56006E6D86 /* RealReachability */,
 				E1209EE61F95A226006E6D86 /* TYCyclePagerView */,
@@ -1090,28 +1090,6 @@
 			path = TabPageVC;
 			sourceTree = "<group>";
 		};
-		E15BC8031FE12EC2001B25C1 /* GXScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				E15BC8041FE12EC2001B25C1 /* GXConfigConst.h */,
-				E15BC8051FE12EC2001B25C1 /* GXContentViewController.h */,
-				E15BC8061FE12EC2001B25C1 /* GXContentViewController.m */,
-				E15BC8071FE12EC2001B25C1 /* GXPageScrollView.h */,
-				E15BC8081FE12EC2001B25C1 /* GXPageScrollView.m */,
-				E15BC8091FE12EC2001B25C1 /* GXScrollTableView.h */,
-				E15BC80A1FE12EC2001B25C1 /* GXScrollTableView.m */,
-				E15BC80B1FE12EC2001B25C1 /* GXScrollTableViewCell.h */,
-				E15BC80C1FE12EC2001B25C1 /* GXScrollTableViewCell.m */,
-				E15BC80D1FE12EC2001B25C1 /* GXTabMenuCell.h */,
-				E15BC80E1FE12EC2001B25C1 /* GXTabMenuCell.m */,
-				E15BC80F1FE12EC2001B25C1 /* GXTabMenuView.h */,
-				E15BC8101FE12EC2001B25C1 /* GXTabMenuView.m */,
-				E15BC8111FE12EC2001B25C1 /* GXTabScrollView.h */,
-				E15BC8121FE12EC2001B25C1 /* GXTabScrollView.m */,
-			);
-			path = GXScrollView;
-			sourceTree = "<group>";
-		};
 		E15ED6331FB2B57B00BC4D1D /* 视频播放 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,6 +1158,28 @@
 				E15BC76C1FE0BC40001B25C1 /* FourViewController.m */,
 			);
 			path = "左右切换控制器";
+			sourceTree = "<group>";
+		};
+		E19282901FF60A73007D6E51 /* GXScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E19282911FF60A73007D6E51 /* GXConfigConst.h */,
+				E19282921FF60A73007D6E51 /* GXContentViewController.h */,
+				E19282931FF60A73007D6E51 /* GXContentViewController.m */,
+				E19282941FF60A73007D6E51 /* GXPageScrollView.h */,
+				E19282951FF60A73007D6E51 /* GXPageScrollView.m */,
+				E19282961FF60A73007D6E51 /* GXScrollTableView.h */,
+				E19282971FF60A73007D6E51 /* GXScrollTableView.m */,
+				E19282981FF60A73007D6E51 /* GXScrollTableViewCell.h */,
+				E19282991FF60A73007D6E51 /* GXScrollTableViewCell.m */,
+				E192829A1FF60A73007D6E51 /* GXTabMenuCell.h */,
+				E192829B1FF60A73007D6E51 /* GXTabMenuCell.m */,
+				E192829C1FF60A73007D6E51 /* GXTabMenuView.h */,
+				E192829D1FF60A73007D6E51 /* GXTabMenuView.m */,
+				E192829E1FF60A73007D6E51 /* GXTabScrollView.h */,
+				E192829F1FF60A73007D6E51 /* GXTabScrollView.m */,
+			);
+			path = GXScrollView;
 			sourceTree = "<group>";
 		};
 		E19E2BF01FBBF27B00BEEA2C /* BGFMDB */ = {
@@ -1393,10 +1393,10 @@
 				E1209F2F1F95EFAC006E6D86 /* PingHelper.m in Sources */,
 				E15F28CA1FC51062002C7946 /* FourthViewController.m in Sources */,
 				E16D8FE71FB3F36000E142A5 /* VideoResolution.m in Sources */,
-				E15BC8191FE12EC2001B25C1 /* GXTabScrollView.m in Sources */,
 				E1209F2E1F95EF9E006E6D86 /* PingFoundation.m in Sources */,
 				E1209F2D1F95EF96006E6D86 /* ReachStateWWAN.m in Sources */,
 				E15BC7701FE0CE36001B25C1 /* FirstViewController.m in Sources */,
+				E19282A61FF60A73007D6E51 /* GXTabScrollView.m in Sources */,
 				E1209F2C1F95EF90006E6D86 /* ReachStateWIFI.m in Sources */,
 				E14D42281F98727300952FD8 /* NavigationControllerTest2.m in Sources */,
 				E14D42471F98810300952FD8 /* UIScrollView+KMNavigationBarTransition.m in Sources */,
@@ -1408,7 +1408,6 @@
 				E15BC7C91FE10DF6001B25C1 /* TabPageView.m in Sources */,
 				E1486A1E1FE26FF10041BFAF /* QRCodeAlbumManager.m in Sources */,
 				E122C3E91FECEE78004DD51D /* UIImage+CL.m in Sources */,
-				E15BC8131FE12EC2001B25C1 /* GXContentViewController.m in Sources */,
 				E1581C181FBADA0300650313 /* TabBarController.m in Sources */,
 				E1453D531FC4211E00E0FA82 /* ScrollViewTableviewController.m in Sources */,
 				E14D42421F98810300952FD8 /* KMSwizzle.m in Sources */,
@@ -1423,6 +1422,7 @@
 				E1209F271F95EF71006E6D86 /* FSMStateUtil.m in Sources */,
 				E122C3E41FECEE78004DD51D /* DailyCalendarView.m in Sources */,
 				E14660A21FF1E2C5004A97F9 /* FMDatabaseQueue.m in Sources */,
+				E19282A41FF60A73007D6E51 /* GXTabMenuCell.m in Sources */,
 				E1167B321F98C2770092E190 /* AlertView.m in Sources */,
 				E1581C1B1FBAE2E000650313 /* PlusButton.m in Sources */,
 				E1453D5F1FC42EA100E0FA82 /* TwoViewController.m in Sources */,
@@ -1441,6 +1441,7 @@
 				E1415D531F973F8B00390C4D /* SCRecordSessionManager.m in Sources */,
 				E1209F041F95A261006E6D86 /* UIColor+Wonderful.m in Sources */,
 				E1209F031F95A25C006E6D86 /* UIColor+Separate.m in Sources */,
+				E19282A01FF60A73007D6E51 /* GXContentViewController.m in Sources */,
 				E1C68AE21FB58B3500D24601 /* NetworkRequestCode.m in Sources */,
 				E1209F021F95A254006E6D86 /* SXMarquee.m in Sources */,
 				E1209F011F95A24E006E6D86 /* SXHeadLine.m in Sources */,
@@ -1456,19 +1457,18 @@
 				E14660A11FF1E2C5004A97F9 /* FMDatabasePool.m in Sources */,
 				E1C68AE81FB5A6CF00D24601 /* LiveListModel.m in Sources */,
 				E1209F001F95A248006E6D86 /* SXColorLabel.m in Sources */,
-				E15BC8151FE12EC2001B25C1 /* GXScrollTableView.m in Sources */,
 				E1209EFF1F95A243006E6D86 /* SXColorGradientView.m in Sources */,
 				E1C68AD81FB5869200D24601 /* NetworkHelper.m in Sources */,
 				E16D8FDF1FB3EE9400E142A5 /* PlayerTableViewController.m in Sources */,
 				E15BC7761FE0CE73001B25C1 /* ThirdViewController.m in Sources */,
+				E19282A31FF60A73007D6E51 /* GXScrollTableViewCell.m in Sources */,
 				E1209EFE1F95A23E006E6D86 /* TYPageControl.m in Sources */,
-				E15BC8171FE12EC2001B25C1 /* GXTabMenuCell.m in Sources */,
 				E1C68ADF1FB58A4600D24601 /* NetworkRequestManager.m in Sources */,
 				E14D42461F98810300952FD8 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
+				E19282A51FF60A73007D6E51 /* GXTabMenuView.m in Sources */,
 				E1209EFD1F95A238006E6D86 /* TYCyclePagerView.m in Sources */,
 				E14660B41FF1EAB5004A97F9 /* FileSessionModel.m in Sources */,
 				E1209EFC1F95A232006E6D86 /* TYCyclePagerTransformLayout.m in Sources */,
-				E15BC8181FE12EC2001B25C1 /* GXTabMenuView.m in Sources */,
 				E1C68AEB1FB5AF0600D24601 /* NetWorkRequest.m in Sources */,
 				E1167B1C1F98B51A0092E190 /* CyclePagerViewController.m in Sources */,
 				E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */,
@@ -1479,11 +1479,10 @@
 				E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */,
 				E1167B2F1F98C2260092E190 /* AlertViewController.m in Sources */,
 				E1486A2E1FE27E590041BFAF /* UIImage+ImageSize.m in Sources */,
+				E19282A21FF60A73007D6E51 /* GXScrollTableView.m in Sources */,
 				E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */,
 				E146609B1FF1E2C5004A97F9 /* BGModelInfo.m in Sources */,
 				E1415D5B1F97581D00390C4D /* SCWatermarkOverlayView.m in Sources */,
-				E15BC8141FE12EC2001B25C1 /* GXPageScrollView.m in Sources */,
-				E15BC8161FE12EC2001B25C1 /* GXScrollTableViewCell.m in Sources */,
 				E146609F1FF1E2C5004A97F9 /* FMDatabase.m in Sources */,
 				E1167B1D1F98B51A0092E190 /* CountdownVCDemo.m in Sources */,
 				E146609D1FF1E2C5004A97F9 /* NSCache+BGCache.m in Sources */,
@@ -1492,6 +1491,7 @@
 				E14660B31FF1EAB5004A97F9 /* FileDownloadManager.m in Sources */,
 				E1453D561FC4231B00E0FA82 /* TCTabSlideView.m in Sources */,
 				E15ED6361FB2B59C00BC4D1D /* PlayerViewController.m in Sources */,
+				E19282A11FF60A73007D6E51 /* GXPageScrollView.m in Sources */,
 				E14D42191F985AEE00952FD8 /* NavigationController.m in Sources */,
 				E16762F81F8F6EF800F1076F /* AYMFMessageViewController.m in Sources */,
 				E1BB8CD31FEA56C9009596A7 /* DownloadViewController.m in Sources */,

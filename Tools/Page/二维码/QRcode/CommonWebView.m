@@ -42,7 +42,7 @@ static CGFloat const progressViewHeight = 2;
 // 9.0以下将文件夹copy到tmp目录
 - (NSURL *)fileURLForBuggyWKWebView:(NSURL *)fileURL {
     NSError *error = nil;
-    if (!fileURL.fileURL || ![fileURL checkResourceIsReachableAndReturnError:&error]) {
+    if (!fileURL.fileURL || ![fileURL checkResourceIsReachableAndReturnError:&error]) { //file URL 指向的文件资源是否可获取
         return nil;
     }
     
@@ -76,16 +76,37 @@ static CGFloat const progressViewHeight = 2;
     if (@available(iOS 9.0, *)) {
         [self.wkWebView loadFileURL:[NSURL fileURLWithPath:fileURL] allowingReadAccessToURL:[NSURL fileURLWithPath:readAccessToURL]];
     } else { // 9.0以下
-        if(fileURL) {
-            NSURL *fileUrl = [NSURL fileURLWithPath:fileURL];
-            // 把文件夹转到tmp目录
-            fileUrl = [self fileURLForBuggyWKWebView:fileUrl];
+        NSURL *fileUrl = [NSURL fileURLWithPath:fileURL];
+        // 把文件夹转到tmp目录
+        fileUrl = [self fileURLForBuggyWKWebView:fileUrl];
+        if (fileURL) {
             NSURL *realUrl = [NSURL fileURLWithPath:fileUrl.path];
             NSURLRequest *request = [NSURLRequest requestWithURL:realUrl];
             [self.wkWebView loadRequest:request];
         }
     }
 }
+
+// 加载本地资源
+- (void)loadFileWithFilePath:(NSString *)filePath {
+    NSString *readAccessToURL = [filePath stringByDeletingLastPathComponent]; // 获取上一级路径
+    
+    if (@available(iOS 9.0, *)) {
+        [self.wkWebView loadFileURL:[NSURL fileURLWithPath:filePath] allowingReadAccessToURL:[NSURL fileURLWithPath:readAccessToURL]];
+    } else { // 9.0以下
+        if(filePath) {
+            NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
+            // 把文件夹转到tmp目录
+            fileUrl = [self fileURLForBuggyWKWebView:fileUrl];
+            if (fileUrl) {
+                NSURL *realUrl = [NSURL fileURLWithPath:fileUrl.path];
+                NSURLRequest *request = [NSURLRequest requestWithURL:realUrl];
+                [self.wkWebView loadRequest:request];
+            }
+        }
+    }
+}
+
 
 //// 加载 HTML
 //- (void)loadHTMLString:(NSString *)HTMLString {

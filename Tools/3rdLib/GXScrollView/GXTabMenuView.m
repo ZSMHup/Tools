@@ -7,21 +7,24 @@
 //
 
 #import "GXTabMenuView.h"
-
 #import "GXTabMenuCell.h"
 
-#import "GXConfigConst.h"
+#define gx_kScreenWidth [UIScreen mainScreen].bounds.size.width
+
+CGFloat const GXTabMenuHeight = 50.f;
+CGFloat const GXTabMenuTitleMaxLength = 120.f;
+CGFloat const GXTabMenuTitleOffset = 20.f;
 
 @interface GXTabMenuView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) CALayer *underline;
 
 @property (nonatomic, strong) NSArray *titles;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) NSMutableArray *titleWidthArray;
-@property (nonatomic, strong) NSMutableArray *titleSelectArray;
 @property (nonatomic, strong) NSArray<NSIndexPath *> *showBadgeIndexPaths;
 @property (nonatomic, assign) CGFloat totalWidth;
+@property (nonatomic, assign) NSUInteger currentIndex;
 
 @end
 
@@ -29,10 +32,11 @@
 
 - (instancetype)initWithTitles:(NSArray *)titles
 {
-    CGRect defaultFrame = CGRectMake(0, 0, gx_kScreenWidth, gx_kTabMenuHeight);
+    CGRect defaultFrame = CGRectMake(0, 0, gx_kScreenWidth, GXTabMenuHeight);
     self = [super initWithFrame:defaultFrame];
     if (self) {
         _titles = titles;
+        [self gx_configDataSource];
         [self gx_configTitleWidth];
         [self gx_addSubviews];
     }
@@ -42,141 +46,134 @@
 - (void)gx_addSubviews
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    CGFloat itemWidth = gx_kScreenWidth / _titles.count;
-    flowLayout.itemSize = CGSizeMake(itemWidth, gx_kTabMenuHeight);
-    flowLayout.minimumLineSpacing = 0;
-    flowLayout.minimumInteritemSpacing = 0;
+    flowLayout.itemSize = CGSizeMake(60, GXTabMenuHeight);
+    flowLayout.minimumLineSpacing = 30;
+    flowLayout.minimumInteritemSpacing = 30;
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, gx_kScreenWidth, gx_kTabMenuHeight) collectionViewLayout:flowLayout];
+    flowLayout.sectionInset = UIEdgeInsetsMake(0, 24, 0, 24);
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, gx_kScreenWidth, GXTabMenuHeight) collectionViewLayout:flowLayout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     _collectionView.showsVerticalScrollIndicator = NO;
     _collectionView.showsHorizontalScrollIndicator = NO;
-    [_collectionView registerClass:[GXTabMenuCell class] forCellWithReuseIdentifier:@"GXTabMenuCell"];
+    [_titles enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *cellId = [NSString stringWithFormat:@"GXTabMenuCell_%ld", idx];
+        [_collectionView registerClass:[GXTabMenuCell class] forCellWithReuseIdentifier:cellId];
+    }];
+
     [self addSubview:_collectionView];
-    
-    _underline = [[CALayer alloc] init];
-    _underline.backgroundColor = gx_kTabMenuUnderlineColor.CGColor;
-    [self.layer addSublayer:_underline];
-    
+
     if (_titles.count > 0) {
-        [self selectItemAtIndex:0];
+        [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
     }
-    
+
     CALayer *line = [[CALayer alloc] init];
-    line.frame = CGRectMake(0, gx_kTabMenuHeight - 0.5, gx_kScreenWidth, 0.5);
-    line.backgroundColor = [UIColor grayColor].CGColor;
+    line.backgroundColor = [UIColor lightGrayColor].CGColor;
+    line.frame = CGRectMake(0, GXTabMenuHeight - 1, gx_kScreenWidth, 1);
     [self.layer addSublayer:line];
+}
+
+- (void)gx_configDataSource
+{
+    [_titles enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        GXTabMenuModel *model = [[GXTabMenuModel alloc] init];
+        model.title = obj;
+        model.titleNormalColor = [UIColor lightGrayColor];
+        model.titleSelectedColor = [UIColor redColor];
+        model.backgroundLayerColor = [UIColor clearColor];
+        model.underlineColor = [UIColor redColor];
+        [self.dataSource addObject:model];
+    }];
 }
 
 - (void)gx_configTitleWidth
 {
     _titleWidthArray = [NSMutableArray array];
     [_titles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        CGRect titleFrame = [obj boundingRectWithSize:CGSizeMake(gx_kTabMenuTitleMaxLength, gx_kTabMenuHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: gx_kTabMenuTitleFont} context:nil];
-        _totalWidth += (titleFrame.size.width + gx_kTabMenuTitleOffset);
-        [_titleWidthArray addObject:@(titleFrame.size.width + gx_kTabMenuTitleOffset)];
+        CGRect titleFrame = [obj boundingRectWithSize:CGSizeMake(GXTabMenuTitleMaxLength, GXTabMenuHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15]} context:nil];
+        _totalWidth += (titleFrame.size.width + GXTabMenuTitleOffset);
+        [_titleWidthArray addObject:@(titleFrame.size.width + GXTabMenuTitleOffset)];
     }];
-}
-
-- (void)gx_selectItemAtIndex:(NSUInteger)index
-{
-    [self.titleSelectArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (idx == index) {
-            [self.titleSelectArray replaceObjectAtIndex:idx withObject:@YES];
-        }
-        else {
-            [self.titleSelectArray replaceObjectAtIndex:idx withObject:@NO];
-        }
-    }];
-    [_collectionView reloadData];
 }
 
 #pragma mark - public
-- (void)selectItemAtIndex:(NSUInteger)index
+- (void)didSelectItemAtIndex:(NSUInteger)index
 {
+    if (self.currentIndex == index) {
+        return;
+    }
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
-    [_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-    GXTabMenuCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"GXTabMenuCell" forIndexPath:indexPath];
-    CGRect frame = [self.collectionView convertRect:cell.frame toView:self];
-    [UIView animateWithDuration:0.25 animations:^{
-        self.underline.frame = CGRectMake(frame.origin.x + (frame.size.width - 61) / 2, 42.5, 61, gx_kTabMenuUnderlineHeight);
-    }];
-    [self gx_selectItemAtIndex:index];
+    [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+    self.currentIndex = index;
 }
 
 - (void)showBadgeAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths
 {
     self.showBadgeIndexPaths = indexPaths;
     [self.collectionView reloadData];
+    [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
 }
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.titles.count;
+    return self.dataSource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    GXTabMenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GXTabMenuCell" forIndexPath:indexPath];
-    if ([self.showBadgeIndexPaths containsObject:indexPath]) {
-        cell.showBadge = YES;
-    } else {
-        cell.showBadge = NO;
-    }
-    cell.tabMenuTitleSelectedColor = self.tabMenuTitleSelectedColor ?: gx_kTabMenuTitleSelectedColor;
-    cell.tabMenuTitleNormalColor = self.tabMenuTitleNormalColor ?: gx_kTabMenuTitleNormalColor;
-    cell.lineHidden = self.lineHidden;
-    [cell setTitle:self.titles[indexPath.item]];
-    [cell setChecked:[self.titleSelectArray[indexPath.item] boolValue]];
+    NSString *cellId = [NSString stringWithFormat:@"GXTabMenuCell_%ld", indexPath.item];
+    GXTabMenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    [cell setModel:self.dataSource[indexPath.item]];
     return cell;
 }
 
 #pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    GXTabMenuModel *model = self.dataSource[self.currentIndex];
+    model.deselectDisabled = YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    GXTabMenuModel *model = self.dataSource[self.currentIndex];
+    model.deselectDisabled = NO;
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    [self selectItemAtIndex:indexPath.item];
-    
-    if (self.didselectItemAtIndex) {
-        self.didselectItemAtIndex(indexPath.item);
+    if (self.currentIndex == indexPath.item) {
+        return;
+    }
+
+    self.currentIndex = indexPath.item;
+    if (self.didSelectItemHandler) {
+        self.didSelectItemHandler(indexPath.item);
     }
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.totalWidth < gx_kScreenWidth) {
-        CGFloat titleWidth = [self.titleWidthArray[indexPath.item] doubleValue];
-        CGFloat offset = (gx_kScreenWidth - self.totalWidth) / self.titles.count;
-        return CGSizeMake(titleWidth + offset, gx_kTabMenuHeight);
-    }
-    CGFloat titleWidth = [self.titleWidthArray[indexPath.item] doubleValue];
-    return CGSizeMake(titleWidth, gx_kTabMenuHeight);
+    GXTabMenuModel *model = self.dataSource[indexPath.item];
+    return CGSizeMake(model.title.length * 15, GXTabMenuHeight);
 }
 
 #pragma mark - getter
-- (NSMutableArray *)titleSelectArray
-{
-    if (!_titleSelectArray) {
-        _titleSelectArray = [NSMutableArray array];
-        [_titles enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (0 == idx) {
-                [_titleSelectArray addObject:@YES];
-            }
-            else {
-                [_titleSelectArray addObject:@NO];
-            }
-        }];
-    }
-    return _titleSelectArray;
-}
-
 - (void)setTabMenuBackgroundColor:(UIColor *)tabMenuBackgroundColor
 {
     _collectionView.backgroundColor = tabMenuBackgroundColor ?: [UIColor whiteColor];
 }
 
+- (NSMutableArray *)dataSource
+{
+    if (!_dataSource) {
+        _dataSource = [NSMutableArray array];
+    }
+    return _dataSource;
+}
+
 @end
+

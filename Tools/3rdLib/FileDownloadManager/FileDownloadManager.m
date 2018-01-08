@@ -117,9 +117,8 @@ static FileDownloadManager *_downloadManager;
 /**
  *  开启任务下载资源
  */
-- (void)downloadWithAttribute:(NSDictionary *)attribute fileName:(NSString *)fileName  progress:(void(^)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress))progressBlock state:(void(^)(DownloadState state))stateBlock
+- (void)downloadWithURL:(NSString *)url attribute:(NSDictionary *)attribute fileName:(NSString *)fileName  progress:(void(^)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress))progressBlock state:(void(^)(DownloadState state))stateBlock
 {
-    NSString *url = attribute[@"url"];
     if (!url) return;
     if (!fileName) fileName = DefaultFileName;
     
@@ -263,6 +262,20 @@ static FileDownloadManager *_downloadManager;
 {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
+
+/**
+ * 获取下载文件路径
+ */
+- (NSString *)getFileWithURL:(NSString *)url fileName:(NSString *)fileName
+{
+    if (!fileName) {
+        fileName = DefaultFileName;
+    }
+    self.fileName = fileName;
+    
+    return FileFullpath(url, fileName);
+}
+
 /**
  *  获取下载文件的信息
  */
@@ -428,7 +441,7 @@ static FileDownloadManager *_downloadManager;
     
     for (NSInteger i = 0; i < attribute.count; i++) {
         if (![self isCompletion:attribute[i][@"url"] fileName:fileName]) {
-            [self downloadWithAttribute:attribute[i] fileName:fileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
+            [self downloadWithURL:attribute[i][@"url"] attribute:attribute[i] fileName:fileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
                 if (progressBlock) {
                     progressBlock(receivedSize, expectedSize, progress);
                 }

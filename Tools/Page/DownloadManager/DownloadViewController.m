@@ -38,7 +38,7 @@
     
     NSLog(@"getCacheSize : %lf",[[FileDownloadManager sharedInstance] getCacheSize]);
     
-    NSLog(@"沙盒路径： %@",[[FileDownloadManager sharedInstance] getFileRoute]);
+    NSLog(@"%@",[[FileDownloadManager sharedInstance] getFileWithURL:@"http://tya.znzkj.net/touyanshe_web/outImages/20180104/20180104_5642247.pdf" fileName:FileName]);
     NSLog(@"---------------------");
     NSLog(@"%@",[[FileDownloadManager sharedInstance] getAttribute:FileName]);
     
@@ -55,7 +55,7 @@
     NSArray *attributeArr = [[FileDownloadManager sharedInstance] getAttribute:FileName];
     __weak typeof(self) weakSelf = self;
     [[FileDownloadManager sharedInstance] startTaskWithAttribute:attributeArr fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
-        
+        NSLog(@"pro : %lf",progress);
     } state:^(DownloadState state) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView reloadData];
@@ -99,7 +99,7 @@
     __weak typeof(self) weakSelf = self;
     cell.downloadBtnClick = ^(UIButton *sender, UILabel *label) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [[FileDownloadManager sharedInstance] downloadWithAttribute:strongSelf.dataSource[indexPath.row] fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
+        [[FileDownloadManager sharedInstance] downloadWithURL:strongSelf.dataSource[indexPath.row][@"url"] attribute:strongSelf.dataSource[indexPath.row] fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 label.text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
                 NSLog(@"---progress---: %lf",progress * 100);
@@ -131,7 +131,7 @@
 
 - (NSArray *)dataSource {
     if (!_dataSource) {
-        _dataSource = @[@{@"url": @"http://news.iciba.com/admin/tts/2013-11-15.mp3",
+        _dataSource = @[@{@"url": @"http://tya.znzkj.net/touyanshe_web/outImages/20180104/20180104_5642247.pdf",
                           @"fileId" : @"1",
                           @"create_time" : @"2017.12.26",
                           @"att_name" : @"测试1",

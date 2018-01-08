@@ -10,6 +10,8 @@
 #import "CommonWebView.h"
 #import <Masonry/Masonry.h>
 
+#import "FileDownloadManager.h"
+
 @interface QRCodeScanningSuccessVC ()<CommonWebViewDelegate>
 
 @property (nonatomic, strong) CommonWebView *webView;
@@ -26,8 +28,14 @@
     _webView = [CommonWebView webViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _webView.isNavigationBarOrTranslucent = NO;
     _webView.delegate = self;
-    [_webView loadRequestWithUrlString:self.urlString];
+//    [_webView loadRequestWithUrlString:self.urlString];
 //    [_webView loadFileName:@"BAHome.html"];
+    
+    if ([[FileDownloadManager sharedInstance] isExistence:@"http://tya.znzkj.net/touyanshe_web/outImages/20180104/20180104_5642247.pdf" fileName:@"PDF"]) {
+        NSString *filePath = [[FileDownloadManager sharedInstance] getFileWithURL:@"http://tya.znzkj.net/touyanshe_web/outImages/20180104/20180104_5642247.pdf" fileName:@"PDF"];
+        [_webView loadFileWithFilePath:filePath];
+    }
+    
     [self.view addSubview:_webView];
     
 }

@@ -15,10 +15,10 @@
 @property (nonatomic, strong) UIColor *tabMenuTitleSelectedColor;
 @property (nonatomic, assign) BOOL lineHidden;
 
-@property (nonatomic, copy) void(^didselectItemAtIndex)(NSUInteger index);
+@property (nonatomic, copy) void(^didSelectItemHandler)(NSUInteger index);
 
 - (instancetype)initWithTitles:(NSArray *)titles;
-- (void)selectItemAtIndex:(NSUInteger)index;
+- (void)didSelectItemAtIndex:(NSUInteger)index;
 - (void)showBadgeAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
 
 @end

@@ -22,12 +22,23 @@
 /**
  开启任务下载资源
 
- @param attribute 需要存储的属性(必须包含下载链接)
+ @param url 下载地址
+ @param attribute 需要存储的属性
  @param fileName 存储的目录 默认：Default
  @param progressBlock 回调下载进度
  @param stateBlock 下载状态
  */
-- (void)downloadWithAttribute:(NSDictionary *)attribute fileName:(NSString *)fileName  progress:(void(^)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress))progressBlock state:(void(^)(DownloadState state))stateBlock;
+- (void)downloadWithURL:(NSString *)url attribute:(NSDictionary *)attribute fileName:(NSString *)fileName  progress:(void(^)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress))progressBlock state:(void(^)(DownloadState state))stateBlock;
+
+/**
+ 开始多个任务
+ 
+ @param attribute 传入的文件信息(注意：传入的URL attribute[i][@"url"])
+ @param fileName 文件存放路径的目录名称 默认：Default
+ @param progressBlock 回调下载进度
+ @param stateBlock 下载状态
+ */
+- (void)startTaskWithAttribute:(NSArray *)attribute fileName:(NSString *)fileName progress:(void(^)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress))progressBlock state:(void(^)(DownloadState state))stateBlock;
 
 /**
  开始下载
@@ -107,6 +118,15 @@
 - (NSString *)getFileRoute;
 
 /**
+ 获取下载文件路径
+ 
+ @param url 下载地址
+ @param fileName 文件存放路径的目录名称 默认：Default
+ @return 下载文件路径
+ */
+- (NSString *)getFileWithURL:(NSString *)url fileName:(NSString *)fileName;
+
+/**
  获取下载文件的信息
  
  @param fileName 文件存放路径的目录名称 默认：Default
@@ -123,15 +143,5 @@
  取消所有任务(非删除)
  */
 - (void)cancelAllTasks;
-
-/**
- 开始多个任务
-
- @param attribute 传入的文件信息
- @param fileName 文件存放路径的目录名称 默认：Default
- @param progressBlock 回调下载进度
- @param stateBlock 下载状态
- */
-- (void)startTaskWithAttribute:(NSArray *)attribute fileName:(NSString *)fileName progress:(void(^)(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress))progressBlock state:(void(^)(DownloadState state))stateBlock;
 
 @end

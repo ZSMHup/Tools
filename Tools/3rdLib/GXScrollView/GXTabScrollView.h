@@ -18,7 +18,7 @@
 
 - (NSUInteger)numberOfItemsInPageScrollView:(GXTabScrollView *)pageScrollView;
 
-- (UIScrollView *)tabScrollView:(GXTabScrollView *)tabScrollView scrollViewForIndex:(NSUInteger)index;
+- (UIView *)tabScrollView:(GXTabScrollView *)tabScrollView scrollViewForIndex:(NSUInteger)index;
 
 @optional
 

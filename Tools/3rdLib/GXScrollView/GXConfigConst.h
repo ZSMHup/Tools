@@ -25,11 +25,11 @@
 #define gx_kTabMenuTitleOffset 20
 #define gx_kTabMenuTitleMaxLength 120
 #define gx_kTabMenuTitleFont [UIFont systemFontOfSize:14.0]
-#define gx_kTabMenuTitleNormalColor [UIColor grayColor]
-#define gx_kTabMenuTitleSelectedColor [UIColor redColor]
+#define gx_kTabMenuTitleNormalColor [UIColor ay_fragmentNormalColor]
+#define gx_kTabMenuTitleSelectedColor [UIColor ay_fragmentSelectedColor]
 
 #define gx_kTabMenuUnderlineHeight 1.5
 #define gx_kTabMenuUnderlineOffset 16
-#define gx_kTabMenuUnderlineColor [UIColor redColor]
+#define gx_kTabMenuUnderlineColor [UIColor ay_fragmentSelectedColor]
 
 #endif /* GXConfigConst_h */
