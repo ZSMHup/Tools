@@ -40,6 +40,11 @@
 
 + (instancetype)shareQRCodeAlbumManager;
 
+/**
+ 从相册中读取二维码
+
+ @param currentController 当前控制器
+ */
 - (void)readQRCodeFromAlbumWithCurrentController:(UIViewController *)currentController;
 
 @end

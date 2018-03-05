@@ -110,7 +110,6 @@
     return label;
 }
 
-
 #pragma mark `placeholder`
 
 - (NSString *)placeholder {

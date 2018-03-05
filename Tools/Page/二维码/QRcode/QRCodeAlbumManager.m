@@ -82,16 +82,12 @@ static QRCodeAlbumManager *_instance;
             NSString *executableFile = [infoDictionary objectForKey:(NSString *)kCFBundleExecutableKey];
 
             UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"相册权限未开启" message:[NSString stringWithFormat:@"请去-> [设置 - 隐私 - 照片 - %@] 打开访问开关",executableFile] preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-                
-            }];
+            UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:nil];
             [alertC addAction:alertA];
             [self.currentVC presentViewController:alertC animated:YES completion:nil];
         } else if (status == PHAuthorizationStatusRestricted) {
             UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"由于系统原因, 无法访问相册" preferredStyle:(UIAlertControllerStyleAlert)];
-            UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-                
-            }];
+            UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:nil];
             [alertC addAction:alertA];
             [self.currentVC presentViewController:alertC animated:YES completion:nil];
         }
@@ -151,13 +147,6 @@ static QRCodeAlbumManager *_instance;
             strongSelf.detectorString = nil;
         }];
     }
-    
 }
-
-
-
-
-
-
 
 @end

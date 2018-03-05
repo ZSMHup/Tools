@@ -80,6 +80,11 @@
  */
 - (void)loadFileName:(NSString *)fileName;
 
+/**
+ 加载本地资源
+
+ @param filePath 本地资源路径
+ */
 - (void)loadFileWithFilePath:(NSString *)filePath;
 
 /**

@@ -27,10 +27,18 @@
 
 - (void)dealloc {
     NSLog(@"%@ - dealloc",self.class);
-    [self removeScanningView];
+    
 }
 
 #pragma mark - lifecycle
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self setupQRCodeScanning];
+    [self.view addSubview:self.scanningView];
+    [self addFlashlightBtn];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.scanningView addTimer];
@@ -39,15 +47,13 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    [self removeScanningView];
     [self.scanningView removeTimer];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavigationBar];
-    [self setupQRCodeScanning];
-    [self.view addSubview:self.scanningView];
-    [self addFlashlightBtn];
 }
 
 #pragma mark - private
@@ -62,7 +68,6 @@
     NSArray *arr = @[AVMetadataObjectTypeQRCode, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
     // AVCaptureSessionPreset1920x1080 推荐使用，对于小型的二维码读取率较高
     [_manager setupSessionPreset:AVCaptureSessionPreset1920x1080 metadataObjectTypes:arr currentController:self];
-    //    [manager cancelSampleBufferDelegate];
     _manager.delegate = self;
 }
 
