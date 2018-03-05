@@ -16,24 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.interactivePopGestureRecognizer.delegate = self;
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
-    [navigationBarAppearance setBackgroundImage:[self imageWithColor:[self colorWithHexString:@"#242C38"]] forBarMetrics:UIBarMetricsDefault];
+    [navigationBarAppearance setBackgroundImage:[self imageWithColor:[UIColor orangeColor]] forBarMetrics:UIBarMetricsDefault];
     NSDictionary *textAttributes = @{
-                                     NSFontAttributeName: [UIFont systemFontOfSize:18.0],
-                                     NSForegroundColorAttributeName: [UIColor whiteColor]
+                                     NSFontAttributeName: [UIFont systemFontOfSize:22.0],
+                                     NSForegroundColorAttributeName: [UIColor blackColor]
                                      };
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
     [navigationBarAppearance setTintColor:[UIColor redColor]];
-  
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if ([self.viewControllers count] > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
+        
+        UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateHighlighted];
+        backBtn.frame = CGRectMake(0, 0, 40, 70);
+        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+        [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     }
-    
     [super pushViewController:viewController animated:animated];
 }
 
@@ -87,7 +92,7 @@
     return [UIColor colorWithRed: red green: green blue: blue alpha: alpha];
 }
 
-- (CGFloat)colorComponentFrom: (NSString *) string start: (NSUInteger) start length: (NSUInteger) length {
+- (CGFloat)colorComponentFrom:(NSString *) string start:(NSUInteger)start length: (NSUInteger)length {
     NSString *substring = [string substringWithRange: NSMakeRange(start, length)];
     NSString *fullHex = length == 2 ? substring : [NSString stringWithFormat: @"%@%@", substring, substring];
     unsigned hexComponent;
@@ -101,6 +106,10 @@
     } else {
         return YES;
     }
+}
+
+- (void)backBtnClick {
+    [self popViewControllerAnimated:YES];
 }
 
 

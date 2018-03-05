@@ -8,12 +8,16 @@
 
 #import "NavigationControllerTest1.h"
 #import "NavigationControllerTest2.h"
+
 #import "UITableViewCell+FastCell.h"
+#import "NavigationBarBgView.h"
+
+#import <Masonry/Masonry.h>
 
 @interface NavigationControllerTest1 ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UIView *navView;
+@property (nonatomic, strong) NavigationBarBgView *navView;
 @property (nonatomic, strong) UIImageView *headImg;
 
 @end
@@ -32,7 +36,7 @@
     [self setNavTransparent:YES];
     [self setNavBlackLine:YES];
 }
-
+/*
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
@@ -42,12 +46,16 @@
     [super viewDidDisappear:animated];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
+ */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"next" style:UIBarButtonItemStylePlain target:self action:@selector(saveToCameraRoll)];
     self.navigationItem.rightBarButtonItem = saveButton;
+    self.navigationItem.title = @"列表";
     [self addTableView];
     [self addNavView];
 }
@@ -70,18 +78,18 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     CGFloat offset = scrollView.contentOffset.y;
-    if (offset > 50) {
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    } else {
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-    }
+//    NSLog(@"offset: %f", offset);
+//    if (offset > 50) {
+//        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+//    } else {
+//        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+//    }
     self.navView.alpha = offset / 64;
-    
 }
 
 - (void)addTableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -64, self.view.frame.size.width, self.view.frame.size.height + 64) style:(UITableViewStylePlain)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableHeaderView = self.headImg;
@@ -92,13 +100,16 @@
             _tableView.estimatedSectionHeaderHeight = 0;
         }
         [self.view addSubview:_tableView];
+        
+        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
     }
 }
 
 - (void)addNavView {
     if (!_navView) {
-        _navView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64.0)];
-        _navView.backgroundColor = [UIColor blackColor];
+        _navView = [[NavigationBarBgView alloc] init];
         [self.view addSubview:_navView];
     }
 }

@@ -29,7 +29,7 @@
         [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
         [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     } else {
-        [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[self colorWithHexString:@"#242C38"]] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor orangeColor]] forBarMetrics:UIBarMetricsDefault];
     }
 }
 

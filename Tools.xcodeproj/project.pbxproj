@@ -166,6 +166,11 @@
 		E1C68AE81FB5A6CF00D24601 /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AE71FB5A6CF00D24601 /* LiveListModel.m */; };
 		E1C68AEB1FB5AF0600D24601 /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AEA1FB5AF0600D24601 /* NetWorkRequest.m */; };
 		E1F06D1D1FB9A44100A9F315 /* MBProgressHUD+NH.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F06D1B1FB9A44000A9F315 /* MBProgressHUD+NH.m */; };
+		E1FB4F7D204CE0480087BE2B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F7C204CE0480087BE2B /* NSDate+Utilities.m */; };
+		E1FB4F80204CE3250087BE2B /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F7F204CE3250087BE2B /* NSDate+Extension.m */; };
+		E1FB4F8B204CE6910087BE2B /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F89204CE4FD0087BE2B /* TestViewController.m */; };
+		E1FB4F8F204D143A0087BE2B /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F8E204D143A0087BE2B /* UIScrollView+Extension.m */; };
+		E1FB4F97204D259F0087BE2B /* NavigationBarBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F96204D259F0087BE2B /* NavigationBarBgView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -484,6 +489,16 @@
 		E1C68AEA1FB5AF0600D24601 /* NetWorkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkRequest.m; sourceTree = "<group>"; };
 		E1F06D1B1FB9A44000A9F315 /* MBProgressHUD+NH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NH.m"; sourceTree = "<group>"; };
 		E1F06D1C1FB9A44000A9F315 /* MBProgressHUD+NH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NH.h"; sourceTree = "<group>"; };
+		E1FB4F7B204CE0480087BE2B /* NSDate+Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		E1FB4F7C204CE0480087BE2B /* NSDate+Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		E1FB4F7E204CE3250087BE2B /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		E1FB4F7F204CE3250087BE2B /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		E1FB4F88204CE4FD0087BE2B /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		E1FB4F89204CE4FD0087BE2B /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		E1FB4F8D204D143A0087BE2B /* UIScrollView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extension.h"; sourceTree = "<group>"; };
+		E1FB4F8E204D143A0087BE2B /* UIScrollView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extension.m"; sourceTree = "<group>"; };
+		E1FB4F95204D259F0087BE2B /* NavigationBarBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarBgView.h; sourceTree = "<group>"; };
+		E1FB4F96204D259F0087BE2B /* NavigationBarBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarBgView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,6 +593,7 @@
 				E14D42161F98596900952FD8 /* 导航栏 */,
 				E1167B1F1F98B57B0092E190 /* 等待提示器 */,
 				E1167B2C1F98C2030092E190 /* 弹框 */,
+				E1FB4F81204CE3F30087BE2B /* Test */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -594,10 +610,12 @@
 		E11043B51F7DF73800372F21 /* OC_Category */ = {
 			isa = PBXGroup;
 			children = (
+				E1FB4F8C204D140D0087BE2B /* UIscrollView */,
 				E16762FB1F8F748100F1076F /* UIButton */,
 				E11043E91F7DF73900372F21 /* UITableViewCell */,
 				E11043EC1F7DF73900372F21 /* UITextView */,
 				E11043EF1F7DF73900372F21 /* UIView */,
+				E1FB4F77204CDF410087BE2B /* NSDate */,
 			);
 			path = OC_Category;
 			sourceTree = "<group>";
@@ -731,6 +749,7 @@
 		E1209EE51F95A226006E6D86 /* 3rdLib */ = {
 			isa = PBXGroup;
 			children = (
+				E1FB4F94204D259F0087BE2B /* NavigationBar */,
 				E19282901FF60A73007D6E51 /* GXScrollView */,
 				E14660AB1FF1EAB5004A97F9 /* FileDownloadManager */,
 				E146607F1FF1E2C4004A97F9 /* BGFMDB */,
@@ -1243,6 +1262,44 @@
 			path = NetworkRequestManager;
 			sourceTree = "<group>";
 		};
+		E1FB4F77204CDF410087BE2B /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB4F7B204CE0480087BE2B /* NSDate+Utilities.h */,
+				E1FB4F7C204CE0480087BE2B /* NSDate+Utilities.m */,
+				E1FB4F7E204CE3250087BE2B /* NSDate+Extension.h */,
+				E1FB4F7F204CE3250087BE2B /* NSDate+Extension.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		E1FB4F81204CE3F30087BE2B /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB4F88204CE4FD0087BE2B /* TestViewController.h */,
+				E1FB4F89204CE4FD0087BE2B /* TestViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		E1FB4F8C204D140D0087BE2B /* UIscrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB4F8D204D143A0087BE2B /* UIScrollView+Extension.h */,
+				E1FB4F8E204D143A0087BE2B /* UIScrollView+Extension.m */,
+			);
+			path = UIscrollView;
+			sourceTree = "<group>";
+		};
+		E1FB4F94204D259F0087BE2B /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB4F95204D259F0087BE2B /* NavigationBarBgView.h */,
+				E1FB4F96204D259F0087BE2B /* NavigationBarBgView.m */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
 		F0E43B9EDAC796B281284F87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1388,8 +1445,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FB4F8B204CE6910087BE2B /* TestViewController.m in Sources */,
 				E146609A1FF1E2C5004A97F9 /* BGDB.m in Sources */,
 				E1209F301F95EFB2006E6D86 /* RealReachability.m in Sources */,
+				E1FB4F8F204D143A0087BE2B /* UIScrollView+Extension.m in Sources */,
+				E1FB4F80204CE3250087BE2B /* NSDate+Extension.m in Sources */,
 				E1209F2F1F95EFAC006E6D86 /* PingHelper.m in Sources */,
 				E15F28CA1FC51062002C7946 /* FourthViewController.m in Sources */,
 				E16D8FE71FB3F36000E142A5 /* VideoResolution.m in Sources */,
@@ -1422,6 +1482,7 @@
 				E1209F271F95EF71006E6D86 /* FSMStateUtil.m in Sources */,
 				E122C3E41FECEE78004DD51D /* DailyCalendarView.m in Sources */,
 				E14660A21FF1E2C5004A97F9 /* FMDatabaseQueue.m in Sources */,
+				E1FB4F7D204CE0480087BE2B /* NSDate+Utilities.m in Sources */,
 				E19282A41FF60A73007D6E51 /* GXTabMenuCell.m in Sources */,
 				E1167B321F98C2770092E190 /* AlertView.m in Sources */,
 				E1581C1B1FBAE2E000650313 /* PlusButton.m in Sources */,
@@ -1516,6 +1577,7 @@
 				E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */,
 				E16D8FE41FB3F26400E142A5 /* VideoModel.m in Sources */,
 				E1453D621FC4314800E0FA82 /* TwoModel.m in Sources */,
+				E1FB4F97204D259F0087BE2B /* NavigationBarBgView.m in Sources */,
 				E110438F1F7DF55600372F21 /* ViewController.m in Sources */,
 				E142B9891F946639002EAEF7 /* UIButton+Countdown.m in Sources */,
 				E15ED63A1FB2D0E500BC4D1D /* UINavigationController+ZFFullscreenPopGesture.m in Sources */,

@@ -98,5 +98,11 @@
 		<key>class</key>
 		<string>DownloadViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Test</string>
+		<key>class</key>
+		<string>TestViewController</string>
+	</dict>
 </array>
 </plist>
