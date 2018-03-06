@@ -104,5 +104,11 @@
 		<key>class</key>
 		<string>TestViewController</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>标签</string>
+		<key>class</key>
+		<string>TagViewController</string>
+	</dict>
 </array>
 </plist>

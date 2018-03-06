@@ -8,15 +8,21 @@
 
 #import "BaseNavigationController.h"
 
-@interface BaseNavigationController ()<UIGestureRecognizerDelegate>
+@interface BaseNavigationController ()
 
 @end
 
 @implementation BaseNavigationController
 
+#pragma mark - lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.interactivePopGestureRecognizer.delegate = self;
+    
+    [self setup];
+}
+
+#pragma mark - private
+- (void)setup {
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
     [navigationBarAppearance setBackgroundImage:[self imageWithColor:[UIColor orangeColor]] forBarMetrics:UIBarMetricsDefault];
     NSDictionary *textAttributes = @{
@@ -24,22 +30,7 @@
                                      NSForegroundColorAttributeName: [UIColor blackColor]
                                      };
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
-    [navigationBarAppearance setTintColor:[UIColor redColor]];
-}
-
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if ([self.viewControllers count] > 0) {
-        viewController.hidesBottomBarWhenPushed = YES;
-        
-        UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateHighlighted];
-        backBtn.frame = CGRectMake(0, 0, 40, 70);
-        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
-        [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
-    }
-    [super pushViewController:viewController animated:animated];
+    [navigationBarAppearance setTintColor:[UIColor blackColor]];
 }
 
 - (UIImage *)imageWithColor:(UIColor *)color {
@@ -100,18 +91,24 @@
     return hexComponent / 255.0;
 }
 
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    if (self.viewControllers.count <= 1) {
-        return NO;
-    } else {
-        return YES;
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if ([self.viewControllers count] > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+        
+        UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateHighlighted];
+        backBtn.frame = CGRectMake(0, 0, 40, 70);
+        backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+        [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     }
+    [super pushViewController:viewController animated:animated];
 }
 
+#pragma mark - event response
 - (void)backBtnClick {
     [self popViewControllerAnimated:YES];
 }
-
-
 
 @end
