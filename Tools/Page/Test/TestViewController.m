@@ -8,6 +8,7 @@
 
 #import "TestViewController.h"
 #import "NSDate+Extension.h"
+#import "HYBImageCliped.h"
 
 @interface TestViewController ()
 
@@ -18,11 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
-    label.textColor = [UIColor redColor];
-    [self.view addSubview:label];
-    NSString *dateStr = @"2018-03-05 10:47:00";
-    label.text = [NSDate jk_timeInfoWithDateString:dateStr];
+    UIView *test = [[UIView alloc] initWithFrame:CGRectMake(100, 64, 100, 100)];
+//    [test hyb_setImage:[UIImage imageNamed:@"0"] size:CGSizeMake(100, 100) cornerRadius:50.0 rectCorner:(UIRectCornerAllCorners) backgroundColor:[UIColor whiteColor] isEqualScale:NO onCliped:^(UIImage *clipedImage) {
+//
+//    }];
+    test.backgroundColor = [UIColor redColor];
+    [test hyb_addCorner:UIRectCornerAllCorners cornerRadius:20];
+    [self.view addSubview:test];
     
     
     

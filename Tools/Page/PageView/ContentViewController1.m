@@ -1,12 +1,12 @@
 //
-//  NetworkViewController.m
+//  ContentViewController1.m
 //  Tools
 //
-//  Created by 张书孟 on 2017/11/10.
-//  Copyright © 2017年 张书孟. All rights reserved.
+//  Created by 张书孟 on 2018/3/13.
+//  Copyright © 2018年 张书孟. All rights reserved.
 //
 
-#import "NetworkViewController.h"
+#import "ContentViewController1.h"
 #import "UITableViewCell+FastCell.h"
 #import <Masonry/Masonry.h>
 #import "NetworkRequest.h"
@@ -14,16 +14,15 @@
 #import <MJRefresh/MJRefresh.h>
 #import "NetworkCache.h"
 
-@interface NetworkViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ContentViewController1 () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray <LiveListModel *> *dataSource;
 @property (nonatomic, assign) NSInteger page;
-@property (nonatomic, strong) UIView *footerView;
 
 @end
 
-@implementation NetworkViewController
+@implementation ContentViewController1
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -89,13 +88,14 @@
     NSLog(@"cell -- %ld", indexPath.row);
 }
 
+
 - (void)addTableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [UIView new];
-//        [self.view addSubview:_tableView];
+        //        [self.view addSubview:_tableView];
         self.view = _tableView;
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
@@ -118,6 +118,8 @@
     }
     return _dataSource;
 }
+
+
 
 
 @end

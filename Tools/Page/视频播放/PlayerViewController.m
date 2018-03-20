@@ -9,7 +9,7 @@
 #import "PlayerViewController.h"
 #import <ZFPlayer/ZFPlayer.h>
 #import <Masonry/Masonry.h>
-#import "UINavigationController+ZFFullscreenPopGesture.h"
+//#import "UINavigationController+ZFFullscreenPopGesture.h"
 #import "PlayerControlView.h"
 
 @interface PlayerViewController ()<ZFPlayerDelegate,ZFPlayerControlViewDelagate>

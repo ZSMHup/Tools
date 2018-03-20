@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 @class CommonWebView;
 
@@ -47,7 +48,7 @@
 
 @end
 
-@interface CommonWebView : UIView
+@interface CommonWebView : WKWebView
 
 /** CommonWebViewDelegate */
 @property (nonatomic, weak) id<CommonWebViewDelegate> delegate;

@@ -74,13 +74,13 @@
 
 + (NSDictionary *)configParameters:(NSDictionary *)parameters {
     NSMutableDictionary *mDic = [NSMutableDictionary dictionary];
-    NSString *accessToken = @"e1312ff6aadf383177dca4e47c979d22";
+    NSString *accessToken = @"2a3468b34cedc240fce2498a49b75ab";
     if (accessToken) {
         [mDic setObject:accessToken forKey:@"accessToken"];
     } else {
         [mDic setObject:@"" forKey:@"accessToken"];
     }
-    [mDic setObject:@"3.0.0" forKey:@"version"];
+    [mDic setObject:@"4.0.0" forKey:@"version"];
     [mDic setObject:@"1" forKey:@"deviceType"];
     for (NSString *key in parameters.allKeys) {
         NSString *value = parameters[key];

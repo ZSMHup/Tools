@@ -9,9 +9,9 @@
 #import "NetworkRequestCode.h"
 
 //#if DevelopSever
-//NSString *const kApiPrefix = @"http://tyapi.znzkj.net/touyanshe_api/s/api";
+NSString *const kApiPrefix = @"http://tyapi.znzkj.net/touyanshe_api/s/api";
 //#elif ProductSever
-NSString *const kApiPrefix = @"http://api.touyanshe.com.cn/touyanshe_api/s/api";
+//NSString *const kApiPrefix = @"http://api.touyanshe.com.cn/touyanshe_api/s/api";
 //#endif
 
 NSString *const LiveListRequestCode = @"80003";

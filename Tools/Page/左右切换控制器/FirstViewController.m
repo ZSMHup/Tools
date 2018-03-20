@@ -14,10 +14,18 @@
 
 @implementation FirstViewController
 
++ (UITableView *)contentTableView {
+    
+    FirstViewController *net = [[FirstViewController alloc] init];
+    [net.view addSubview:net.tableView];
+    
+    return net.tableView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
-    
+
     [self.view addSubview:self.tableView];
 }
 
@@ -28,6 +36,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = [NSString stringWithFormat:@"cell -- %ld", indexPath.row];
     return cell;
 }
 
