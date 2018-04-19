@@ -10,4 +10,6 @@
 
 @interface TagViewController : BaseViewController
 
+@property (nonatomic, strong) NSString *body;
+
 @end

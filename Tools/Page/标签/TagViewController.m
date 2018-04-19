@@ -25,6 +25,8 @@
     
     [self.view addSubview:self.collectionView];
     [self.collectionView reloadData];
+    
+    NSLog(@"%@", [NSString stringWithFormat:@"%@", self.body]);
 }
 
 #pragma mark - UICollectionViewDelegate, UICollectionViewDataSource

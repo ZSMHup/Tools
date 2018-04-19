@@ -1,45 +1,37 @@
 //
-//  WebViewController.m
+//  WebViewPushController.m
 //  Tools
 //
-//  Created by 张书孟 on 2018/3/16.
+//  Created by 张书孟 on 2018/4/16.
 //  Copyright © 2018年 张书孟. All rights reserved.
 //
 
-#import "WebViewController.h"
 #import "WebViewPushController.h"
-
 #import "CommonWebView.h"
 #import <Masonry/Masonry.h>
 
-#define LocalUrl @"http://192.168.20.18:3000/"
+#define LocalUrl @"http://localhost:3000/"
 
-@interface WebViewController () <CommonWebViewDelegate, WKScriptMessageHandler>
+@interface WebViewPushController () <CommonWebViewDelegate, WKScriptMessageHandler>
 
 @property (nonatomic, strong) CommonWebView *webView;
 
-@property (nonatomic, strong) NSString *url;
-
 @end
 
-@implementation WebViewController
+@implementation WebViewPushController
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     config.userContentController = [[WKUserContentController alloc] init];
-    [config.userContentController addScriptMessageHandler:self name:@"AppModel"];
-    [config.userContentController addScriptMessageHandler:self name:@"AppTabs"];
-
+    [config.userContentController addScriptMessageHandler:self name:@"HomeModel"];
+    
     _webView = [CommonWebView webViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64) configuration:config];
     _webView.delegate = self;
     _webView.isNavigationBarOrTranslucent = NO;
-    NSString *url = [NSString stringWithFormat:@"%@", LocalUrl];
-   [_webView loadRequestWithUrlString:url];
+    [_webView loadRequestWithUrlString:self.url];
     [self.view addSubview:self.webView];
-    
 }
 
 - (void)webView:(CommonWebView *)webView didFinishLoadWithURL:(NSURL *)url {
@@ -47,13 +39,10 @@
 }
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    if ([message.name isEqualToString:@"AppModel"]) {
+    if ([message.name isEqualToString:@"HomeModel"]) {
+        NSLog(@"message.body: %@", message.body);
         WebViewPushController *vc = [[WebViewPushController alloc] init];
-        vc.url = [NSString stringWithFormat:@"%@%@", LocalUrl, @"Carousel"];
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if ([message.name isEqualToString:@"AppTabs"]) {
-        WebViewPushController *vc = [[WebViewPushController alloc] init];
-        vc.url = [NSString stringWithFormat:@"%@%@", LocalUrl, @"AppTabs"];
+        vc.url = [NSString stringWithFormat:@"%@%@", LocalUrl, @"Home"];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
@@ -65,5 +54,7 @@
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
 }
+
+
 
 @end

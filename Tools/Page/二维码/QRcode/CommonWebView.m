@@ -15,6 +15,7 @@
 @property (nonatomic, strong) WKWebView *wkWebView;
 // 进度条
 @property (nonatomic, strong) UIProgressView *progressView;
+@property (nonatomic, strong) WKWebViewConfiguration *config;
 
 @end
 
@@ -32,6 +33,16 @@ static CGFloat const progressViewHeight = 2;
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        [self addWkWebView];
+        [self addProgressView];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration *)configuration {
+    self = [super initWithFrame:frame configuration:configuration];
+    if (self) {
+        self.config = configuration;
         [self addWkWebView];
         [self addProgressView];
     }
@@ -61,6 +72,10 @@ static CGFloat const progressViewHeight = 2;
 #pragma mark Public
 + (instancetype)webViewWithFrame:(CGRect)frame {
     return [[self alloc] initWithFrame:frame];
+}
+
++ (instancetype)webViewWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration *)configuration {
+    return [[self alloc] initWithFrame:frame configuration:configuration];
 }
 
 // 加载 web
@@ -169,6 +184,28 @@ static CGFloat const progressViewHeight = 2;
 }
 
 #pragma mark  加载的状态回调（WKNavigationDelegate）
+
+//// 请求开始前，会先掉用此代理方法
+//- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+//    if (navigationAction.navigationType == WKNavigationTypeLinkActivated) {
+//        decisionHandler(WKNavigationActionPolicyCancel);
+//    } else {
+//        decisionHandler(WKNavigationActionPolicyAllow);
+//    }
+//    if (self.delegate && [self.delegate respondsToSelector:@selector(wkWebView:decidePolicyForNavigationAction:decisionHandler:)]) {
+//        [self.delegate wkWebView:self decidePolicyForNavigationAction:navigationAction decisionHandler:decisionHandler];
+//    }
+//}
+//
+//// 在响应完成时，会回调此方法
+//// 肉果设置为不允许响应，web内容就不会传过来
+//- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
+//    
+//    if (self.delegate && [self.delegate respondsToSelector:@selector(wkWebView:decidePolicyForNavigationResponse:decisionHandler:)]) {
+//        [self.delegate wkWebView:self decidePolicyForNavigationResponse:navigationResponse decisionHandler:decisionHandler];
+//    }
+//}
+
 // 页面开始加载时调用
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     if (self.delegate && [self.delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
@@ -198,10 +235,39 @@ static CGFloat const progressViewHeight = 2;
     self.progressView.alpha = 0.0;
 }
 
+// 在js端调用alert函数时，会触发此方法
+// js端调用alert时所传的数据可以通过message拿到
+// 在原生得到结果后，需要回调js，是通过completionHandler回调
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:completionHandler:)]) {
+        [self.delegate webView:self runJavaScriptAlertPanelWithMessage:message initiatedByFrame:frame completionHandler:completionHandler ? : nil];
+    }
+}
+//
+// 在js端调用Confirm函数时，会触发此方法
+// 通过message可以拿到js端所传的数据
+// 在iOS端显示原生alert得到YES／NO
+// 在原生得到结果后，需要回调js，是通过completionHandler回调
+- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:completionHandler:)]) {
+        [self.delegate webView:self runJavaScriptConfirmPanelWithMessage:message initiatedByFrame:frame completionHandler:completionHandler];
+    }
+}
+
+// 在js端调用Prompt函数时，会触发此方法
+// 要求输入一段文本
+// 在原生输入得到内容后，通过completionHandler回调给js
+- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * _Nullable))completionHandler {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:completionHandler:)]) {
+        [self.delegate webView:self runJavaScriptTextInputPanelWithPrompt:prompt defaultText:defaultText initiatedByFrame:frame completionHandler:completionHandler];
+    }
+}
+
+
 #pragma mark getter
 - (void)addWkWebView {
     if (!_wkWebView) {
-        _wkWebView = [[WKWebView alloc] initWithFrame:self.bounds];
+        _wkWebView = [[WKWebView alloc] initWithFrame:self.bounds configuration:self.config];
         _wkWebView.UIDelegate = self;
         _wkWebView.navigationDelegate = self;
         [self addSubview:_wkWebView];

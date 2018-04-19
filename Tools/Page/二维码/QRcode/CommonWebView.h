@@ -15,6 +15,17 @@
 
 @optional
 
+///**
+// 请求开始前，会先掉用此代理方法
+// */
+//- (void)wkWebView:(CommonWebView *)wkWebView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler;
+///**
+// 在响应完成时，会回调此方法
+// 如果设置为不允许响应，web内容就不会传过来
+// */
+//- (void)wkWebView:(CommonWebView *)wkWebView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler;
+
+
 /**
  页面开始加载时调用
 
@@ -46,6 +57,29 @@
  */
 - (void)webView:(CommonWebView *)webView didFailLoadWithError:(NSError *)error;
 
+/**
+ 在js端调用alert函数时，会触发此方法
+ js端调用alert时所传的数据可以通过message拿到
+ 在原生得到结果后，需要回调js，是通过completionHandler回调
+ */
+- (void)webView:(CommonWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler;
+
+/**
+ 在js端调用Confirm函数时，会触发此方法
+ 通过message可以拿到js端所传的数据
+ 在iOS端显示原生alert得到YES／NO
+ 在原生得到结果后，需要回调js，是通过completionHandler回调
+ */
+- (void)webView:(CommonWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler;
+
+/**
+ 在js端调用Prompt函数时，会触发此方法
+ 要求输入一段文本
+ 在原生输入得到内容后，通过completionHandler回调给js
+ */
+- (void)webView:(CommonWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString *))completionHandler;
+
+
 @end
 
 @interface CommonWebView : WKWebView
@@ -66,6 +100,7 @@
  @return CommonWebView
  */
 + (instancetype)webViewWithFrame:(CGRect)frame;
++ (instancetype)webViewWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration *)configuration;
 
 /**
  加载 web

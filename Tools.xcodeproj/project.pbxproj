@@ -172,6 +172,7 @@
 		E1A64B5B2057CDE200814AF9 /* ContentViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A64B5A2057CDE200814AF9 /* ContentViewController1.m */; };
 		E1B5BAAF2057AD530092B263 /* UINavigationController+ZFFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B5BAAE2057AD530092B263 /* UINavigationController+ZFFullscreenPopGesture.m */; };
 		E1BB8CD31FEA56C9009596A7 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BB8CD21FEA56C9009596A7 /* DownloadViewController.m */; };
+		E1C3BB522084A703006A23D1 /* WebViewPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3BB512084A703006A23D1 /* WebViewPushController.m */; };
 		E1C68AD71FB5869200D24601 /* NetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AD41FB5869200D24601 /* NetworkCache.m */; };
 		E1C68AD81FB5869200D24601 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AD61FB5869200D24601 /* NetworkHelper.m */; };
 		E1C68ADB1FB586CC00D24601 /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68ADA1FB586CC00D24601 /* NetworkViewController.m */; };
@@ -522,6 +523,8 @@
 		E1B5BAAE2057AD530092B263 /* UINavigationController+ZFFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ZFFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		E1BB8CD11FEA56C9009596A7 /* DownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		E1BB8CD21FEA56C9009596A7 /* DownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		E1C3BB502084A703006A23D1 /* WebViewPushController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewPushController.h; sourceTree = "<group>"; };
+		E1C3BB512084A703006A23D1 /* WebViewPushController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewPushController.m; sourceTree = "<group>"; };
 		E1C68AD31FB5869200D24601 /* NetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCache.h; sourceTree = "<group>"; };
 		E1C68AD41FB5869200D24601 /* NetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCache.m; sourceTree = "<group>"; };
 		E1C68AD51FB5869200D24601 /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
@@ -815,6 +818,8 @@
 			children = (
 				E1186526205B9D2C0092BC13 /* WebViewController.h */,
 				E1186527205B9D2C0092BC13 /* WebViewController.m */,
+				E1C3BB502084A703006A23D1 /* WebViewPushController.h */,
+				E1C3BB512084A703006A23D1 /* WebViewPushController.m */,
 			);
 			path = HTML5;
 			sourceTree = "<group>";
@@ -1736,6 +1741,7 @@
 				E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */,
 				E1486A211FE26FF10041BFAF /* QRCodeScanningView.m in Sources */,
 				E146609E1FF1E2C5004A97F9 /* NSObject+BGModel.m in Sources */,
+				E1C3BB522084A703006A23D1 /* WebViewPushController.m in Sources */,
 				E1C68AD71FB5869200D24601 /* NetworkCache.m in Sources */,
 				E14D42441F98810300952FD8 /* NSObject+KMNavigationBarTransition.m in Sources */,
 				E11044091F7E006000372F21 /* UITableViewCell+FastCell.m in Sources */,
