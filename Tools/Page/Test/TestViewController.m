@@ -12,8 +12,12 @@
 #import <NSDate+AYDate.h>
 #import <Macro/AYMacro.h>
 #import <UIView+AYView.h>
+#import <Macro/AYNotification.h>
+#import <AYTextHelper/UILabel+AYLabelTextHelper.h>
 
 @interface TestViewController ()
+
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -43,19 +47,60 @@
 //
 //    NSLog(@"%@", kSystemVersion);
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 200, 100)];
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 200, 100)];
+//
+//    [label drawLineWidth:1 lineLength:5 lineSpacing:5 lineColor:[UIColor redColor] fillColor:[UIColor greenColor] cornerRadius:2];
+//
+//    [self.view addSubview:label];
+//
+//    NotificationRegister(self, @selector(qqq), TEST, nil);
+//
+//    kPostNotificationName(TEST);
     
-    [label drawLineWidth:1 lineLength:5 lineSpacing:5 lineColor:[UIColor redColor] fillColor:[UIColor greenColor] cornerRadius:2];
-    label.text = @"labellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabel";
-    
+    UILabel *label = [[UILabel alloc] init];
+    label.numberOfLines = 0;
     [self.view addSubview:label];
     
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.equalTo(self.view);
+    }];
+    
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] init];
+    
+    NSAttributedString *att1 = [[NSAttributedString alloc] initWithString:@"因为解析的数据里面有html标签，就使用下面的代码把字符串转换成data，初始化时再用HTML类型，转换为富文本" attributes:
+                                @{NSForegroundColorAttributeName: [UIColor redColor]}];
+    NSAttributedString *att2 = [[NSAttributedString alloc] initWithString:@"qwertyuiopasdfghjjkl" attributes:
+                                @{
+                                  NSLinkAttributeName: @"qwe",
+                                  NSForegroundColorAttributeName: [UIColor greenColor],
+                                  }];
+    
+    NSTextAttachment *attch = [[NSTextAttachment alloc] init];
+    attch.image = [UIImage imageNamed:@"0"];
+    CGFloat pointSize = label.font.pointSize;
+    attch.bounds = CGRectMake(0, 0, 30, 30);
+    
+    NSAttributedString *att3 = [NSAttributedString attributedStringWithAttachment:attch];
+    
+    [attString appendAttributedString:att1];
+    [attString appendAttributedString:att2];
+    [attString appendAttributedString:att3];
+    
+    label.attributedText = attString;
+    
+    [label setAy_tapBlock:^(NSInteger index, NSAttributedString *charAttributedString) {
+        NSRange range = NSMakeRange(0, 1);
+        NSString *link = [charAttributedString attribute:NSLinkAttributeName atIndex:0 effectiveRange:&range];
+        NSString *attch = [charAttributedString attribute:NSAttachmentAttributeName atIndex:0 effectiveRange:&range];
+        NSLog(@"%ld -- %@ -- %@ -- %@", index, charAttributedString, link, attch);
+    }];
     
     
     
 }
 
-
-
+- (void)qqq {
+    NSLog(@"test");
+}
 
 @end

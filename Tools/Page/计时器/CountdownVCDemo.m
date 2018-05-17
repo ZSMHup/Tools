@@ -9,7 +9,7 @@
 #import "CountdownVCDemo.h"
 #import "UIButton+Countdown.h"
 
-#import "UINavigationController+ZFFullscreenPopGesture.h"
+//#import "UINavigationController+ZFFullscreenPopGesture.h"
 
 @interface CountdownVCDemo ()
 

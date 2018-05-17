@@ -16,7 +16,7 @@
 
 #import "JYPagingView.h"
 
-#import "UINavigationController+ZFFullscreenPopGesture.h"
+//#import "UINavigationController+ZFFullscreenPopGesture.h"
 
 @interface PagesViewController () <HHHorizontalPagingViewDelegate>
 

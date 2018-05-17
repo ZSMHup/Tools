@@ -7,7 +7,7 @@
 //
 
 #import "QRCodeGenerateViewController.h"
-//#import <AYQRCodeManager/AYQRCodeGenerateManager.h>
+#import <AYQRCodeManager/AYQRCodeGenerateManager.h>
 
 @interface QRCodeGenerateViewController ()
 
@@ -18,12 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 200, 200)];
-//    [self.view addSubview:imageView1];
-//    CGFloat scale = 0.2;
-//    imageView1.image = [AYQRCodeGenerateManager generateWithLogoQRCodeData:@"http://www.jianshu.com/p/821cca78f887" logoImageName:@"defaultUserIcon" logoScaleToSuperView:scale];
-//
-//
+    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 200, 200)];
+    [self.view addSubview:imageView1];
+    CGFloat scale = 0.2;
+    imageView1.image = [AYQRCodeGenerateManager generateWithLogoQRCodeData:@"http://www.jianshu.com/p/821cca78f887" logoImageName:@"defaultUserIcon" logoScaleToSuperView:scale];
+
+
 //    UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(100, 400, 200, 200)];
 //    [self.view addSubview:imageView2];
 //
