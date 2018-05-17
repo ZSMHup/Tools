@@ -7,7 +7,8 @@
 //
 
 #import "DownloadViewController.h"
-#import "FileDownloadManager.h"
+//#import "FileDownloadManager.h"
+#import <AYFileDownloadManager.h>
 
 #import "DownloadTestCell.h"
 
@@ -36,11 +37,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"getCacheSize : %lf",[[FileDownloadManager sharedInstance] getCacheSize]);
+    NSLog(@"getCacheSize : %lf",[[AYFileDownloadManager sharedInstance] getCacheSize]);
     
-    NSLog(@"%@",[[FileDownloadManager sharedInstance] getFileWithURL:@"http://tya.znzkj.net/touyanshe_web/outImages/20180104/20180104_5642247.pdf" fileName:FileName]);
+    NSLog(@"%@",[[AYFileDownloadManager sharedInstance] getFileWithURL:@"http://tya.znzkj.net/touyanshe_web/outImages/20180104/20180104_5642247.pdf" fileName:FileName]);
     NSLog(@"---------------------");
-    NSLog(@"%@",[[FileDownloadManager sharedInstance] getAttribute:FileName]);
+    NSLog(@"%@",[[AYFileDownloadManager sharedInstance] getAttribute:FileName]);
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     [btn setTitle:@"清 空" forState:(UIControlStateNormal)];
@@ -52,9 +53,9 @@
 }
 
 - (void)btnClick {
-    NSArray *attributeArr = [[FileDownloadManager sharedInstance] getAttribute:FileName];
+    NSArray *attributeArr = [[AYFileDownloadManager sharedInstance] getAttribute:FileName];
     __weak typeof(self) weakSelf = self;
-    [[FileDownloadManager sharedInstance] startTaskWithAttribute:attributeArr fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
+    [[AYFileDownloadManager sharedInstance] startTaskWithAttribute:attributeArr fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
         NSLog(@"pro : %lf",progress);
     } state:^(DownloadState state) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -82,7 +83,7 @@
 #pragma mark 刷新数据（用来判断程序刚进来时候下载的文件本地是否存在过，进度咋样）
 - (void)refreshDataWithState:(DownloadState)state url:(NSString *)url
 {
-    self.progress = [[FileDownloadManager sharedInstance] progress:url fileName:FileName] * 100;
+    self.progress = [[AYFileDownloadManager sharedInstance] progress:url fileName:FileName] * 100;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -99,7 +100,7 @@
     __weak typeof(self) weakSelf = self;
     cell.downloadBtnClick = ^(UIButton *sender, UILabel *label) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [[FileDownloadManager sharedInstance] downloadWithURL:strongSelf.dataSource[indexPath.row][@"url"] attribute:strongSelf.dataSource[indexPath.row] fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
+        [[AYFileDownloadManager sharedInstance] downloadWithURL:strongSelf.dataSource[indexPath.row][@"url"] attribute:strongSelf.dataSource[indexPath.row] fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 label.text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
                 NSLog(@"---progress---: %lf",progress * 100);
@@ -113,7 +114,7 @@
     };
     cell.deleteBtnClick = ^(UILabel *label) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [[FileDownloadManager sharedInstance] deleteFile:strongSelf.dataSource[indexPath.row][@"url"] fileName:FileName];
+        [[AYFileDownloadManager sharedInstance] deleteFile:strongSelf.dataSource[indexPath.row][@"url"] fileName:FileName];
         label.text = @"0%";
     };
     return cell;

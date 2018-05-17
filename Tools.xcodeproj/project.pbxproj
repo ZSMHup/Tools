@@ -81,26 +81,11 @@
 		E14660A11FF1E2C5004A97F9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E14660931FF1E2C4004A97F9 /* FMDatabasePool.m */; };
 		E14660A21FF1E2C5004A97F9 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E14660951FF1E2C4004A97F9 /* FMDatabaseQueue.m */; };
 		E14660A31FF1E2C5004A97F9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E14660981FF1E2C4004A97F9 /* FMResultSet.m */; };
-		E14660B31FF1EAB5004A97F9 /* FileDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E14660AD1FF1EAB5004A97F9 /* FileDownloadManager.m */; };
-		E14660B41FF1EAB5004A97F9 /* FileSessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E14660AF1FF1EAB5004A97F9 /* FileSessionModel.m */; };
-		E14660B51FF1EAB5004A97F9 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = E14660B21FF1EAB5004A97F9 /* NSString+Hash.m */; };
 		E14660EF1FF24AD4004A97F9 /* jquery-1.7.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E14660EB1FF24AD3004A97F9 /* jquery-1.7.2.min.js */; };
 		E14660F01FF24AD4004A97F9 /* BAWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = E14660EC1FF24AD3004A97F9 /* BAWebView.html */; };
 		E14660F11FF24AD4004A97F9 /* BAHome2.html in Resources */ = {isa = PBXBuildFile; fileRef = E14660ED1FF24AD3004A97F9 /* BAHome2.html */; };
 		E14660F21FF24AD4004A97F9 /* BAHome.html in Resources */ = {isa = PBXBuildFile; fileRef = E14660EE1FF24AD4004A97F9 /* BAHome.html */; };
-		E1486A1E1FE26FF10041BFAF /* QRCodeAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1486A0F1FE26FF10041BFAF /* QRCodeAlbumManager.m */; };
-		E1486A1F1FE26FF10041BFAF /* QRCodeGenerateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1486A111FE26FF10041BFAF /* QRCodeGenerateManager.m */; };
-		E1486A201FE26FF10041BFAF /* QRCodeScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1486A131FE26FF10041BFAF /* QRCodeScanManager.m */; };
-		E1486A211FE26FF10041BFAF /* QRCodeScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1486A151FE26FF10041BFAF /* QRCodeScanningView.m */; };
-		E1486A221FE26FF10041BFAF /* QRCodeFlashlightCloseImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E1486A171FE26FF10041BFAF /* QRCodeFlashlightCloseImage.png */; };
-		E1486A231FE26FF10041BFAF /* QRCodeFlashlightOpenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E1486A181FE26FF10041BFAF /* QRCodeFlashlightOpenImage.png */; };
-		E1486A241FE26FF10041BFAF /* QRCodeScanningLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1486A191FE26FF10041BFAF /* QRCodeScanningLine@2x.png */; };
-		E1486A251FE26FF10041BFAF /* QRCodeScanningLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1486A1A1FE26FF10041BFAF /* QRCodeScanningLine@3x.png */; };
-		E1486A261FE26FF10041BFAF /* QRCodeScanningLineGrid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1486A1B1FE26FF10041BFAF /* QRCodeScanningLineGrid@2x.png */; };
-		E1486A271FE26FF10041BFAF /* QRCodeScanningLineGrid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1486A1C1FE26FF10041BFAF /* QRCodeScanningLineGrid@3x.png */; };
-		E1486A281FE26FF10041BFAF /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = E1486A1D1FE26FF10041BFAF /* sound.caf */; };
 		E1486A2B1FE270680041BFAF /* QRCodeScanningSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1486A2A1FE270680041BFAF /* QRCodeScanningSuccessVC.m */; };
-		E1486A2E1FE27E590041BFAF /* UIImage+ImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = E1486A2D1FE27E590041BFAF /* UIImage+ImageSize.m */; };
 		E14D42191F985AEE00952FD8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D42181F985AEE00952FD8 /* NavigationController.m */; };
 		E14D421C1F985B3D00952FD8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D421B1F985B3D00952FD8 /* BaseViewController.m */; };
 		E14D421F1F986F7000952FD8 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D421E1F986F7000952FD8 /* BaseNavigationController.m */; };
@@ -126,7 +111,6 @@
 		E15BC7761FE0CE73001B25C1 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7751FE0CE73001B25C1 /* ThirdViewController.m */; };
 		E15BC7C81FE10DF6001B25C1 /* SwitchVCContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7C51FE10DF5001B25C1 /* SwitchVCContentView.m */; };
 		E15BC7C91FE10DF6001B25C1 /* TabPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15BC7C71FE10DF5001B25C1 /* TabPageView.m */; };
-		E15D38451FE3768700305810 /* CommonWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D38441FE3768700305810 /* CommonWebView.m */; };
 		E15ED6361FB2B59C00BC4D1D /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED6351FB2B59C00BC4D1D /* PlayerViewController.m */; };
 		E15ED63D1FB308B100BC4D1D /* PlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15ED63C1FB308B100BC4D1D /* PlayerControlView.m */; };
 		E15F28C71FC51044002C7946 /* ThridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F28C61FC51044002C7946 /* ThridViewController.m */; };
@@ -138,11 +122,8 @@
 		E165F2A5204E87EB002AC499 /* UIButton+HYBImageCliped.m in Sources */ = {isa = PBXBuildFile; fileRef = E165F29F204E87EA002AC499 /* UIButton+HYBImageCliped.m */; };
 		E165F2A6204E87EB002AC499 /* UIImageView+HYBImageCliped.m in Sources */ = {isa = PBXBuildFile; fileRef = E165F2A1204E87EB002AC499 /* UIImageView+HYBImageCliped.m */; };
 		E16762F41F8F6EDA00F1076F /* UIView+ViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043F31F7DF73900372F21 /* UIView+ViewTools.m */; };
-		E16762F51F8F6EE500F1076F /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043EE1F7DF73900372F21 /* UITextView+Placeholder.m */; };
 		E16762F61F8F6EED00F1076F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043F11F7DF73900372F21 /* UIView+Extension.m */; };
 		E16762F81F8F6EF800F1076F /* AYMFMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043FA1F7DF73900372F21 /* AYMFMessageViewController.m */; };
-		E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E11043FD1F7DF73900372F21 /* AYTextField.m */; };
-		E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E11044001F7DF73900372F21 /* AYTextView.m */; };
 		E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */ = {isa = PBXBuildFile; fileRef = E16762FD1F8F748100F1076F /* UIButton+Alignment.m */; };
 		E16D8FDC1FB3E9EC00E142A5 /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FDB1FB3E9EC00E142A5 /* VideoListViewController.m */; };
 		E16D8FDF1FB3EE9400E142A5 /* PlayerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D8FDE1FB3EE9400E142A5 /* PlayerTableViewController.m */; };
@@ -154,6 +135,14 @@
 		E176B9271FE74D88006998ED /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E176B9261FE74D88006998ED /* index.html */; };
 		E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */; };
 		E18844B81FDF86BA0012C2B1 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18844B71FDF86BA0012C2B1 /* PageViewController.m */; };
+		E188B78120AC12640012E78F /* libAYCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E188B78020AC123C0012E78F /* libAYCommon.a */; };
+		E188B7A620AC13440012E78F /* QRCodeFlashlightOpenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E188B79F20AC13430012E78F /* QRCodeFlashlightOpenImage.png */; };
+		E188B7A720AC13440012E78F /* QRCodeFlashlightCloseImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E188B7A020AC13430012E78F /* QRCodeFlashlightCloseImage.png */; };
+		E188B7A820AC13440012E78F /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = E188B7A120AC13430012E78F /* sound.caf */; };
+		E188B7A920AC13440012E78F /* QRCodeScanningLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188B7A220AC13430012E78F /* QRCodeScanningLine@3x.png */; };
+		E188B7AA20AC13440012E78F /* QRCodeScanningLineGrid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188B7A320AC13440012E78F /* QRCodeScanningLineGrid@3x.png */; };
+		E188B7AB20AC13440012E78F /* QRCodeScanningLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188B7A420AC13440012E78F /* QRCodeScanningLine@2x.png */; };
+		E188B7AC20AC13440012E78F /* QRCodeScanningLineGrid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188B7A520AC13440012E78F /* QRCodeScanningLineGrid@2x.png */; };
 		E19282A01FF60A73007D6E51 /* GXContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282931FF60A73007D6E51 /* GXContentViewController.m */; };
 		E19282A11FF60A73007D6E51 /* GXPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282951FF60A73007D6E51 /* GXPageScrollView.m */; };
 		E19282A21FF60A73007D6E51 /* GXScrollTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282971FF60A73007D6E51 /* GXScrollTableView.m */; };
@@ -184,7 +173,6 @@
 		E1E05AA7205614C700972A13 /* PagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E05AA6205614C700972A13 /* PagesViewController.m */; };
 		E1F06D1D1FB9A44100A9F315 /* MBProgressHUD+NH.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F06D1B1FB9A44000A9F315 /* MBProgressHUD+NH.m */; };
 		E1FB4F7D204CE0480087BE2B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F7C204CE0480087BE2B /* NSDate+Utilities.m */; };
-		E1FB4F80204CE3250087BE2B /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F7F204CE3250087BE2B /* NSDate+Extension.m */; };
 		E1FB4F8B204CE6910087BE2B /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F89204CE4FD0087BE2B /* TestViewController.m */; };
 		E1FB4F8F204D143A0087BE2B /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F8E204D143A0087BE2B /* UIScrollView+Extension.m */; };
 		E1FB4F97204D259F0087BE2B /* NavigationBarBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F96204D259F0087BE2B /* NavigationBarBgView.m */; };
@@ -192,6 +180,16 @@
 		E1FB4F9E204D3F1C0087BE2B /* AYTagCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F9D204D3F1C0087BE2B /* AYTagCollectionLayout.m */; };
 		E1FB4FA1204D4DCF0087BE2B /* TagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4FA0204D4DCF0087BE2B /* TagCollectionViewCell.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E188B77F20AC123C0012E78F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E188B77B20AC123C0012E78F /* AYCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E152D0A820ABC30F002D00E6;
+			remoteInfo = AYCommon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1A5DFA05C8625ACCBE240B77 /* Pods-Tools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tools/Pods-Tools.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,18 +203,12 @@
 		E11043931F7DF55600372F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E11043981F7DF55600372F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E11043991F7DF55600372F21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E11043ED1F7DF73900372F21 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
-		E11043EE1F7DF73900372F21 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
 		E11043F01F7DF73900372F21 /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		E11043F11F7DF73900372F21 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		E11043F21F7DF73900372F21 /* UIView+ViewTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewTools.h"; sourceTree = "<group>"; };
 		E11043F31F7DF73900372F21 /* UIView+ViewTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewTools.m"; sourceTree = "<group>"; };
 		E11043F91F7DF73900372F21 /* AYMFMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYMFMessageViewController.h; sourceTree = "<group>"; };
 		E11043FA1F7DF73900372F21 /* AYMFMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYMFMessageViewController.m; sourceTree = "<group>"; };
-		E11043FC1F7DF73900372F21 /* AYTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYTextField.h; sourceTree = "<group>"; };
-		E11043FD1F7DF73900372F21 /* AYTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYTextField.m; sourceTree = "<group>"; };
-		E11043FF1F7DF73900372F21 /* AYTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYTextView.h; sourceTree = "<group>"; };
-		E11044001F7DF73900372F21 /* AYTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYTextView.m; sourceTree = "<group>"; };
 		E11044051F7DFDD000372F21 /* TestClassList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TestClassList.plist; sourceTree = "<group>"; };
 		E11044071F7E006000372F21 /* UITableViewCell+FastCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FastCell.h"; sourceTree = "<group>"; };
 		E11044081F7E006000372F21 /* UITableViewCell+FastCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FastCell.m"; sourceTree = "<group>"; };
@@ -360,35 +352,12 @@
 		E14660961FF1E2C4004A97F9 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		E14660971FF1E2C4004A97F9 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		E14660981FF1E2C4004A97F9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		E14660AC1FF1EAB5004A97F9 /* FileDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadManager.h; sourceTree = "<group>"; };
-		E14660AD1FF1EAB5004A97F9 /* FileDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadManager.m; sourceTree = "<group>"; };
-		E14660AE1FF1EAB5004A97F9 /* FileSessionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSessionModel.h; sourceTree = "<group>"; };
-		E14660AF1FF1EAB5004A97F9 /* FileSessionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSessionModel.m; sourceTree = "<group>"; };
-		E14660B11FF1EAB5004A97F9 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		E14660B21FF1EAB5004A97F9 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		E14660EB1FF24AD3004A97F9 /* jquery-1.7.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.7.2.min.js"; sourceTree = "<group>"; };
 		E14660EC1FF24AD3004A97F9 /* BAWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BAWebView.html; sourceTree = "<group>"; };
 		E14660ED1FF24AD3004A97F9 /* BAHome2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BAHome2.html; sourceTree = "<group>"; };
 		E14660EE1FF24AD4004A97F9 /* BAHome.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BAHome.html; sourceTree = "<group>"; };
-		E1486A0E1FE26FF10041BFAF /* QRCodeAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeAlbumManager.h; sourceTree = "<group>"; };
-		E1486A0F1FE26FF10041BFAF /* QRCodeAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeAlbumManager.m; sourceTree = "<group>"; };
-		E1486A101FE26FF10041BFAF /* QRCodeGenerateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerateManager.h; sourceTree = "<group>"; };
-		E1486A111FE26FF10041BFAF /* QRCodeGenerateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerateManager.m; sourceTree = "<group>"; };
-		E1486A121FE26FF10041BFAF /* QRCodeScanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanManager.h; sourceTree = "<group>"; };
-		E1486A131FE26FF10041BFAF /* QRCodeScanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanManager.m; sourceTree = "<group>"; };
-		E1486A141FE26FF10041BFAF /* QRCodeScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanningView.h; sourceTree = "<group>"; };
-		E1486A151FE26FF10041BFAF /* QRCodeScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanningView.m; sourceTree = "<group>"; };
-		E1486A171FE26FF10041BFAF /* QRCodeFlashlightCloseImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRCodeFlashlightCloseImage.png; sourceTree = "<group>"; };
-		E1486A181FE26FF10041BFAF /* QRCodeFlashlightOpenImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRCodeFlashlightOpenImage.png; sourceTree = "<group>"; };
-		E1486A191FE26FF10041BFAF /* QRCodeScanningLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLine@2x.png"; sourceTree = "<group>"; };
-		E1486A1A1FE26FF10041BFAF /* QRCodeScanningLine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLine@3x.png"; sourceTree = "<group>"; };
-		E1486A1B1FE26FF10041BFAF /* QRCodeScanningLineGrid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLineGrid@2x.png"; sourceTree = "<group>"; };
-		E1486A1C1FE26FF10041BFAF /* QRCodeScanningLineGrid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLineGrid@3x.png"; sourceTree = "<group>"; };
-		E1486A1D1FE26FF10041BFAF /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
 		E1486A291FE270680041BFAF /* QRCodeScanningSuccessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeScanningSuccessVC.h; sourceTree = "<group>"; };
 		E1486A2A1FE270680041BFAF /* QRCodeScanningSuccessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanningSuccessVC.m; sourceTree = "<group>"; };
-		E1486A2C1FE27E590041BFAF /* UIImage+ImageSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageSize.h"; sourceTree = "<group>"; };
-		E1486A2D1FE27E590041BFAF /* UIImage+ImageSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageSize.m"; sourceTree = "<group>"; };
 		E14D42171F985AEE00952FD8 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		E14D42181F985AEE00952FD8 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		E14D421A1F985B3D00952FD8 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -443,8 +412,6 @@
 		E15BC7C51FE10DF5001B25C1 /* SwitchVCContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchVCContentView.m; sourceTree = "<group>"; };
 		E15BC7C61FE10DF5001B25C1 /* TabPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabPageView.h; sourceTree = "<group>"; };
 		E15BC7C71FE10DF5001B25C1 /* TabPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabPageView.m; sourceTree = "<group>"; };
-		E15D38431FE3768700305810 /* CommonWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonWebView.h; sourceTree = "<group>"; };
-		E15D38441FE3768700305810 /* CommonWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonWebView.m; sourceTree = "<group>"; };
 		E15ED6341FB2B59C00BC4D1D /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		E15ED6351FB2B59C00BC4D1D /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		E15ED63B1FB308B100BC4D1D /* PlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerControlView.h; sourceTree = "<group>"; };
@@ -486,6 +453,15 @@
 		E17913C71F99D717002FE1A6 /* CAKeyframeAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAKeyframeAnimationController.m; sourceTree = "<group>"; };
 		E18844B61FDF86BA0012C2B1 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		E18844B71FDF86BA0012C2B1 /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		E188B74A20AC0DD70012E78F /* libAYCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAYCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E188B77B20AC123C0012E78F /* AYCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AYCommon.xcodeproj; path = ../AYCommon/AYCommon/AYCommon.xcodeproj; sourceTree = "<group>"; };
+		E188B79F20AC13430012E78F /* QRCodeFlashlightOpenImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRCodeFlashlightOpenImage.png; sourceTree = "<group>"; };
+		E188B7A020AC13430012E78F /* QRCodeFlashlightCloseImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRCodeFlashlightCloseImage.png; sourceTree = "<group>"; };
+		E188B7A120AC13430012E78F /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		E188B7A220AC13430012E78F /* QRCodeScanningLine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLine@3x.png"; sourceTree = "<group>"; };
+		E188B7A320AC13440012E78F /* QRCodeScanningLineGrid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLineGrid@3x.png"; sourceTree = "<group>"; };
+		E188B7A420AC13440012E78F /* QRCodeScanningLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLine@2x.png"; sourceTree = "<group>"; };
+		E188B7A520AC13440012E78F /* QRCodeScanningLineGrid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLineGrid@2x.png"; sourceTree = "<group>"; };
 		E19282911FF60A73007D6E51 /* GXConfigConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXConfigConst.h; sourceTree = "<group>"; };
 		E19282921FF60A73007D6E51 /* GXContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXContentViewController.h; sourceTree = "<group>"; };
 		E19282931FF60A73007D6E51 /* GXContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXContentViewController.m; sourceTree = "<group>"; };
@@ -547,8 +523,6 @@
 		E1F06D1C1FB9A44000A9F315 /* MBProgressHUD+NH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NH.h"; sourceTree = "<group>"; };
 		E1FB4F7B204CE0480087BE2B /* NSDate+Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		E1FB4F7C204CE0480087BE2B /* NSDate+Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
-		E1FB4F7E204CE3250087BE2B /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
-		E1FB4F7F204CE3250087BE2B /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		E1FB4F88204CE4FD0087BE2B /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		E1FB4F89204CE4FD0087BE2B /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		E1FB4F8D204D143A0087BE2B /* UIScrollView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extension.h"; sourceTree = "<group>"; };
@@ -568,6 +542,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E188B78120AC12640012E78F /* libAYCommon.a in Frameworks */,
 				E19E2B771FBBF11100BEEA2C /* libsqlite3.tbd in Frameworks */,
 				41F4B4CB147CBD6C1260B779 /* libPods-Tools.a in Frameworks */,
 			);
@@ -579,6 +554,7 @@
 		2275C54257D90974EA3AEABD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E188B74A20AC0DD70012E78F /* libAYCommon.a */,
 				E140B0341FCE455500F4558D /* QuickLook.framework */,
 				E19E2B761FBBF11100BEEA2C /* libsqlite3.tbd */,
 				D75A0273E9CCF4728241A80B /* libPods-Tools.a */,
@@ -593,6 +569,7 @@
 				E11043881F7DF55600372F21 /* Products */,
 				F0E43B9EDAC796B281284F87 /* Pods */,
 				2275C54257D90974EA3AEABD /* Frameworks */,
+				E188B77B20AC123C0012E78F /* AYCommon.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -679,7 +656,6 @@
 				E1FB4F8C204D140D0087BE2B /* UIscrollView */,
 				E16762FB1F8F748100F1076F /* UIButton */,
 				E11043E91F7DF73900372F21 /* UITableViewCell */,
-				E11043EC1F7DF73900372F21 /* UITextView */,
 				E11043EF1F7DF73900372F21 /* UIView */,
 				E1FB4F77204CDF410087BE2B /* NSDate */,
 				E165F296204E85CE002AC499 /* UIImage */,
@@ -694,15 +670,6 @@
 				E11044081F7E006000372F21 /* UITableViewCell+FastCell.m */,
 			);
 			path = UITableViewCell;
-			sourceTree = "<group>";
-		};
-		E11043EC1F7DF73900372F21 /* UITextView */ = {
-			isa = PBXGroup;
-			children = (
-				E11043ED1F7DF73900372F21 /* UITextView+Placeholder.h */,
-				E11043EE1F7DF73900372F21 /* UITextView+Placeholder.m */,
-			);
-			path = UITextView;
 			sourceTree = "<group>";
 		};
 		E11043EF1F7DF73900372F21 /* UIView */ = {
@@ -720,8 +687,6 @@
 			isa = PBXGroup;
 			children = (
 				E11043F81F7DF73900372F21 /* MFMessageComposeViewController */,
-				E11043FB1F7DF73900372F21 /* UITextField */,
-				E11043FE1F7DF73900372F21 /* UITextView */,
 			);
 			path = OC_Extend;
 			sourceTree = "<group>";
@@ -733,24 +698,6 @@
 				E11043FA1F7DF73900372F21 /* AYMFMessageViewController.m */,
 			);
 			path = MFMessageComposeViewController;
-			sourceTree = "<group>";
-		};
-		E11043FB1F7DF73900372F21 /* UITextField */ = {
-			isa = PBXGroup;
-			children = (
-				E11043FC1F7DF73900372F21 /* AYTextField.h */,
-				E11043FD1F7DF73900372F21 /* AYTextField.m */,
-			);
-			path = UITextField;
-			sourceTree = "<group>";
-		};
-		E11043FE1F7DF73900372F21 /* UITextView */ = {
-			isa = PBXGroup;
-			children = (
-				E11043FF1F7DF73900372F21 /* AYTextView.h */,
-				E11044001F7DF73900372F21 /* AYTextView.m */,
-			);
-			path = UITextView;
 			sourceTree = "<group>";
 		};
 		E1167B0C1F98B51A0092E190 /* 跑马灯 */ = {
@@ -830,7 +777,6 @@
 				E1A64B462057B90800814AF9 /* HHHorizontalPagingView */,
 				E1FB4F94204D259F0087BE2B /* NavigationBar */,
 				E19282901FF60A73007D6E51 /* GXScrollView */,
-				E14660AB1FF1EAB5004A97F9 /* FileDownloadManager */,
 				E146607F1FF1E2C4004A97F9 /* BGFMDB */,
 				E122C3D31FECEE78004DD51D /* Calendar */,
 				E14D422C1F98810300952FD8 /* KMNavigationBarTransition */,
@@ -1053,42 +999,9 @@
 			path = FMDB;
 			sourceTree = "<group>";
 		};
-		E14660AB1FF1EAB5004A97F9 /* FileDownloadManager */ = {
-			isa = PBXGroup;
-			children = (
-				E14660AC1FF1EAB5004A97F9 /* FileDownloadManager.h */,
-				E14660AD1FF1EAB5004A97F9 /* FileDownloadManager.m */,
-				E14660AE1FF1EAB5004A97F9 /* FileSessionModel.h */,
-				E14660AF1FF1EAB5004A97F9 /* FileSessionModel.m */,
-				E14660B01FF1EAB5004A97F9 /* MD5 */,
-			);
-			path = FileDownloadManager;
-			sourceTree = "<group>";
-		};
-		E14660B01FF1EAB5004A97F9 /* MD5 */ = {
-			isa = PBXGroup;
-			children = (
-				E14660B11FF1EAB5004A97F9 /* NSString+Hash.h */,
-				E14660B21FF1EAB5004A97F9 /* NSString+Hash.m */,
-			);
-			path = MD5;
-			sourceTree = "<group>";
-		};
 		E1486A0D1FE26FF10041BFAF /* QRcode */ = {
 			isa = PBXGroup;
 			children = (
-				E1486A0E1FE26FF10041BFAF /* QRCodeAlbumManager.h */,
-				E1486A0F1FE26FF10041BFAF /* QRCodeAlbumManager.m */,
-				E1486A101FE26FF10041BFAF /* QRCodeGenerateManager.h */,
-				E1486A111FE26FF10041BFAF /* QRCodeGenerateManager.m */,
-				E1486A121FE26FF10041BFAF /* QRCodeScanManager.h */,
-				E1486A131FE26FF10041BFAF /* QRCodeScanManager.m */,
-				E1486A141FE26FF10041BFAF /* QRCodeScanningView.h */,
-				E1486A151FE26FF10041BFAF /* QRCodeScanningView.m */,
-				E15D38431FE3768700305810 /* CommonWebView.h */,
-				E15D38441FE3768700305810 /* CommonWebView.m */,
-				E1486A2C1FE27E590041BFAF /* UIImage+ImageSize.h */,
-				E1486A2D1FE27E590041BFAF /* UIImage+ImageSize.m */,
 				E1486A161FE26FF10041BFAF /* Resources */,
 			);
 			path = QRcode;
@@ -1097,17 +1010,17 @@
 		E1486A161FE26FF10041BFAF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E188B7A020AC13430012E78F /* QRCodeFlashlightCloseImage.png */,
+				E188B79F20AC13430012E78F /* QRCodeFlashlightOpenImage.png */,
+				E188B7A420AC13440012E78F /* QRCodeScanningLine@2x.png */,
+				E188B7A220AC13430012E78F /* QRCodeScanningLine@3x.png */,
+				E188B7A520AC13440012E78F /* QRCodeScanningLineGrid@2x.png */,
+				E188B7A320AC13440012E78F /* QRCodeScanningLineGrid@3x.png */,
+				E188B7A120AC13430012E78F /* sound.caf */,
 				E14660EE1FF24AD4004A97F9 /* BAHome.html */,
 				E14660ED1FF24AD3004A97F9 /* BAHome2.html */,
 				E14660EC1FF24AD3004A97F9 /* BAWebView.html */,
 				E14660EB1FF24AD3004A97F9 /* jquery-1.7.2.min.js */,
-				E1486A171FE26FF10041BFAF /* QRCodeFlashlightCloseImage.png */,
-				E1486A181FE26FF10041BFAF /* QRCodeFlashlightOpenImage.png */,
-				E1486A191FE26FF10041BFAF /* QRCodeScanningLine@2x.png */,
-				E1486A1A1FE26FF10041BFAF /* QRCodeScanningLine@3x.png */,
-				E1486A1B1FE26FF10041BFAF /* QRCodeScanningLineGrid@2x.png */,
-				E1486A1C1FE26FF10041BFAF /* QRCodeScanningLineGrid@3x.png */,
-				E1486A1D1FE26FF10041BFAF /* sound.caf */,
 				E176B9261FE74D88006998ED /* index.html */,
 			);
 			path = Resources;
@@ -1276,6 +1189,14 @@
 			path = "左右切换控制器";
 			sourceTree = "<group>";
 		};
+		E188B77C20AC123C0012E78F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E188B78020AC123C0012E78F /* libAYCommon.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E19282901FF60A73007D6E51 /* GXScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1404,8 +1325,6 @@
 			children = (
 				E1FB4F7B204CE0480087BE2B /* NSDate+Utilities.h */,
 				E1FB4F7C204CE0480087BE2B /* NSDate+Utilities.m */,
-				E1FB4F7E204CE3250087BE2B /* NSDate+Extension.h */,
-				E1FB4F7F204CE3250087BE2B /* NSDate+Extension.m */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -1510,6 +1429,12 @@
 			mainGroup = E110437E1F7DF55500372F21;
 			productRefGroup = E11043881F7DF55600372F21 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E188B77C20AC123C0012E78F /* Products */;
+					ProjectRef = E188B77B20AC123C0012E78F /* AYCommon.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E11043861F7DF55600372F21 /* Tools */,
@@ -1517,29 +1442,39 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		E188B78020AC123C0012E78F /* libAYCommon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAYCommon.a;
+			remoteRef = E188B77F20AC123C0012E78F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		E11043851F7DF55600372F21 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E188B7A620AC13440012E78F /* QRCodeFlashlightOpenImage.png in Resources */,
+				E188B7A720AC13440012E78F /* QRCodeFlashlightCloseImage.png in Resources */,
 				E14D42411F98810300952FD8 /* Info.plist in Resources */,
 				E14660EF1FF24AD4004A97F9 /* jquery-1.7.2.min.js in Resources */,
 				E1A2F2AE204F774C00CF9863 /* test1.html in Resources */,
 				E1415D581F97428500390C4D /* a_filter.cisf in Resources */,
+				E188B7A820AC13440012E78F /* sound.caf in Resources */,
 				E11043941F7DF55600372F21 /* Assets.xcassets in Resources */,
 				E176B9271FE74D88006998ED /* index.html in Resources */,
 				E14660F11FF24AD4004A97F9 /* BAHome2.html in Resources */,
-				E1486A241FE26FF10041BFAF /* QRCodeScanningLine@2x.png in Resources */,
-				E1486A281FE26FF10041BFAF /* sound.caf in Resources */,
+				E188B7AB20AC13440012E78F /* QRCodeScanningLine@2x.png in Resources */,
 				E16D8FE11FB3F04900E142A5 /* videoData.json in Resources */,
-				E1486A271FE26FF10041BFAF /* QRCodeScanningLineGrid@3x.png in Resources */,
-				E1486A261FE26FF10041BFAF /* QRCodeScanningLineGrid@2x.png in Resources */,
-				E1486A221FE26FF10041BFAF /* QRCodeFlashlightCloseImage.png in Resources */,
-				E1486A231FE26FF10041BFAF /* QRCodeFlashlightOpenImage.png in Resources */,
+				E188B7AA20AC13440012E78F /* QRCodeScanningLineGrid@3x.png in Resources */,
+				E188B7AC20AC13440012E78F /* QRCodeScanningLineGrid@2x.png in Resources */,
 				E11044061F7DFDD000372F21 /* TestClassList.plist in Resources */,
 				E14660F21FF24AD4004A97F9 /* BAHome.html in Resources */,
+				E188B7A920AC13440012E78F /* QRCodeScanningLine@3x.png in Resources */,
 				E14660F01FF24AD4004A97F9 /* BAWebView.html in Resources */,
-				E1486A251FE26FF10041BFAF /* QRCodeScanningLine@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1602,7 +1537,6 @@
 				E146609A1FF1E2C5004A97F9 /* BGDB.m in Sources */,
 				E1209F301F95EFB2006E6D86 /* RealReachability.m in Sources */,
 				E1FB4F8F204D143A0087BE2B /* UIScrollView+Extension.m in Sources */,
-				E1FB4F80204CE3250087BE2B /* NSDate+Extension.m in Sources */,
 				E1A64B582057B90900814AF9 /* UIView+WhenTappedBlocks.m in Sources */,
 				E1209F2F1F95EFAC006E6D86 /* PingHelper.m in Sources */,
 				E15F28CA1FC51062002C7946 /* FourthViewController.m in Sources */,
@@ -1615,14 +1549,11 @@
 				E1209F2C1F95EF90006E6D86 /* ReachStateWIFI.m in Sources */,
 				E14D42281F98727300952FD8 /* NavigationControllerTest2.m in Sources */,
 				E14D42471F98810300952FD8 /* UIScrollView+KMNavigationBarTransition.m in Sources */,
-				E1486A201FE26FF10041BFAF /* QRCodeScanManager.m in Sources */,
 				E1A64B542057B90900814AF9 /* DynamicItem.m in Sources */,
 				E16D8FEA1FB3F47400E142A5 /* PlayerTableViewCell.m in Sources */,
 				E1486A2B1FE270680041BFAF /* QRCodeScanningSuccessVC.m in Sources */,
 				E122C3E61FECEE78004DD51D /* NSDate+CL.m in Sources */,
-				E14660B51FF1EAB5004A97F9 /* NSString+Hash.m in Sources */,
 				E15BC7C91FE10DF6001B25C1 /* TabPageView.m in Sources */,
-				E1486A1E1FE26FF10041BFAF /* QRCodeAlbumManager.m in Sources */,
 				E1B5BAAF2057AD530092B263 /* UINavigationController+ZFFullscreenPopGesture.m in Sources */,
 				E122C3E91FECEE78004DD51D /* UIImage+CL.m in Sources */,
 				E1581C181FBADA0300650313 /* TabBarController.m in Sources */,
@@ -1692,22 +1623,17 @@
 				E14D42461F98810300952FD8 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				E19282A51FF60A73007D6E51 /* GXTabMenuView.m in Sources */,
 				E1209EFD1F95A238006E6D86 /* TYCyclePagerView.m in Sources */,
-				E14660B41FF1EAB5004A97F9 /* FileSessionModel.m in Sources */,
 				E1209EFC1F95A232006E6D86 /* TYCyclePagerTransformLayout.m in Sources */,
 				E1C68AEB1FB5AF0600D24601 /* NetWorkRequest.m in Sources */,
 				E1167B1C1F98B51A0092E190 /* CyclePagerViewController.m in Sources */,
 				E16763041F8F74A100F1076F /* UIButton+Alignment.m in Sources */,
 				E14D421F1F986F7000952FD8 /* BaseNavigationController.m in Sources */,
-				E15D38451FE3768700305810 /* CommonWebView.m in Sources */,
 				E1C68AE51FB59AA800D24601 /* NetworkRequestModel.m in Sources */,
 				E158EC581FE217580013B8BA /* QRCodeGenerateViewController.m in Sources */,
 				E165F299204E85F5002AC499 /* UIImage+HYBImageCliped.m in Sources */,
-				E16762FA1F8F6F0200F1076F /* AYTextView.m in Sources */,
 				E1167B2F1F98C2260092E190 /* AlertViewController.m in Sources */,
-				E1486A2E1FE27E590041BFAF /* UIImage+ImageSize.m in Sources */,
 				E1A64B572057B90900814AF9 /* UIScrollView+Dragging.m in Sources */,
 				E19282A21FF60A73007D6E51 /* GXScrollTableView.m in Sources */,
-				E16762F91F8F6EFD00F1076F /* AYTextField.m in Sources */,
 				E146609B1FF1E2C5004A97F9 /* BGModelInfo.m in Sources */,
 				E1415D5B1F97581D00390C4D /* SCWatermarkOverlayView.m in Sources */,
 				E146609F1FF1E2C5004A97F9 /* FMDatabase.m in Sources */,
@@ -1715,7 +1641,6 @@
 				E146609D1FF1E2C5004A97F9 /* NSCache+BGCache.m in Sources */,
 				E15F28C71FC51044002C7946 /* ThridViewController.m in Sources */,
 				E158EC551FE216CD0013B8BA /* QRCodeDemoViewController.m in Sources */,
-				E14660B31FF1EAB5004A97F9 /* FileDownloadManager.m in Sources */,
 				E1453D561FC4231B00E0FA82 /* TCTabSlideView.m in Sources */,
 				E165F295204E62C4002AC499 /* TagAddCollectionViewCell.m in Sources */,
 				E15ED6361FB2B59C00BC4D1D /* PlayerViewController.m in Sources */,
@@ -1730,7 +1655,6 @@
 				E122C3E81FECEE78004DD51D /* UIColor+CL.m in Sources */,
 				E1453D5C1FC42E9800E0FA82 /* OneViewController.m in Sources */,
 				E1E05AA7205614C700972A13 /* PagesViewController.m in Sources */,
-				E16762F51F8F6EE500F1076F /* UITextView+Placeholder.m in Sources */,
 				E1167B2B1F98B8050092E190 /* SVProgressHUDController.m in Sources */,
 				E16762F41F8F6EDA00F1076F /* UIView+ViewTools.m in Sources */,
 				E1FB4F9E204D3F1C0087BE2B /* AYTagCollectionLayout.m in Sources */,
@@ -1739,7 +1663,6 @@
 				E14D421C1F985B3D00952FD8 /* BaseViewController.m in Sources */,
 				E14660A31FF1E2C5004A97F9 /* FMResultSet.m in Sources */,
 				E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */,
-				E1486A211FE26FF10041BFAF /* QRCodeScanningView.m in Sources */,
 				E146609E1FF1E2C5004A97F9 /* NSObject+BGModel.m in Sources */,
 				E1C3BB522084A703006A23D1 /* WebViewPushController.m in Sources */,
 				E1C68AD71FB5869200D24601 /* NetworkCache.m in Sources */,
@@ -1754,7 +1677,6 @@
 				E1FB4FA1204D4DCF0087BE2B /* TagCollectionViewCell.m in Sources */,
 				E110439A1F7DF55600372F21 /* main.m in Sources */,
 				E1FB4F9B204D3E150087BE2B /* TagViewController.m in Sources */,
-				E1486A1F1FE26FF10041BFAF /* QRCodeGenerateManager.m in Sources */,
 				E14D42451F98810300952FD8 /* UINavigationBar+KMNavigationBarTransition.m in Sources */,
 				E1167B1B1F98B51A0092E190 /* CyclePagerViewCell.m in Sources */,
 				E14D422B1F98727F00952FD8 /* NavigationControllerTest3.m in Sources */,
@@ -1879,6 +1801,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZB67NUCDZ;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/CYLTabBarController\"",
+					"\"${PODS_ROOT}/Headers/Public/JTCalendar\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SCRecorder\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/TZImagePickerController\"",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/ZFPlayer\"",
+					"\"$(SRCROOT)/../AYCommon/AYCommon/AYCommon\"/**",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tools/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1895,6 +1836,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZB67NUCDZ;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/CYLTabBarController\"",
+					"\"${PODS_ROOT}/Headers/Public/JTCalendar\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SCRecorder\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/TZImagePickerController\"",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/ZFPlayer\"",
+					"\"$(SRCROOT)/../AYCommon/AYCommon/AYCommon\"/**",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Tools/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

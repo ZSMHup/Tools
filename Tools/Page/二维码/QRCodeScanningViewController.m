@@ -9,15 +9,15 @@
 #import "QRCodeScanningViewController.h"
 #import "QRCodeScanningSuccessVC.h"
 
-#import "QRCodeScanManager.h"
-#import "QRCodeScanningView.h"
-#import "QRCodeAlbumManager.h"
+#import <AYQRCodeManager/AYQRCodeScanManager.h>
+#import <AYQRCodeManager/AYQRCodeScanningView.h>
+#import <AYQRCodeManager/AYQRCodeAlbumManager.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface QRCodeScanningViewController ()<QRCodeScanManagerDelegate, QRCodeAlbumManagerDelegate>
+@interface QRCodeScanningViewController ()<AYQRCodeScanManagerDelegate, AYQRCodeAlbumManagerDelegate>
 
-@property (nonatomic, strong) QRCodeScanManager *manager;
-@property (nonatomic, strong) QRCodeScanningView *scanningView;
+@property (nonatomic, strong) AYQRCodeScanManager *manager;
+@property (nonatomic, strong) AYQRCodeScanningView *scanningView;
 /** 闪光灯 */
 @property (nonatomic, strong) UIButton *flashlightBtn;
 
@@ -27,7 +27,6 @@
 
 - (void)dealloc {
     NSLog(@"%@ - dealloc",self.class);
-    
 }
 
 #pragma mark - lifecycle
@@ -36,7 +35,7 @@
     
     [self setupQRCodeScanning];
     [self.view addSubview:self.scanningView];
-    [self addFlashlightBtn];
+    [self.scanningView addSubview:self.flashlightBtn];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -48,7 +47,6 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self removeScanningView];
-    [self.scanningView removeTimer];
 }
 
 - (void)viewDidLoad {
@@ -64,7 +62,7 @@
 }
 
 - (void)setupQRCodeScanning {
-    self.manager = [QRCodeScanManager shareQRCodeScanManager];
+    self.manager = [AYQRCodeScanManager shareQRCodeScanManager];
     NSArray *arr = @[AVMetadataObjectTypeQRCode, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
     // AVCaptureSessionPreset1920x1080 推荐使用，对于小型的二维码读取率较高
     [_manager setupSessionPreset:AVCaptureSessionPreset1920x1080 metadataObjectTypes:arr currentController:self];
@@ -81,28 +79,22 @@
 - (void)flashlightBtnClick:(UIButton *)sender {
     sender.selected = !sender.selected;
     if (sender.selected) {
-        [sender setImage:[UIImage imageNamed:@"QRCodeFlashlightCloseImage"] forState:(UIControlStateNormal)];
         [self.manager openFlashlight];
     } else {
-        [sender setImage:[UIImage imageNamed:@"QRCodeFlashlightOpenImage"] forState:(UIControlStateNormal)];
         [self.manager closeFlashlight];
     }
 }
 
 - (void)rightBarButtonItenAction {
-    QRCodeAlbumManager *manager = [QRCodeAlbumManager shareQRCodeAlbumManager];
+    AYQRCodeAlbumManager *manager = [AYQRCodeAlbumManager shareQRCodeAlbumManager];
     [manager readQRCodeFromAlbumWithCurrentController:self];
     manager.delegate = self;
-
-    if (manager.isPHAuthorization == YES) {
-        [self.scanningView removeTimer];
-    }
 }
 
 #pragma mark - getter
-- (QRCodeScanningView *)scanningView {
+- (AYQRCodeScanningView *)scanningView {
     if (!_scanningView) {
-        _scanningView = [[QRCodeScanningView alloc] initWithFrame:CGRectMake(0, -64, self.view.frame.size.width, self.view.frame.size.height)];
+        _scanningView = [[AYQRCodeScanningView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 //        _scanningView.scanningImageName = @"QRCodeScanningLineGrid";
 //        _scanningView.scanningAnimationStyle = ScanningAnimationStyleGrid;
 //        _scanningView.cornerColor = [UIColor orangeColor];
@@ -111,18 +103,19 @@
     return _scanningView;
 }
 
-- (void)addFlashlightBtn {
+- (UIButton *)flashlightBtn {
     if (!_flashlightBtn) {
         _flashlightBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100, self.view.frame.size.height - 150, 60, 60)];
         [_flashlightBtn setImage:[UIImage imageNamed:@"QRCodeFlashlightOpenImage"] forState:(UIControlStateNormal)];
+        [_flashlightBtn setImage:[UIImage imageNamed:@"QRCodeFlashlightCloseImage"] forState:(UIControlStateSelected)];
         [_flashlightBtn addTarget:self action:@selector(flashlightBtnClick:) forControlEvents:(UIControlEventTouchUpInside)];
-        [self.scanningView addSubview:_flashlightBtn];
     }
+    return _flashlightBtn;
 }
 
 #pragma mark - - - QRCodeScanManagerDelegate
 
-- (void)QRCodeScanManager:(QRCodeScanManager *)scanManager didOutputMetadataObjects:(NSArray *)metadataObjects {
+- (void)QRCodeScanManager:(AYQRCodeScanManager *)scanManager didOutputMetadataObjects:(NSArray *)metadataObjects {
     if (metadataObjects != nil && metadataObjects.count > 0) {
         [scanManager palySoundName:@"sound.caf"];
         [scanManager stopRunning];
@@ -140,10 +133,10 @@
 }
 
 #pragma mark - - - SGQRCodeAlbumManagerDelegate
-- (void)QRCodeAlbumManagerDidCancelWithImagePickerController:(QRCodeAlbumManager *)albumManager {
+- (void)QRCodeAlbumManagerDidCancelWithImagePickerController:(AYQRCodeAlbumManager *)albumManager {
     NSLog(@"取消");
 }
-- (void)QRCodeAlbumManager:(QRCodeAlbumManager *)albumManager didFinishPickingMediaWithResult:(NSString *)result {
+- (void)QRCodeAlbumManager:(AYQRCodeAlbumManager *)albumManager didFinishPickingMediaWithResult:(NSString *)result {
     NSLog(@"result: %@",result);
     
     if (result) {
@@ -154,7 +147,6 @@
     } else {
         NSLog(@"未能识别");
     }
-    
 }
 
 @end

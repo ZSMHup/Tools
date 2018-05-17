@@ -7,14 +7,14 @@
 //
 
 #import "WebViewPushController.h"
-#import "CommonWebView.h"
+#import <AYWebView/AYWebView.h>
 #import <Masonry/Masonry.h>
 
 #define LocalUrl @"http://localhost:3000/"
 
-@interface WebViewPushController () <CommonWebViewDelegate, WKScriptMessageHandler>
+@interface WebViewPushController () <AYWebViewDelegate, WKScriptMessageHandler>
 
-@property (nonatomic, strong) CommonWebView *webView;
+@property (nonatomic, strong) AYWebView *webView;
 
 @end
 
@@ -27,14 +27,14 @@
     config.userContentController = [[WKUserContentController alloc] init];
     [config.userContentController addScriptMessageHandler:self name:@"HomeModel"];
     
-    _webView = [CommonWebView webViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64) configuration:config];
+    _webView = [AYWebView webViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64) configuration:config];
     _webView.delegate = self;
     _webView.isNavigationBarOrTranslucent = NO;
     [_webView loadRequestWithUrlString:self.url];
     [self.view addSubview:self.webView];
 }
 
-- (void)webView:(CommonWebView *)webView didFinishLoadWithURL:(NSURL *)url {
+- (void)webView:(AYWebView *)webView didFinishLoadWithURL:(NSURL *)url {
     self.navigationItem.title = webView.navigationItemTitle;
 }
 
@@ -47,7 +47,7 @@
     }
 }
 
-- (void)webView:(CommonWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
+- (void)webView:(AYWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:nil preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         completionHandler();

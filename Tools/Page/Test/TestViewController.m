@@ -7,9 +7,11 @@
 //
 
 #import "TestViewController.h"
-#import "NSDate+Extension.h"
 #import "HYBImageCliped.h"
 #import <Masonry.h>
+#import <NSDate+AYDate.h>
+#import <Macro/AYMacro.h>
+#import <UIView+AYView.h>
 
 @interface TestViewController ()
 
@@ -28,23 +30,25 @@
 //    [test hyb_addCorner:UIRectCornerAllCorners cornerRadius:20];
 //    [self.view addSubview:test];
     
-    UIScrollView *sc = [[UIScrollView alloc] initWithFrame:CGRectMake(50, 100, 200, 30)];
-    sc.backgroundColor = [UIColor redColor];
-    sc.contentSize = CGSizeMake(4 * self.view.frame.size.width, 0);
-    [self.view addSubview:sc];
+//    UIScrollView *sc = [[UIScrollView alloc] initWithFrame:CGRectMake(50, 100, 200, 30)];
+//    sc.contentSize = CGSizeMake(4 * self.view.frame.size.width, 0);
+//    [self.view addSubview:sc];
+//
+//    UILabel *label = [[UILabel alloc] init];
+//    label.text = @"labellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabel";
+//    [sc addSubview:label];
+//    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.top.equalTo(sc);
+//    }];
+//
+//    NSLog(@"%@", kSystemVersion);
     
-    UILabel *label = [[UILabel alloc] init];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 200, 100)];
+    
+    [label drawLineWidth:1 lineLength:5 lineSpacing:5 lineColor:[UIColor redColor] fillColor:[UIColor greenColor] cornerRadius:2];
     label.text = @"labellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabellabel";
-    [sc addSubview:label];
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(sc);
-    }];
     
-    
-    
-    
-    
-    
+    [self.view addSubview:label];
     
     
     
