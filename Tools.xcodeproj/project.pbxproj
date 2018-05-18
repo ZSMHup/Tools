@@ -160,6 +160,7 @@
 		E1A64B582057B90900814AF9 /* UIView+WhenTappedBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A64B532057B90800814AF9 /* UIView+WhenTappedBlocks.m */; };
 		E1A64B5B2057CDE200814AF9 /* ContentViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A64B5A2057CDE200814AF9 /* ContentViewController1.m */; };
 		E1A9D4BF20AEC158003D7FF0 /* UINavigationController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A9D4BE20AEC157003D7FF0 /* UINavigationController+Additions.m */; };
+		E1A9D4C220AECBE5003D7FF0 /* AYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A9D4C120AECBE5003D7FF0 /* AYAlertView.m */; };
 		E1BB8CD31FEA56C9009596A7 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BB8CD21FEA56C9009596A7 /* DownloadViewController.m */; };
 		E1C3BB522084A703006A23D1 /* WebViewPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3BB512084A703006A23D1 /* WebViewPushController.m */; };
 		E1C68AD71FB5869200D24601 /* NetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AD41FB5869200D24601 /* NetworkCache.m */; };
@@ -496,6 +497,8 @@
 		E1A64B5A2057CDE200814AF9 /* ContentViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController1.m; sourceTree = "<group>"; };
 		E1A9D4BC20AEC157003D7FF0 /* UINavigationController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Additions.h"; sourceTree = "<group>"; };
 		E1A9D4BE20AEC157003D7FF0 /* UINavigationController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Additions.m"; sourceTree = "<group>"; };
+		E1A9D4C020AECBE5003D7FF0 /* AYAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYAlertView.h; sourceTree = "<group>"; };
+		E1A9D4C120AECBE5003D7FF0 /* AYAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYAlertView.m; sourceTree = "<group>"; };
 		E1BB8CD11FEA56C9009596A7 /* DownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		E1BB8CD21FEA56C9009596A7 /* DownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		E1C3BB502084A703006A23D1 /* WebViewPushController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewPushController.h; sourceTree = "<group>"; };
@@ -752,6 +755,8 @@
 				E1167B2E1F98C2260092E190 /* AlertViewController.m */,
 				E1167B301F98C2770092E190 /* AlertView.h */,
 				E1167B311F98C2770092E190 /* AlertView.m */,
+				E1A9D4C020AECBE5003D7FF0 /* AYAlertView.h */,
+				E1A9D4C120AECBE5003D7FF0 /* AYAlertView.m */,
 			);
 			path = "弹框";
 			sourceTree = "<group>";
@@ -1570,6 +1575,7 @@
 				E1209F051F95A267006E6D86 /* UILabel+Wonderful.m in Sources */,
 				E1415D561F97400E00390C4D /* RecorderViewController.m in Sources */,
 				E15BC76D1FE0BC40001B25C1 /* FourViewController.m in Sources */,
+				E1A9D4C220AECBE5003D7FF0 /* AYAlertView.m in Sources */,
 				E165F2A5204E87EB002AC499 /* UIButton+HYBImageCliped.m in Sources */,
 				E171F5351FF3739C0089DA75 /* DownloadTestCell.m in Sources */,
 				E1415D531F973F8B00390C4D /* SCRecordSessionManager.m in Sources */,

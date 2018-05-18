@@ -15,6 +15,7 @@
 #import <Macro/AYNotification.h>
 #import <AYTextHelper/UILabel+AYLabelTextHelper.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UINavigationController+Additions.h"
 
 @interface TestViewController ()
 

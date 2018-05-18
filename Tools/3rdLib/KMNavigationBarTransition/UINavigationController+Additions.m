@@ -30,11 +30,10 @@
     if (self.navigationController.viewControllers.count <= 1) {
         return NO;
     }
-    
     /*
-    某些控制器 不添加手势
+    // 某些控制器 不添加手势
     for (UIViewController * vc in self.navigationController.viewControllers) {
-        if ([vc isKindOfClass:NSClassFromString(@"TCMyCouponDetailController")]){
+        if ([vc isKindOfClass:NSClassFromString(@"TestViewController")]){
             return NO;
         }
     }

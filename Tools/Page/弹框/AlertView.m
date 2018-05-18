@@ -61,7 +61,7 @@
     [kKeyWindow addSubview:alV];
 }
 
-- (float) heightForString:(NSString *)value width:(float)width{
+- (float)heightForString:(NSString *)value width:(float)width{
     CGSize sizeToFit = [value boundingRectWithSize:CGSizeMake(width - 16.0, MAXFLOAT)
                                            options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                                         attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]}
@@ -83,6 +83,7 @@
 
 //隐藏
 - (void)tapGestureAction:(UITapGestureRecognizer *)sender {
+    self.btnClickBlock(0);
     [self hide];
 }
 
