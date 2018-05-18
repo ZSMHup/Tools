@@ -9,16 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "NetworkRequestModel.h"
 #import "NetworkHelper.h"
-@class LiveListModel;
 
 @interface NetworkRequestManager : NSObject
 
 @property (nonatomic, strong) Class modelClass;
-
-+ (NSURLSessionTask *)postRequestWithParameters:(NSDictionary *)parameter
-                                     modelClass:(Class)modelClass
-                                        success:(HttpRequestSuccess)success
-                                        failure:(HttpRequestFailed)failur;
 
 + (NSURLSessionTask *)postRequestWithParameters:(NSDictionary *)parameter
                                      modelClass:(Class)modelClass

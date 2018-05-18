@@ -13,8 +13,9 @@
 #import "LiveListModel.h"
 #import <MJRefresh/MJRefresh.h>
 #import "NetworkCache.h"
+#import <AYProgressHUD/AYProgressHUD.h>
 
-@interface NetworkViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface NetworkViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray <LiveListModel *> *dataSource;
@@ -27,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self addTableView];
     [self.tableView.mj_header beginRefreshing];
 }
@@ -41,6 +43,7 @@
                           @"page":page,
                           @"q_t":@"2",
                           };
+    [AYProgressHUD showNetWorkLoading];
     [NetWorkRequest requestLiveListWithParameters:dic responseCaches:^(LiveListModel *model) {
         if ([self.tableView.mj_header isRefreshing]) {
             if ([model success]) {
@@ -53,7 +56,7 @@
         }
         [self.tableView reloadData];
     } success:^(LiveListModel *model) {
-        
+        [AYProgressHUD dismiss];
         if ([self.tableView.mj_header isRefreshing]) {
             [self.tableView.mj_header endRefreshing];
             if ([model success]) {
@@ -68,6 +71,7 @@
         }
         [self.tableView reloadData];
     } failure:^(NSError *error) {
+        [AYProgressHUD showNetworkError];
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
     }];
@@ -95,8 +99,8 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [UIView new];
-//        [self.view addSubview:_tableView];
-        self.view = _tableView;
+        [self.view addSubview:_tableView];
+//        self.view = _tableView;
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
         }];

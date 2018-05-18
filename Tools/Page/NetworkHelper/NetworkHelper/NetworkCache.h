@@ -1,6 +1,5 @@
 //
 //  NetworkCache.h
-//  TestNetWorking
 //
 //  Created by 张书孟 on 2017/11/10.
 //  Copyright © 2017年 张书孟. All rights reserved.
@@ -34,11 +33,16 @@
  */
 + (id)getHttpCacheForURL:(NSString *)URL parameters:(id)parameters;
 
-/// 获取网络缓存的总大小 bytes(字节)
+/**
+ 获取网络缓存的总大小
+
+ @return bytes(字节)
+ */
 + (NSInteger)getAllHttpCacheSize;
 
-
-/// 删除所有网络缓存
+/**
+ 删除所有网络缓存
+ */
 + (void)removeAllHttpCache;
 
 @end

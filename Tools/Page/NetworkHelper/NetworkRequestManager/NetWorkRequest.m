@@ -17,7 +17,7 @@
                        responseCaches:(void (^)(LiveListModel *model))responseCaches
                               success:(void (^)(LiveListModel *model))success
                               failure:(void (^)(NSError *error))failure {
-    
+
     [NetworkRequestManager postRequestWithParameters:parameters modelClass:[LiveListModel class] responseCaches:^(id responseCache) {
         LiveListModel *model = (LiveListModel *)responseCache;
         if (responseCaches) {
@@ -39,7 +39,6 @@
                        responseCaches:(void (^)(TwoModel *model))responseCaches
                               success:(void (^)(TwoModel *model))success
                               failure:(void (^)(NSError *error))failure {
-    
     [NetworkRequestManager postRequestWithParameters:parameters modelClass:[TwoModel class] responseCaches:^(id responseCache) {
         TwoModel *model = (TwoModel *)responseCache;
         if (responseCaches) {

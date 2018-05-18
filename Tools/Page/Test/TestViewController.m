@@ -14,6 +14,7 @@
 #import <UIView+AYView.h>
 #import <Macro/AYNotification.h>
 #import <AYTextHelper/UILabel+AYLabelTextHelper.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface TestViewController ()
 
@@ -57,45 +58,48 @@
 //
 //    kPostNotificationName(TEST);
     
-    UILabel *label = [[UILabel alloc] init];
-    label.numberOfLines = 0;
-    [self.view addSubview:label];
+//    UILabel *label = [[UILabel alloc] init];
+//    label.numberOfLines = 0;
+//    [self.view addSubview:label];
+//
+//    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.top.right.equalTo(self.view);
+//    }];
+//
+//    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] init];
+//
+//    NSAttributedString *att1 = [[NSAttributedString alloc] initWithString:@"因为解析的数据里面有html标签，就使用下面的代码把字符串转换成data，初始化时再用HTML类型，转换为富文本" attributes:
+//                                @{NSForegroundColorAttributeName: [UIColor redColor]}];
+//    NSAttributedString *att2 = [[NSAttributedString alloc] initWithString:@"qwertyuiopasdfghjjkl" attributes:
+//                                @{
+//                                  NSLinkAttributeName: @"qwe",
+//                                  NSForegroundColorAttributeName: [UIColor greenColor],
+//                                  }];
+//
+//    NSTextAttachment *attch = [[NSTextAttachment alloc] init];
+//    attch.image = [UIImage imageNamed:@"0"];
+//    CGFloat pointSize = label.font.pointSize;
+//    attch.bounds = CGRectMake(0, 0, 30, 30);
+//
+//    NSAttributedString *att3 = [NSAttributedString attributedStringWithAttachment:attch];
+//
+//    [attString appendAttributedString:att1];
+//    [attString appendAttributedString:att2];
+//    [attString appendAttributedString:att3];
+//
+//    label.attributedText = attString;
+//
+//    [label setAy_tapBlock:^(NSInteger index, NSAttributedString *charAttributedString) {
+//        NSRange range = NSMakeRange(0, 1);
+//        NSString *link = [charAttributedString attribute:NSLinkAttributeName atIndex:0 effectiveRange:&range];
+//        NSString *attch = [charAttributedString attribute:NSAttachmentAttributeName atIndex:0 effectiveRange:&range];
+//        NSLog(@"%ld -- %@ -- %@ -- %@", (long)index, charAttributedString, link, attch);
+//    }];
     
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.equalTo(self.view);
-    }];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 200, 200)];
+    [self.view addSubview:imgView];
     
-    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] init];
-    
-    NSAttributedString *att1 = [[NSAttributedString alloc] initWithString:@"因为解析的数据里面有html标签，就使用下面的代码把字符串转换成data，初始化时再用HTML类型，转换为富文本" attributes:
-                                @{NSForegroundColorAttributeName: [UIColor redColor]}];
-    NSAttributedString *att2 = [[NSAttributedString alloc] initWithString:@"qwertyuiopasdfghjjkl" attributes:
-                                @{
-                                  NSLinkAttributeName: @"qwe",
-                                  NSForegroundColorAttributeName: [UIColor greenColor],
-                                  }];
-    
-    NSTextAttachment *attch = [[NSTextAttachment alloc] init];
-    attch.image = [UIImage imageNamed:@"0"];
-    CGFloat pointSize = label.font.pointSize;
-    attch.bounds = CGRectMake(0, 0, 30, 30);
-    
-    NSAttributedString *att3 = [NSAttributedString attributedStringWithAttachment:attch];
-    
-    [attString appendAttributedString:att1];
-    [attString appendAttributedString:att2];
-    [attString appendAttributedString:att3];
-    
-    label.attributedText = attString;
-    
-    [label setAy_tapBlock:^(NSInteger index, NSAttributedString *charAttributedString) {
-        NSRange range = NSMakeRange(0, 1);
-        NSString *link = [charAttributedString attribute:NSLinkAttributeName atIndex:0 effectiveRange:&range];
-        NSString *attch = [charAttributedString attribute:NSAttachmentAttributeName atIndex:0 effectiveRange:&range];
-        NSLog(@"%ld -- %@ -- %@ -- %@", index, charAttributedString, link, attch);
-    }];
-    
-    
+    [imgView sd_setImageWithURL:[NSURL URLWithString:@"https://goss.veer.com/creative/vcg/veer/800water/veer-154679128.jpg"] placeholderImage:[UIImage imageNamed:@"0"] options:(SDWebImageRefreshCached)];
     
 }
 

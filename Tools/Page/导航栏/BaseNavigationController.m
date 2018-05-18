@@ -8,7 +8,7 @@
 
 #import "BaseNavigationController.h"
 
-@interface BaseNavigationController ()
+@interface BaseNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -19,6 +19,15 @@
     [super viewDidLoad];
     
     [self setup];
+    self.interactivePopGestureRecognizer.delegate = self;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if (self.viewControllers.count <= 1) {
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark - private

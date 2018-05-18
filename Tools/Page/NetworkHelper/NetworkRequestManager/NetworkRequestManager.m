@@ -7,34 +7,18 @@
 //
 
 #import "NetworkRequestManager.h"
-#import "NetworkRequestCode.h"
 #import <YYModel/YYModel.h>
 #import "LiveListModel.h"
-#import "MBProgressHUD+NH.h"
+
 #define kWindow [UIApplication sharedApplication].delegate.window
+
+//#define kApiPrefix @"http://tyapi.znzkj.net/touyanshe_api/s/api"
+#define kApiPrefix @"http://api.touyanshe.com.cn/touyanshe_api/s/api"
 
 @implementation NetworkRequestManager
 
 
 #pragma mark - 请求的公共方法
-+ (NSURLSessionTask *)postRequestWithParameters:(NSDictionary *)parameter
-                                     modelClass:(Class)modelClass
-                                        success:(HttpRequestSuccess)success
-                                        failure:(HttpRequestFailed)failure {
-    NetworkRequestManager *manager = [[NetworkRequestManager alloc] init];
-    parameter = [self configParameters:parameter];
-    manager.modelClass = modelClass;
-    return [NetworkHelper POST:kApiPrefix parameters:parameter success:^(id responseObject) {
-        id object = [manager convertToModel:[responseObject yy_modelToJSONString]];
-        if (success) {
-            success(object);
-        }
-    } failure:^(NSError *error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
-}
 
 + (NSURLSessionTask *)postRequestWithParameters:(NSDictionary *)parameter
                                      modelClass:(Class)modelClass
@@ -42,14 +26,13 @@
                                         success:(HttpRequestSuccess)success
                                         failure:(HttpRequestFailed)failure {
     
-//    [MBProgressHUD showMessage:@"loading..." ToView:kWindow];
-    
     NetworkRequestManager *manager = [[NetworkRequestManager alloc] init];
     parameter = [self configParameters:parameter];
     manager.modelClass = modelClass;
     
+    [NetworkHelper openLog];
+    
     return [NetworkHelper POST:kApiPrefix parameters:parameter responseCache:^(id responseCache) {
-        
         if (responseCache) {
             id object = [manager convertToModel:[responseCache yy_modelToJSONString]];
             
@@ -58,13 +41,11 @@
             }
         }
     } success:^(id responseObject) {
-        [MBProgressHUD hideHUD];
         id object = [manager convertToModel:[responseObject yy_modelToJSONString]];
         if (success) {
             success(object);
         }
     } failure:^(NSError *error) {
-        [MBProgressHUD hideHUD];
         if (failure) {
             failure(error);
         }
@@ -74,13 +55,13 @@
 
 + (NSDictionary *)configParameters:(NSDictionary *)parameters {
     NSMutableDictionary *mDic = [NSMutableDictionary dictionary];
-    NSString *accessToken = @"2a3468b34cedc240fce2498a49b75ab";
+    NSString *accessToken = @"1413b137d62bf3aea469a524efc2b6";
     if (accessToken) {
         [mDic setObject:accessToken forKey:@"accessToken"];
     } else {
         [mDic setObject:@"" forKey:@"accessToken"];
     }
-    [mDic setObject:@"4.0.0" forKey:@"version"];
+    [mDic setObject:@"4.0.5" forKey:@"version"];
     [mDic setObject:@"1" forKey:@"deviceType"];
     for (NSString *key in parameters.allKeys) {
         NSString *value = parameters[key];

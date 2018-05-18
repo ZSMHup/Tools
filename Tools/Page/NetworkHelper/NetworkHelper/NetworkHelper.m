@@ -1,6 +1,5 @@
 //
 //  NetworkHelper.m
-//  TestNetWorking
 //
 //  Created by 张书孟 on 2017/11/10.
 //  Copyright © 2017年 张书孟. All rights reserved.
@@ -31,22 +30,22 @@ static AFHTTPSessionManager *_sessionManager;
         switch (status) {
             case AFNetworkReachabilityStatusUnknown:
                 networkStatus ? networkStatus(NetworkStatusUnknown) : nil;
-//                if (_isOpenLog)
+                if (_isOpenLog)
                     DeBugLog(@"未知网络");
                 break;
             case AFNetworkReachabilityStatusNotReachable:
                 networkStatus ? networkStatus(NetworkStatusNotReachable) : nil;
-//                if (_isOpenLog)
+                if (_isOpenLog)
                     DeBugLog(@"无网络");
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
                 networkStatus ? networkStatus(NetworkStatusReachableViaWWAN) : nil;
-//                if (_isOpenLog)
+                if (_isOpenLog)
                     DeBugLog(@"手机自带网络");
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
                 networkStatus ? networkStatus(NetworkStatusReachableViaWiFi) : nil;
-//                if (_isOpenLog)
+                if (_isOpenLog)
                     DeBugLog(@"WIFI");
                 break;
         }
@@ -99,7 +98,6 @@ static AFHTTPSessionManager *_sessionManager;
               parameters:(id)parameters
                   success:(HttpRequestSuccess)success
                   failure:(HttpRequestFailed)failure {
-    
     return  [self GET:URL parameters:parameters responseCache:nil success:success failure:failure];
 }
 
@@ -116,23 +114,23 @@ static AFHTTPSessionManager *_sessionManager;
             responseCache:(HttpRequestCache)responseCache
                   success:(HttpRequestSuccess)success
                   failure:(HttpRequestFailed)failure {
-    
     //读取缓存
     responseCache != nil ? responseCache([NetworkCache getHttpCacheForURL:URL parameters:parameters]) : nil;
     
     NSURLSessionTask *sessionTask = [_sessionManager GET:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        if (_isOpenLog)
-            DeBugLog(@"responseObject = %@",responseObject);
+        if (_isOpenLog)
+            DeBugLog(@"url: %@", URL);
+            DeBugLog(@"responseObject: \n%@",responseObject);
         [[self allSessionTask] removeObject:task];
         success ? success(responseObject) : nil;
         //对数据进行异步缓存
         responseCache != nil ? [NetworkCache setHttpCache:responseObject URL:URL parameters:parameters] : nil;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        if (_isOpenLog)
-            DeBugLog(@"error = %@",error);
+        if (_isOpenLog)
+            DeBugLog(@"error: %@",error);
         [[self allSessionTask] removeObject:task];
         failure ? failure(error) : nil;
     }];
@@ -153,8 +151,9 @@ static AFHTTPSessionManager *_sessionManager;
     NSURLSessionTask *sessionTask = [_sessionManager POST:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        if (_isOpenLog)
-            DeBugLog(@"responseObject = %@",responseObject);
+        if (_isOpenLog)
+            DeBugLog(@"url: %@", URL);
+            DeBugLog(@"responseObject: \n%@", responseObject);
         [[self allSessionTask] removeObject:task];
         success ? success(responseObject) : nil;
         //对数据进行异步缓存
@@ -162,8 +161,8 @@ static AFHTTPSessionManager *_sessionManager;
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        if (_isOpenLog)
-            DeBugLog(@"error = %@",error);
+        if (_isOpenLog)
+            DeBugLog(@"error: %@", error);
         [[self allSessionTask] removeObject:task];
         failure ? failure(error) : nil;
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -193,15 +192,15 @@ static AFHTTPSessionManager *_sessionManager;
         });
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-//        if (_isOpenLog)
-            DeBugLog(@"responseObject = %@",responseObject);
+        if (_isOpenLog)
+            DeBugLog(@"responseObject: \n%@", responseObject);
         [[self allSessionTask] removeObject:task];
         success ? success(responseObject) : nil;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-//        if (_isOpenLog)
-            DeBugLog(@"error = %@",error);
+        if (_isOpenLog)
+            DeBugLog(@"error: %@", error);
         [[self allSessionTask] removeObject:task];
         failure ? failure(error) : nil;
     }];
@@ -232,12 +231,12 @@ static AFHTTPSessionManager *_sessionManager;
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             formatter.dateFormat = @"yyyyMMddHHmmss";
             NSString *str = [formatter stringFromDate:[NSDate date]];
-            NSString *imageFileName = NSStringFormat(@"%@%ld.%@",str,i,imageType?:@"jpg");
+            NSString *imageFileName = NSStringFormat(@"%@%lu.%@", str, i, imageType ? : @"jpg");
             
             [formData appendPartWithFileData:imageData
                                         name:name
-                                    fileName:fileNames ? NSStringFormat(@"%@.%@",fileNames[i],imageType?:@"jpg") : imageFileName
-                                    mimeType:NSStringFormat(@"image/%@",imageType ?: @"jpg")];
+                                    fileName:fileNames ? NSStringFormat(@"%@.%@", fileNames[i], imageType ? : @"jpg") : imageFileName
+                                    mimeType:NSStringFormat(@"image/%@", imageType ? : @"jpg")];
         }
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -247,15 +246,15 @@ static AFHTTPSessionManager *_sessionManager;
         });
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-//        if (_isOpenLog)
-            DeBugLog(@"responseObject = %@",responseObject);
+        if (_isOpenLog)
+            DeBugLog(@"responseObject: \n%@", responseObject);
         [[self allSessionTask] removeObject:task];
         success ? success(responseObject) : nil;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-//        if (_isOpenLog)
-            DeBugLog(@"error = %@",error);
+        if (_isOpenLog)
+            DeBugLog(@"error: %@", error);
         [[self allSessionTask] removeObject:task];
         failure ? failure(error) : nil;
     }];
@@ -332,6 +331,7 @@ static AFHTTPSessionManager *_sessionManager;
     // 打开状态栏的等待菊花
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 }
+
 #pragma mark - 重置AFHTTPSessionManager相关属性
 + (void)setAFHTTPSessionManagerProperty:(void (^)(AFHTTPSessionManager *))sessionManager {
     sessionManager ? sessionManager(_sessionManager) : nil;

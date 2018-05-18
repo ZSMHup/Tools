@@ -17,7 +17,6 @@ PODS:
   - CYLTabBarController (1.14.1)
   - JTCalendar (2.1.10)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.13)
   - SCRecorder (2.7.0)
   - SDWebImage (4.1.0):
@@ -34,7 +33,6 @@ DEPENDENCIES:
   - AFNetworking
   - CYLTabBarController
   - JTCalendar
-  - MBProgressHUD
   - MJRefresh
   - SCRecorder
   - SDWebImage
@@ -44,12 +42,26 @@ DEPENDENCIES:
   - YYModel
   - ZFPlayer
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - CYLTabBarController
+    - JTCalendar
+    - Masonry
+    - MJRefresh
+    - SCRecorder
+    - SDWebImage
+    - SVProgressHUD
+    - TZImagePickerController
+    - YYCache
+    - YYModel
+    - ZFPlayer
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CYLTabBarController: ec44b6e44166d9869fa649ce22bc728d107ecafc
   JTCalendar: d85b0222e9378007a2d185b15c90b7d707a2abe0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: 56a28aa628c9895e97a518dabaecf70b18f92f32
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
@@ -59,6 +71,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
-PODFILE CHECKSUM: 85e256cdc3d01c1302c5a50484972da8116a82e7
+PODFILE CHECKSUM: 6e28f493ac4b6f6c13fd1b5dc03d547191c9afca
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.2
