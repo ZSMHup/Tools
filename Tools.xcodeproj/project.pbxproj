@@ -86,6 +86,7 @@
 		E14660F11FF24AD4004A97F9 /* BAHome2.html in Resources */ = {isa = PBXBuildFile; fileRef = E14660ED1FF24AD3004A97F9 /* BAHome2.html */; };
 		E14660F21FF24AD4004A97F9 /* BAHome.html in Resources */ = {isa = PBXBuildFile; fileRef = E14660EE1FF24AD4004A97F9 /* BAHome.html */; };
 		E1486A2B1FE270680041BFAF /* QRCodeScanningSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1486A2A1FE270680041BFAF /* QRCodeScanningSuccessVC.m */; };
+		E14B7C1220B6B96800DFE9DB /* UIButton+block.m in Sources */ = {isa = PBXBuildFile; fileRef = E14B7C1120B6B96800DFE9DB /* UIButton+block.m */; };
 		E14D42191F985AEE00952FD8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D42181F985AEE00952FD8 /* NavigationController.m */; };
 		E14D421C1F985B3D00952FD8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D421B1F985B3D00952FD8 /* BaseViewController.m */; };
 		E14D421F1F986F7000952FD8 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14D421E1F986F7000952FD8 /* BaseNavigationController.m */; };
@@ -170,6 +171,7 @@
 		E1C68AE51FB59AA800D24601 /* NetworkRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AE41FB59AA800D24601 /* NetworkRequestModel.m */; };
 		E1C68AE81FB5A6CF00D24601 /* LiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AE71FB5A6CF00D24601 /* LiveListModel.m */; };
 		E1C68AEB1FB5AF0600D24601 /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C68AEA1FB5AF0600D24601 /* NetWorkRequest.m */; };
+		E1D413FC20B6B29A00175500 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D413FB20B6B29A00175500 /* UIImage+Category.m */; };
 		E1E05AA7205614C700972A13 /* PagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E05AA6205614C700972A13 /* PagesViewController.m */; };
 		E1FB4F7D204CE0480087BE2B /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F7C204CE0480087BE2B /* NSDate+Utilities.m */; };
 		E1FB4F8B204CE6910087BE2B /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB4F89204CE4FD0087BE2B /* TestViewController.m */; };
@@ -357,6 +359,8 @@
 		E14660EE1FF24AD4004A97F9 /* BAHome.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BAHome.html; sourceTree = "<group>"; };
 		E1486A291FE270680041BFAF /* QRCodeScanningSuccessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeScanningSuccessVC.h; sourceTree = "<group>"; };
 		E1486A2A1FE270680041BFAF /* QRCodeScanningSuccessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanningSuccessVC.m; sourceTree = "<group>"; };
+		E14B7C1020B6B96800DFE9DB /* UIButton+block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+block.h"; sourceTree = "<group>"; };
+		E14B7C1120B6B96800DFE9DB /* UIButton+block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+block.m"; sourceTree = "<group>"; };
 		E14D42171F985AEE00952FD8 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		E14D42181F985AEE00952FD8 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		E14D421A1F985B3D00952FD8 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -517,6 +521,8 @@
 		E1C68AE71FB5A6CF00D24601 /* LiveListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveListModel.m; sourceTree = "<group>"; };
 		E1C68AE91FB5AF0600D24601 /* NetWorkRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkRequest.h; sourceTree = "<group>"; };
 		E1C68AEA1FB5AF0600D24601 /* NetWorkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkRequest.m; sourceTree = "<group>"; };
+		E1D413FA20B6B29A00175500 /* UIImage+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		E1D413FB20B6B29A00175500 /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		E1E05AA5205614C700972A13 /* PagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagesViewController.h; sourceTree = "<group>"; };
 		E1E05AA6205614C700972A13 /* PagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagesViewController.m; sourceTree = "<group>"; };
 		E1FB4F7B204CE0480087BE2B /* NSDate+Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
@@ -1331,6 +1337,10 @@
 			children = (
 				E1FB4F88204CE4FD0087BE2B /* TestViewController.h */,
 				E1FB4F89204CE4FD0087BE2B /* TestViewController.m */,
+				E1D413FA20B6B29A00175500 /* UIImage+Category.h */,
+				E1D413FB20B6B29A00175500 /* UIImage+Category.m */,
+				E14B7C1020B6B96800DFE9DB /* UIButton+block.h */,
+				E14B7C1120B6B96800DFE9DB /* UIButton+block.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1603,6 +1613,7 @@
 				E1209EFF1F95A243006E6D86 /* SXColorGradientView.m in Sources */,
 				E1C68AD81FB5869200D24601 /* NetworkHelper.m in Sources */,
 				E165F2A4204E87EB002AC499 /* HYBImageClipedManager.m in Sources */,
+				E1D413FC20B6B29A00175500 /* UIImage+Category.m in Sources */,
 				E16D8FDF1FB3EE9400E142A5 /* PlayerTableViewController.m in Sources */,
 				E1186528205B9D2C0092BC13 /* WebViewController.m in Sources */,
 				E15BC7761FE0CE73001B25C1 /* ThirdViewController.m in Sources */,
@@ -1648,6 +1659,7 @@
 				E1E05AA7205614C700972A13 /* PagesViewController.m in Sources */,
 				E1167B2B1F98B8050092E190 /* SVProgressHUDController.m in Sources */,
 				E16762F41F8F6EDA00F1076F /* UIView+ViewTools.m in Sources */,
+				E14B7C1220B6B96800DFE9DB /* UIButton+block.m in Sources */,
 				E1FB4F9E204D3F1C0087BE2B /* AYTagCollectionLayout.m in Sources */,
 				E146609C1FF1E2C5004A97F9 /* BGTool.m in Sources */,
 				E18844B81FDF86BA0012C2B1 /* PageViewController.m in Sources */,

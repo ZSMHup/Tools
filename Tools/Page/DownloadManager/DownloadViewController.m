@@ -53,15 +53,23 @@
 }
 
 - (void)btnClick {
-    NSArray *attributeArr = [[AYFileDownloadManager sharedInstance] getAttribute:FileName];
-    __weak typeof(self) weakSelf = self;
-    [[AYFileDownloadManager sharedInstance] startTaskWithAttribute:attributeArr fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
-        NSLog(@"pro : %lf",progress);
-    } state:^(DownloadState state) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.tableView reloadData];
-        });
-    }];
+//    NSArray *attributeArr = [[AYFileDownloadManager sharedInstance] getAttribute:FileName];
+//    __weak typeof(self) weakSelf = self;
+//    [[AYFileDownloadManager sharedInstance] startTaskWithAttribute:attributeArr fileName:FileName progress:^(NSInteger receivedSize, NSInteger expectedSize, CGFloat progress) {
+//        NSLog(@"pro : %lf",progress);
+//    } state:^(DownloadState state) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [weakSelf.tableView reloadData];
+//        });
+//    }];
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.25;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromRight;
+    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 #pragma mark 按钮状态

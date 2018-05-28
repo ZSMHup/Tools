@@ -18,6 +18,7 @@ PODS:
   - JTCalendar (2.1.10)
   - Masonry (1.1.0)
   - MJRefresh (3.1.13)
+  - OBShapedButton (1.1.0)
   - SCRecorder (2.7.0)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - CYLTabBarController
   - JTCalendar
   - MJRefresh
+  - OBShapedButton
   - SCRecorder
   - SDWebImage
   - SVProgressHUD
@@ -49,6 +51,7 @@ SPEC REPOS:
     - JTCalendar
     - Masonry
     - MJRefresh
+    - OBShapedButton
     - SCRecorder
     - SDWebImage
     - SVProgressHUD
@@ -63,6 +66,7 @@ SPEC CHECKSUMS:
   JTCalendar: d85b0222e9378007a2d185b15c90b7d707a2abe0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 56a28aa628c9895e97a518dabaecf70b18f92f32
+  OBShapedButton: 90c414c04454ca25f067deaa91393c221b8721cf
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
@@ -71,6 +75,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
-PODFILE CHECKSUM: 6e28f493ac4b6f6c13fd1b5dc03d547191c9afca
+PODFILE CHECKSUM: 601d7f70fa00032b7cac4a0b4fd5922eb210cc61
 
 COCOAPODS: 1.5.2

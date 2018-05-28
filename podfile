@@ -11,4 +11,5 @@ pod 'MJRefresh'
 pod 'CYLTabBarController'
 pod 'TZImagePickerController'
 pod 'JTCalendar'
+pod 'OBShapedButton'
 end

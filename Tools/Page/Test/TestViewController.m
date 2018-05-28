@@ -16,8 +16,16 @@
 #import <AYTextHelper/UILabel+AYLabelTextHelper.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "UINavigationController+Additions.h"
+#import <AYMenuView/AYMenuView.h>
 
-@interface TestViewController ()
+#import "UIImage+Category.h"
+#import "UIButton+block.h"
+#import <objc/runtime.h>
+#import <OBShapedButton/OBShapedButton.h>
+
+#import "DownloadViewController.h"
+
+@interface TestViewController () <AYMenuViewDelegate>
 
 @property (nonatomic, strong) NSTimer *timer;
 
@@ -97,10 +105,62 @@
 //        NSLog(@"%ld -- %@ -- %@ -- %@", (long)index, charAttributedString, link, attch);
 //    }];
     
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 200, 200)];
-    [self.view addSubview:imgView];
     
-    [imgView sd_setImageWithURL:[NSURL URLWithString:@"https://goss.veer.com/creative/vcg/veer/800water/veer-154679128.jpg"] placeholderImage:[UIImage imageNamed:@"0"] options:(SDWebImageRefreshCached)];
+    
+//    dispatch_after(dispatch_time_delay(1.5), dispatch_get_main_queue(), ^{
+//        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 200, 200)];
+//        imgView.userInteractionEnabled = YES;
+//        [self.view addSubview:imgView];
+//        imgView.image = [UIImage ay_imageNamed:@"0"];
+////        [imgView sd_setImageWithURL:[NSURL URLWithString:@"https://goss.veer.com/creative/vcg/veer/800water/veer-154679128.jpg"] placeholderImage:[UIImage imageNamed:@"0"] options:(SDWebImageRefreshCached)];
+//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+//        tap.numberOfTouchesRequired = 1;
+//        [imgView addGestureRecognizer:tap];
+//    });
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    OBShapedButton *btn1 = [[OBShapedButton alloc] init];
+    [btn1 setImage:[UIImage imageNamed:@"一键呼叫"] forState:(UIControlStateNormal)];
+    [btn1 addTarget:self action:@selector(btn1Click) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:btn1];
+    
+    OBShapedButton *btn2 = [[OBShapedButton alloc] init];
+    [btn2 setImage:[UIImage imageNamed:@"佑拜商城"] forState:(UIControlStateNormal)];
+    [btn2 addTarget:self action:@selector(btn2Click) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:btn2];
+    
+    OBShapedButton *btn3 = [[OBShapedButton alloc] init];
+    [btn3 setImage:[UIImage imageNamed:@"远程祭扫"] forState:(UIControlStateNormal)];
+    [btn3 addTarget:self action:@selector(btn3Click) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:btn3];
+    
+    OBShapedButton *btn4 = [[OBShapedButton alloc] init];
+    [btn4 setImage:[UIImage imageNamed:@"纪念堂"] forState:(UIControlStateNormal)];
+    [btn4 addTarget:self action:@selector(btn4Click) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:btn4];
+    
+    [btn1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.centerY.equalTo(self.view.mas_centerY).offset(-81);
+        make.size.mas_equalTo(CGSizeMake(159, 159));
+    }];
+    
+    [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.centerY.equalTo(self.view.mas_centerY).offset(81);
+        make.size.mas_equalTo(CGSizeMake(159, 159));
+    }];
+    
+    [btn3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX).offset(-81);
+        make.centerY.equalTo(self.view.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(159, 159));
+    }];
+    
+    [btn4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX).offset(81);
+        make.centerY.equalTo(self.view.mas_centerY);
+        make.size.mas_equalTo(CGSizeMake(159, 159));
+    }];
     
 }
 
@@ -108,4 +168,39 @@
     NSLog(@"test");
 }
 
+- (void)btn1Click {
+    NSLog(@"1");
+    DownloadViewController *test = [[DownloadViewController alloc] init];
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.5;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromLeft;
+    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    
+    [self.navigationController pushViewController:test animated:NO];
+}
+
+- (void)btn2Click {
+    NSLog(@"2");
+}
+
+- (void)btn3Click {
+    NSLog(@"3");
+}
+
+- (void)btn4Click {
+    NSLog(@"4");
+}
+
+
+- (void)tapAction {
+    [AYMenuView menuWithTitles:@[@"0", @"1", @"2", @"3"] images:@[@"0", @"1", @"2", @"3"] frame:CGRectMake(150, 478, 100, 150) direction:(AYMenuViewArrowDirectionTopCenter) delegate:self];
+}
+    
+- (void)menuView:(AYMenuView *)menuView didSelectRowAtIndex:(NSInteger)index {
+    NSLog(@"%ld", index);
+}
+    
 @end
