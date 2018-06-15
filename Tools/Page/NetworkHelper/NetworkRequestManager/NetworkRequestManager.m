@@ -10,8 +10,6 @@
 #import <YYModel/YYModel.h>
 #import "LiveListModel.h"
 
-#define kWindow [UIApplication sharedApplication].delegate.window
-
 //#define kApiPrefix @"http://tyapi.znzkj.net/touyanshe_api/s/api"
 #define kApiPrefix @"http://api.touyanshe.com.cn/touyanshe_api/s/api"
 
