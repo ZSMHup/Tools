@@ -143,14 +143,6 @@
 		E19282A41FF60A73007D6E51 /* GXTabMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E192829B1FF60A73007D6E51 /* GXTabMenuCell.m */; };
 		E19282A51FF60A73007D6E51 /* GXTabMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E192829D1FF60A73007D6E51 /* GXTabMenuView.m */; };
 		E19282A61FF60A73007D6E51 /* GXTabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E192829F1FF60A73007D6E51 /* GXTabScrollView.m */; };
-		E194E06320AEBCC900A84E5C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E194E04F20AEBCC900A84E5C /* Info.plist */; };
-		E194E06420AEBCC900A84E5C /* KMSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E194E05220AEBCC900A84E5C /* KMSwizzle.m */; };
-		E194E06520AEBCC900A84E5C /* KMWeakObjectContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = E194E05420AEBCC900A84E5C /* KMWeakObjectContainer.m */; };
-		E194E06620AEBCC900A84E5C /* NSObject+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E194E05620AEBCC900A84E5C /* NSObject+KMNavigationBarTransition.m */; };
-		E194E06720AEBCC900A84E5C /* UINavigationBar+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E194E05820AEBCC900A84E5C /* UINavigationBar+KMNavigationBarTransition.m */; };
-		E194E06820AEBCC900A84E5C /* UINavigationController+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E194E05B20AEBCC900A84E5C /* UINavigationController+KMNavigationBarTransition.m */; };
-		E194E06920AEBCC900A84E5C /* UIScrollView+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E194E05E20AEBCC900A84E5C /* UIScrollView+KMNavigationBarTransition.m */; };
-		E194E06A20AEBCC900A84E5C /* UIViewController+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E194E06120AEBCC900A84E5C /* UIViewController+KMNavigationBarTransition.m */; };
 		E19E2B771FBBF11100BEEA2C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E19E2B761FBBF11100BEEA2C /* libsqlite3.tbd */; };
 		E19E2BF31FBBF2DE00BEEA2C /* BGFMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E2BF21FBBF2DE00BEEA2C /* BGFMDBViewController.m */; };
 		E1A2F2AE204F774C00CF9863 /* test1.html in Resources */ = {isa = PBXBuildFile; fileRef = E1A2F2AD204F774B00CF9863 /* test1.html */; };
@@ -160,7 +152,6 @@
 		E1A64B572057B90900814AF9 /* UIScrollView+Dragging.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A64B512057B90800814AF9 /* UIScrollView+Dragging.m */; };
 		E1A64B582057B90900814AF9 /* UIView+WhenTappedBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A64B532057B90800814AF9 /* UIView+WhenTappedBlocks.m */; };
 		E1A64B5B2057CDE200814AF9 /* ContentViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A64B5A2057CDE200814AF9 /* ContentViewController1.m */; };
-		E1A9D4BF20AEC158003D7FF0 /* UINavigationController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A9D4BE20AEC157003D7FF0 /* UINavigationController+Additions.m */; };
 		E1A9D4C220AECBE5003D7FF0 /* AYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A9D4C120AECBE5003D7FF0 /* AYAlertView.m */; };
 		E1BB8CD31FEA56C9009596A7 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BB8CD21FEA56C9009596A7 /* DownloadViewController.m */; };
 		E1C3BB522084A703006A23D1 /* WebViewPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3BB512084A703006A23D1 /* WebViewPushController.m */; };
@@ -461,26 +452,6 @@
 		E192829D1FF60A73007D6E51 /* GXTabMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXTabMenuView.m; sourceTree = "<group>"; };
 		E192829E1FF60A73007D6E51 /* GXTabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXTabScrollView.h; sourceTree = "<group>"; };
 		E192829F1FF60A73007D6E51 /* GXTabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXTabScrollView.m; sourceTree = "<group>"; };
-		E194E04F20AEBCC900A84E5C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E194E05020AEBCC900A84E5C /* KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMNavigationBarTransition.h; sourceTree = "<group>"; };
-		E194E05120AEBCC900A84E5C /* KMSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSwizzle.h; sourceTree = "<group>"; };
-		E194E05220AEBCC900A84E5C /* KMSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSwizzle.m; sourceTree = "<group>"; };
-		E194E05320AEBCC900A84E5C /* KMWeakObjectContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMWeakObjectContainer.h; sourceTree = "<group>"; };
-		E194E05420AEBCC900A84E5C /* KMWeakObjectContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMWeakObjectContainer.m; sourceTree = "<group>"; };
-		E194E05520AEBCC900A84E5C /* NSObject+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
-		E194E05620AEBCC900A84E5C /* NSObject+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
-		E194E05720AEBCC900A84E5C /* UINavigationBar+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
-		E194E05820AEBCC900A84E5C /* UINavigationBar+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
-		E194E05920AEBCC900A84E5C /* UINavigationBar+KMNavigationBarTransition_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KMNavigationBarTransition_internal.h"; sourceTree = "<group>"; };
-		E194E05A20AEBCC900A84E5C /* UINavigationController+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
-		E194E05B20AEBCC900A84E5C /* UINavigationController+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
-		E194E05C20AEBCC900A84E5C /* UINavigationController+KMNavigationBarTransition_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+KMNavigationBarTransition_internal.h"; sourceTree = "<group>"; };
-		E194E05D20AEBCC900A84E5C /* UIScrollView+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
-		E194E05E20AEBCC900A84E5C /* UIScrollView+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
-		E194E05F20AEBCC900A84E5C /* UIScrollView+KMNavigationBarTransition_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+KMNavigationBarTransition_internal.h"; sourceTree = "<group>"; };
-		E194E06020AEBCC900A84E5C /* UIViewController+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
-		E194E06120AEBCC900A84E5C /* UIViewController+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
-		E194E06220AEBCC900A84E5C /* UIViewController+KMNavigationBarTransition_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KMNavigationBarTransition_internal.h"; sourceTree = "<group>"; };
 		E19E2B761FBBF11100BEEA2C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		E19E2BF11FBBF2DE00BEEA2C /* BGFMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGFMDBViewController.h; sourceTree = "<group>"; };
 		E19E2BF21FBBF2DE00BEEA2C /* BGFMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGFMDBViewController.m; sourceTree = "<group>"; };
@@ -499,8 +470,6 @@
 		E1A64B532057B90800814AF9 /* UIView+WhenTappedBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WhenTappedBlocks.m"; sourceTree = "<group>"; };
 		E1A64B592057CDE200814AF9 /* ContentViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewController1.h; sourceTree = "<group>"; };
 		E1A64B5A2057CDE200814AF9 /* ContentViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController1.m; sourceTree = "<group>"; };
-		E1A9D4BC20AEC157003D7FF0 /* UINavigationController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Additions.h"; sourceTree = "<group>"; };
-		E1A9D4BE20AEC157003D7FF0 /* UINavigationController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Additions.m"; sourceTree = "<group>"; };
 		E1A9D4C020AECBE5003D7FF0 /* AYAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYAlertView.h; sourceTree = "<group>"; };
 		E1A9D4C120AECBE5003D7FF0 /* AYAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYAlertView.m; sourceTree = "<group>"; };
 		E1BB8CD11FEA56C9009596A7 /* DownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
@@ -781,7 +750,6 @@
 		E1209EE51F95A226006E6D86 /* 3rdLib */ = {
 			isa = PBXGroup;
 			children = (
-				E194E04E20AEBCC900A84E5C /* KMNavigationBarTransition */,
 				E1A64B462057B90800814AF9 /* HHHorizontalPagingView */,
 				E1FB4F94204D259F0087BE2B /* NavigationBar */,
 				E19282901FF60A73007D6E51 /* GXScrollView */,
@@ -1197,35 +1165,6 @@
 			path = GXScrollView;
 			sourceTree = "<group>";
 		};
-		E194E04E20AEBCC900A84E5C /* KMNavigationBarTransition */ = {
-			isa = PBXGroup;
-			children = (
-				E194E04F20AEBCC900A84E5C /* Info.plist */,
-				E194E05020AEBCC900A84E5C /* KMNavigationBarTransition.h */,
-				E194E05120AEBCC900A84E5C /* KMSwizzle.h */,
-				E194E05220AEBCC900A84E5C /* KMSwizzle.m */,
-				E194E05320AEBCC900A84E5C /* KMWeakObjectContainer.h */,
-				E194E05420AEBCC900A84E5C /* KMWeakObjectContainer.m */,
-				E194E05520AEBCC900A84E5C /* NSObject+KMNavigationBarTransition.h */,
-				E194E05620AEBCC900A84E5C /* NSObject+KMNavigationBarTransition.m */,
-				E194E05720AEBCC900A84E5C /* UINavigationBar+KMNavigationBarTransition.h */,
-				E194E05820AEBCC900A84E5C /* UINavigationBar+KMNavigationBarTransition.m */,
-				E194E05920AEBCC900A84E5C /* UINavigationBar+KMNavigationBarTransition_internal.h */,
-				E194E05A20AEBCC900A84E5C /* UINavigationController+KMNavigationBarTransition.h */,
-				E194E05B20AEBCC900A84E5C /* UINavigationController+KMNavigationBarTransition.m */,
-				E194E05C20AEBCC900A84E5C /* UINavigationController+KMNavigationBarTransition_internal.h */,
-				E194E05D20AEBCC900A84E5C /* UIScrollView+KMNavigationBarTransition.h */,
-				E194E05E20AEBCC900A84E5C /* UIScrollView+KMNavigationBarTransition.m */,
-				E194E05F20AEBCC900A84E5C /* UIScrollView+KMNavigationBarTransition_internal.h */,
-				E194E06020AEBCC900A84E5C /* UIViewController+KMNavigationBarTransition.h */,
-				E194E06120AEBCC900A84E5C /* UIViewController+KMNavigationBarTransition.m */,
-				E194E06220AEBCC900A84E5C /* UIViewController+KMNavigationBarTransition_internal.h */,
-				E1A9D4BC20AEC157003D7FF0 /* UINavigationController+Additions.h */,
-				E1A9D4BE20AEC157003D7FF0 /* UINavigationController+Additions.m */,
-			);
-			path = KMNavigationBarTransition;
-			sourceTree = "<group>";
-		};
 		E19E2BF01FBBF27B00BEEA2C /* BGFMDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -1465,7 +1404,6 @@
 			files = (
 				E188B7A620AC13440012E78F /* QRCodeFlashlightOpenImage.png in Resources */,
 				E188B7A720AC13440012E78F /* QRCodeFlashlightCloseImage.png in Resources */,
-				E194E06320AEBCC900A84E5C /* Info.plist in Resources */,
 				E14660EF1FF24AD4004A97F9 /* jquery-1.7.2.min.js in Resources */,
 				E1A2F2AE204F774C00CF9863 /* test1.html in Resources */,
 				E1415D581F97428500390C4D /* a_filter.cisf in Resources */,
@@ -1511,7 +1449,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Tools/Pods-Tools-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Tools/Pods-Tools-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
@@ -1526,7 +1464,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tools/Pods-Tools-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tools/Pods-Tools-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1551,7 +1489,6 @@
 				E19282A61FF60A73007D6E51 /* GXTabScrollView.m in Sources */,
 				E1209F2C1F95EF90006E6D86 /* ReachStateWIFI.m in Sources */,
 				E14D42281F98727300952FD8 /* NavigationControllerTest2.m in Sources */,
-				E194E06A20AEBCC900A84E5C /* UIViewController+KMNavigationBarTransition.m in Sources */,
 				E1A64B542057B90900814AF9 /* DynamicItem.m in Sources */,
 				E16D8FEA1FB3F47400E142A5 /* PlayerTableViewCell.m in Sources */,
 				E1486A2B1FE270680041BFAF /* QRCodeScanningSuccessVC.m in Sources */,
@@ -1631,7 +1568,6 @@
 				E158EC581FE217580013B8BA /* QRCodeGenerateViewController.m in Sources */,
 				E165F299204E85F5002AC499 /* UIImage+HYBImageCliped.m in Sources */,
 				E1167B2F1F98C2260092E190 /* AlertViewController.m in Sources */,
-				E1A9D4BF20AEC158003D7FF0 /* UINavigationController+Additions.m in Sources */,
 				E1A64B572057B90900814AF9 /* UIScrollView+Dragging.m in Sources */,
 				E19282A21FF60A73007D6E51 /* GXScrollTableView.m in Sources */,
 				E146609B1FF1E2C5004A97F9 /* BGModelInfo.m in Sources */,
@@ -1641,14 +1577,11 @@
 				E146609D1FF1E2C5004A97F9 /* NSCache+BGCache.m in Sources */,
 				E15F28C71FC51044002C7946 /* ThridViewController.m in Sources */,
 				E158EC551FE216CD0013B8BA /* QRCodeDemoViewController.m in Sources */,
-				E194E06720AEBCC900A84E5C /* UINavigationBar+KMNavigationBarTransition.m in Sources */,
 				E1453D561FC4231B00E0FA82 /* TCTabSlideView.m in Sources */,
 				E165F295204E62C4002AC499 /* TagAddCollectionViewCell.m in Sources */,
 				E15ED6361FB2B59C00BC4D1D /* PlayerViewController.m in Sources */,
 				E19282A11FF60A73007D6E51 /* GXPageScrollView.m in Sources */,
-				E194E06520AEBCC900A84E5C /* KMWeakObjectContainer.m in Sources */,
 				E14D42191F985AEE00952FD8 /* NavigationController.m in Sources */,
-				E194E06420AEBCC900A84E5C /* KMSwizzle.m in Sources */,
 				E16762F81F8F6EF800F1076F /* AYMFMessageViewController.m in Sources */,
 				E1BB8CD31FEA56C9009596A7 /* DownloadViewController.m in Sources */,
 				E1167B1A1F98B51A0092E190 /* MarqueeDemo.m in Sources */,
@@ -1666,7 +1599,6 @@
 				E14D421C1F985B3D00952FD8 /* BaseViewController.m in Sources */,
 				E14660A31FF1E2C5004A97F9 /* FMResultSet.m in Sources */,
 				E17913C81F99D717002FE1A6 /* CAKeyframeAnimationController.m in Sources */,
-				E194E06920AEBCC900A84E5C /* UIScrollView+KMNavigationBarTransition.m in Sources */,
 				E146609E1FF1E2C5004A97F9 /* NSObject+BGModel.m in Sources */,
 				E1C3BB522084A703006A23D1 /* WebViewPushController.m in Sources */,
 				E1C68AD71FB5869200D24601 /* NetworkCache.m in Sources */,
@@ -1676,13 +1608,11 @@
 				E1453D621FC4314800E0FA82 /* TwoModel.m in Sources */,
 				E1FB4F97204D259F0087BE2B /* NavigationBarBgView.m in Sources */,
 				E110438F1F7DF55600372F21 /* ViewController.m in Sources */,
-				E194E06820AEBCC900A84E5C /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				E142B9891F946639002EAEF7 /* UIButton+Countdown.m in Sources */,
 				E1FB4FA1204D4DCF0087BE2B /* TagCollectionViewCell.m in Sources */,
 				E110439A1F7DF55600372F21 /* main.m in Sources */,
 				E1FB4F9B204D3E150087BE2B /* TagViewController.m in Sources */,
 				E1167B1B1F98B51A0092E190 /* CyclePagerViewCell.m in Sources */,
-				E194E06620AEBCC900A84E5C /* NSObject+KMNavigationBarTransition.m in Sources */,
 				E14D422B1F98727F00952FD8 /* NavigationControllerTest3.m in Sources */,
 				E1453D591FC424AD00E0FA82 /* ScrollTableViewCell.m in Sources */,
 				E19E2BF31FBBF2DE00BEEA2C /* BGFMDBViewController.m in Sources */,

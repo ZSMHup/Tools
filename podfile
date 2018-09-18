@@ -1,15 +1,23 @@
-platform :ios, '7.0'
+
+platform :ios, '8.0'
+
+#屏蔽三方框架警告
+inhibit_all_warnings!
+
 target 'Tools' do
-pod 'SCRecorder'
-pod 'SVProgressHUD'
-pod 'ZFPlayer'
-pod 'SDWebImage'
-pod 'AFNetworking'
-pod 'YYCache'
-pod 'YYModel'
-pod 'MJRefresh'
-pod 'CYLTabBarController'
-pod 'TZImagePickerController'
-pod 'JTCalendar'
-pod 'OBShapedButton'
+    
+    pod 'SCRecorder'
+    pod 'SVProgressHUD'
+    pod 'ZFPlayer'
+    pod 'SDWebImage'
+    pod 'AFNetworking'
+    pod 'YYCache'
+    pod 'YYModel'
+    pod 'MJRefresh'
+    pod 'CYLTabBarController'
+    pod 'TZImagePickerController'
+    pod 'JTCalendar'
+    pod 'OBShapedButton'
+    pod 'KMNavigationBarTransition'
+
 end

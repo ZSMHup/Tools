@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import "UIView+WhenTappedBlocks.h"
 #import "UIScrollView+Dragging.h"
+#import <AYMacro.h>
 
 #import "JYSegmentView.h"
 
@@ -205,9 +206,9 @@ static NSInteger pagingScrollViewTag = 2000;
             tableView.estimatedSectionHeaderHeight = 0.;
         }
        
-        if (@available(iOS 11.0, *)) {
-            [scrollView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
-        }
+//        if (@available(iOS 11.0, *)) {
+//            [scrollView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+//        }
         [self configureContentView:scrollView];
         scrollView.tag = pagingScrollViewTag + index;
         [self.contentViewArray addObject:scrollView];
