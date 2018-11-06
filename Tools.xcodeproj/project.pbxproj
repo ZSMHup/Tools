@@ -136,6 +136,7 @@
 		E188B7AA20AC13440012E78F /* QRCodeScanningLineGrid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188B7A320AC13440012E78F /* QRCodeScanningLineGrid@3x.png */; };
 		E188B7AB20AC13440012E78F /* QRCodeScanningLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188B7A420AC13440012E78F /* QRCodeScanningLine@2x.png */; };
 		E188B7AC20AC13440012E78F /* QRCodeScanningLineGrid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188B7A520AC13440012E78F /* QRCodeScanningLineGrid@2x.png */; };
+		E18BDDD22154812100837C3C /* TestToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18BDDD12154812100837C3C /* TestToViewController.m */; };
 		E19282A01FF60A73007D6E51 /* GXContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282931FF60A73007D6E51 /* GXContentViewController.m */; };
 		E19282A11FF60A73007D6E51 /* GXPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282951FF60A73007D6E51 /* GXPageScrollView.m */; };
 		E19282A21FF60A73007D6E51 /* GXScrollTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19282971FF60A73007D6E51 /* GXScrollTableView.m */; };
@@ -437,6 +438,8 @@
 		E188B7A320AC13440012E78F /* QRCodeScanningLineGrid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLineGrid@3x.png"; sourceTree = "<group>"; };
 		E188B7A420AC13440012E78F /* QRCodeScanningLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLine@2x.png"; sourceTree = "<group>"; };
 		E188B7A520AC13440012E78F /* QRCodeScanningLineGrid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanningLineGrid@2x.png"; sourceTree = "<group>"; };
+		E18BDDD02154812100837C3C /* TestToViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestToViewController.h; sourceTree = "<group>"; };
+		E18BDDD12154812100837C3C /* TestToViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestToViewController.m; sourceTree = "<group>"; };
 		E19282911FF60A73007D6E51 /* GXConfigConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXConfigConst.h; sourceTree = "<group>"; };
 		E19282921FF60A73007D6E51 /* GXContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXContentViewController.h; sourceTree = "<group>"; };
 		E19282931FF60A73007D6E51 /* GXContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXContentViewController.m; sourceTree = "<group>"; };
@@ -1276,6 +1279,8 @@
 			children = (
 				E1FB4F88204CE4FD0087BE2B /* TestViewController.h */,
 				E1FB4F89204CE4FD0087BE2B /* TestViewController.m */,
+				E18BDDD02154812100837C3C /* TestToViewController.h */,
+				E18BDDD12154812100837C3C /* TestToViewController.m */,
 				E1D413FA20B6B29A00175500 /* UIImage+Category.h */,
 				E1D413FB20B6B29A00175500 /* UIImage+Category.m */,
 				E14B7C1020B6B96800DFE9DB /* UIButton+block.h */,
@@ -1582,6 +1587,7 @@
 				E15ED6361FB2B59C00BC4D1D /* PlayerViewController.m in Sources */,
 				E19282A11FF60A73007D6E51 /* GXPageScrollView.m in Sources */,
 				E14D42191F985AEE00952FD8 /* NavigationController.m in Sources */,
+				E18BDDD22154812100837C3C /* TestToViewController.m in Sources */,
 				E16762F81F8F6EF800F1076F /* AYMFMessageViewController.m in Sources */,
 				E1BB8CD31FEA56C9009596A7 /* DownloadViewController.m in Sources */,
 				E1167B1A1F98B51A0092E190 /* MarqueeDemo.m in Sources */,

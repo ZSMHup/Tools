@@ -23,14 +23,27 @@
 #import <OBShapedButton/OBShapedButton.h>
 
 #import "DownloadViewController.h"
+#import "TestToViewController.h"
 
-@interface TestViewController () <AYMenuViewDelegate>
+@interface TestViewController () <AYMenuViewDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) NSTimer *timer;
 
 @end
 
 @implementation TestViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setNavTransparent:YES];
+    [self setNavBlackLine:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self setNavTransparent:YES];
+    [self setNavBlackLine:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -183,6 +196,15 @@
 
 - (void)btn2Click {
     NSLog(@"2");
+    
+    TestToViewController *toVc = [[TestToViewController alloc] init];
+    CATransition *transtion = [CATransition animation];
+    transtion.type = @"rippleEffect";
+    transtion.subtype = kCATransitionFromLeft;//kCATransitionFromLeft  kCATransitionFromRight
+    transtion.duration = 1;
+    [self.navigationController.view.layer addAnimation:transtion forKey:@"transtion"];
+    
+    [self.navigationController pushViewController:toVc animated:NO];
 }
 
 - (void)btn3Click {
